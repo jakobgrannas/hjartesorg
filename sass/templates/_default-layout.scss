@@ -1,0 +1,18 @@
+/**
+ * Default layout
+ */
+.wrapper {
+	z-index: 20; // Required for mobile menu to work
+	position: relative; // Required for mobile menu to work
+	@include animation-duration(350ms);
+	@include animation-timing-function(ease);
+}
+
+.centered-inner {
+	max-width: 45em;
+}
+
+.mobile-menu {
+	background: #222;
+	color: white;
+}

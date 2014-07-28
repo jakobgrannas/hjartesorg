@@ -1,0 +1,62 @@
+/*
+ * Imports
+ */
+@import "bourbon";
+
+@import 'utils/variables';
+@import 'utils/helpers';
+@import 'utils/flex';
+
+@import 'atoms/fonts';
+@import 'atoms/links';
+
+@import 'molecules/mobile-menu';
+
+@import 'templates/default-layout';
+
+// Media queries
+@import 'utils/media-queries'; // TODO: Spread across affected modules
+
+/* Preload banner */
+body:after{
+	display:none;
+	content: image-url('banner.jpg');
+}
+
+/* General styling */
+body {
+	text-align: left;
+	line-height: 1.5em;
+	font-size: 100%;
+	font-family: 'Noto Sans', sans-serif, Arial, Verdana, Helvetica, 'Times New Roman';
+	background: white;
+	color: black;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: subpixel-antialiased;
+	position: relative;
+}
+
+button, input, select, textarea {
+	font-family: 'Noto Sans', sans-serif;
+}
+
+img {
+	vertical-align: middle;
+}
+
+/*
+===============
+   Misc
+===============
+*/
+
+.chromeframe {
+	margin: 0;
+	background: #ccc;
+	color: black;
+	padding: 0.2em 0;
+	position: absolute;
+	top: 0;
+	display: block;
+	z-index: 9999;
+}

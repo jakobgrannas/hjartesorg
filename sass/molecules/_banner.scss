@@ -1,0 +1,4 @@
+.banner {
+	@include animation-duration(350ms);
+	@include animation-timing-function(ease);
+}
