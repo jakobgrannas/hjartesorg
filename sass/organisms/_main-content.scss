@@ -1,0 +1,34 @@
+.main {
+	background: $bg-color;
+}
+
+.main--banner-overlap {
+	position: relative;
+	z-index: 20;
+}
+
+.main__section {
+	max-width: 45em;
+	margin: 0 auto;
+	color: $body-text-color;
+	font-family: Cambo, serif, 'Times New Roman';
+}
+
+.main__image--centered {
+	display: block;
+	margin: -4.5em auto 3.5em auto;
+	border: 0.5em solid $bg-color;
+	border-radius: 100%;
+	filter: #{'grayscale(100%)'};
+	-webkit-filter: #{'grayscale(100%)'};
+}
+
+.main__h2 {
+	@extend .headline;
+	color: $dark-text-color;
+	font-size: 2.1em;
+	text-align: center;
+	line-height: 1.3em;
+	margin-bottom: 1.2em;
+	letter-spacing: 0.1em;
+}

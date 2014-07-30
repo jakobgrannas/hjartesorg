@@ -13,9 +13,12 @@
 @import 'atoms/logo';
 @import 'atoms/buttons';
 @import 'atoms/dividers';
+@import 'atoms/headlines';
 
 @import 'molecules/mobile-menu';
-@import 'molecules/banner';
+
+@import 'organisms/banner';
+@import 'organisms/main-content';
 
 @import 'templates/default-layout';
 
