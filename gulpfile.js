@@ -9,6 +9,7 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
     bourbon = require('node-bourbon'),
     gutil = require('gulp-util'),
+    autoprefixer = require('gulp-autoprefixer'),
 	paths = {
 		scripts: './js/*.js',
 		sass: {
@@ -41,10 +42,9 @@ gulp.task('sass', function() {
 			includePaths:  bourbon.with('utils', 'atoms', 'molecules', 'organisms', 'templates')
 		}))
 		.pipe(gulp.dest(paths.sass.dest))
+        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
 		.pipe(minifyCSS())
-		.pipe(rename(function(path) {
-			path.extname = '.min.css';
-		}))
+		.pipe(rename({ suffix: 'min' }))
 		.pipe(gulp.dest(paths.sass.dest));
 });
 

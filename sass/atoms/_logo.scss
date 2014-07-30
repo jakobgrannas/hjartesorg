@@ -1,11 +1,10 @@
 .logo {
 	font-family: 'Asap', sans-serif;
-	font-size: 1.2em;
+	font-size: 1.35em;
 	text-transform: uppercase;
 	text-decoration: none;
 	font-weight: bold;
 	color: $logo-color;
-	letter-spacing: 0.05em;
 
 	&:hover {
 		text-decoration: none;
@@ -17,7 +16,7 @@
 		content: "\f08a";
 		background-color: $base-color;
 		color: white;
-		font-size: 1.15em;
+		font-size: 1em;
 		padding: 0.35em;
 		border-radius: 100%;
 		margin-right: 0.5em;

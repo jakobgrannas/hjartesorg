@@ -48,10 +48,6 @@
 }
 
 /* No js nav*/
-.close-menu-btn {
-	display: none;
-}
-
 .no-js #main-nav:target + .wrapper {
 	left: $mobile-menu-negative-width;
 }

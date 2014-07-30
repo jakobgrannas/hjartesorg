@@ -6,10 +6,6 @@
 	height: 45em;
 	position: relative;
 	padding: 2em;
-
-	.logo {
-		letter-spacing: 0.1em;
-	}
 }
 
 // Menu
@@ -17,34 +13,51 @@
 	float: right;
 	padding: 0.5em 0 0 0;
 	margin: 0;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.01em;
+	font-size: 1em;
+	box-sizing: border-box;
+}
 
-	li {
-		list-style: none;
+.banner__menu-item {
+	list-style: none;
+	display: inline-block;
+	line-height: 1em;
+
+	&:nth-child(even):before {
+		background-color: rgba(255,255,255,0.25);
+		margin-left: 0.8em;
+		margin-right: 0.9em;
+		content: "";
 		display: inline-block;
+		height: 1.2em;
+		width: 0.1em;
+		box-sizing: border-box;
+		vertical-align: bottom;
 	}
+}
+
+.close-menu-btn {
+	display: none;
 }
 
 %nav__button--icon-base {
 	@extend .fa;
 	color: white;
 	font-size: 1.1em;
-	margin-left: 0.7em;
+	margin-left: 0.6em;
 }
 
 .banner__menu--btn {
 	text-decoration: none;
-	cursor: pointer;
-	font-size: 1em;
-	letter-spacing: 0.09em;
 	text-transform: uppercase;
 	font-weight: bold;
 	border: 0;
 	color: white;
+	padding-bottom: 0.2em;
 
 	&:hover {
 		color: white;
-		text-decoration: underline;
+		border-bottom: 0.2em solid rgba(255,255,255,0.4);
 	}
 
 	&:after {
@@ -53,36 +66,29 @@
 }
 
 // Buttons
-.banner__menu--main-btn{
-	&:after {
-		@extend %nav__button--icon-base;
-		content: "\f0c9";
-	}
+.banner__menu--main-btn:after {
+	@extend %nav__button--icon-base;
+	content: "\f0c9";
 }
 
-.banner__search--btn {
-	border-right: 1px solid rgba(255,255,255,0.25);
-	padding-right: 0.8em;
-	margin-right: 0.8em;
-
-	&:after {
-		@extend %nav-button-icon-base;
-		content: "\f002";
-	}
+.banner__search--btn:after {
+	@extend %nav-button-icon-base;
+	content: "\f002";
 }
 
 .banner__button-important {
 	@extend .button-important;
 	color: $light-text-color;
 	border-color: $light-text-color;
-	width: 13em;
+	width: 15em;
 	display: block;
 	margin: 0 auto;
 
 	&:hover {
-		background-color: $light-text-color;
-		border-color: $light-text-color;
-		color: black;
+		background-color: $dark-text-color;
+		border: 0;
+		padding: 1.3em 1.1em;
+		color: white;
 	}
 }
 
