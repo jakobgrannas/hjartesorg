@@ -1,0 +1,28 @@
+.divider {
+	text-align: center;
+	margin: 0 auto;
+
+	&:before,
+	&:after {
+		display: inline-block;
+		width: 3em;
+		content: "";
+		height: 1px;
+		background-color: $light-text-color;
+		margin-bottom: 0.3em;
+	}
+
+	&:before {
+		margin-right: 0.8em;
+	}
+
+	&:after {
+		margin-left: 0.8em;
+	}
+}
+
+.divider__symbol:before {
+	@extend .fa;
+	font-size: 0.7em;
+	content: "\f004";
+}

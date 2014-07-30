@@ -1,17 +1,24 @@
 /**
  * Variables
  */
+
 // Base colors
-$base-color: #469a73;
-$primary-bg-color: #f3f5f0;
+$base-color: #d62935;
+$bg-color: #fffcf7;
+$light-text-color: #fff8e6;
+$dark-text-color: #ee4747;
 
 //Links
+$link-color: #63a758;
+$link-hover: darken($link-color, 10%);
 $link-visited: #000;
+
+//Logo
+$logo-color: #efefef;
 
 //Mobile
 $mobile-menu-width: 15em;
 $mobile-menu-negative-width: -15em;
-
 
 // Paths
 $font-path: '../../fonts';

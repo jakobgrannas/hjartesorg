@@ -1,0 +1,26 @@
+.logo {
+	font-family: 'Asap', sans-serif;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+	color: $logo-color;
+	letter-spacing: 0.05em;
+
+	&:hover {
+		text-decoration: none;
+		color: $logo-color;
+	}
+
+	&:before {
+		@extend .fa;
+		content: "\f08a";
+		background-color: $base-color;
+		color: white;
+		font-size: 1.15em;
+		padding: 0.35em;
+		border-radius: 100%;
+		margin-right: 0.5em;
+		width: 1.05em;
+	}
+}

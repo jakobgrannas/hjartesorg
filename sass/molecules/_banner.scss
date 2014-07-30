@@ -1,4 +1,114 @@
 .banner {
-	@include animation-duration(350ms);
+	@include animation-duration(350ms); // TODO: Add autoprefixer plugin and remove Bourbon
 	@include animation-timing-function(ease);
+	background: transparent image-url('banner.png') no-repeat center center scroll;
+	background-size: cover;
+	height: 45em;
+	position: relative;
+	padding: 2em;
+
+	.logo {
+		letter-spacing: 0.1em;
+	}
+}
+
+// Menu
+.banner__menu {
+	float: right;
+	padding: 0.5em 0 0 0;
+	margin: 0;
+	letter-spacing: 0.1em;
+
+	li {
+		list-style: none;
+		display: inline-block;
+	}
+}
+
+%nav__button--icon-base {
+	@extend .fa;
+	color: white;
+	font-size: 1.1em;
+	margin-left: 0.7em;
+}
+
+.banner__menu--btn {
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 1em;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: 0;
+	color: white;
+
+	&:hover {
+		color: white;
+		text-decoration: underline;
+	}
+
+	&:after {
+		@extend %nav__button--icon-base;
+	}
+}
+
+// Buttons
+.banner__menu--main-btn{
+	&:after {
+		@extend %nav__button--icon-base;
+		content: "\f0c9";
+	}
+}
+
+.banner__search--btn {
+	border-right: 1px solid rgba(255,255,255,0.25);
+	padding-right: 0.8em;
+	margin-right: 0.8em;
+
+	&:after {
+		@extend %nav-button-icon-base;
+		content: "\f002";
+	}
+}
+
+.banner__button-important {
+	@extend .button-important;
+	color: $light-text-color;
+	border-color: $light-text-color;
+	width: 13em;
+	display: block;
+	margin: 0 auto;
+
+	&:hover {
+		background-color: $light-text-color;
+		border-color: $light-text-color;
+		color: black;
+	}
+}
+
+// Typography
+.banner__slogan {
+	position: relative;
+	top: 30%;
+	transform: translateY(-50%);
+}
+
+.banner__slogan-text {
+	font-size: 3em;
+	line-height: 1.3em;
+	color: $light-text-color;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: block;
+	width: 12em;
+	margin: 0 auto;
+}
+
+// Divider
+.banner__divider {
+	@extend .divider;
+	color: $light-text-color;
+	margin-top: 1.2em;
+	margin-bottom: 3em;
 }

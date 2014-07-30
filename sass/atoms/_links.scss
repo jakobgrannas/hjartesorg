@@ -1,7 +1,7 @@
 /**
  * Links
  */
-a {
+/*a {
 	color: $base-color;
 }
 
@@ -25,4 +25,5 @@ a:hover {
 .bare-link:visited {
 	text-decoration: none;
 	color: inherit;
-}
+}*/
+// Causes overqualified selectors and undoing styles, define separate context dependent styles instead

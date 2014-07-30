@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-	clean = require('gulp-clean'),
+	rimraf = require('gulp-rimraf'),
 	order = require('gulp-order'),
 	sass = require('gulp-sass'),
 	concat = require('gulp-concat'),
@@ -8,6 +8,7 @@ var gulp = require('gulp'),
 	minifyCSS = require('gulp-minify-css'),
 	uglify = require('gulp-uglify'),
     bourbon = require('node-bourbon'),
+    gutil = require('gulp-util'),
 	paths = {
 		scripts: './js/*.js',
 		sass: {
@@ -37,7 +38,7 @@ gulp.task('sass', function() {
 	return gulp.src(paths.sass.src)
 		.pipe(sass({
 			imagePath: '../images',
-			includePaths: bourbon.with('utils', 'atoms', 'molecules', 'organisms', 'templates')
+			includePaths:  bourbon.with('utils', 'atoms', 'molecules', 'organisms', 'templates')
 		}))
 		.pipe(gulp.dest(paths.sass.dest))
 		.pipe(minifyCSS())
@@ -60,13 +61,19 @@ gulp.task('fonts', function() {
 
 gulp.task('clean', function() {
 	return gulp.src(['dist/css', 'dist/js'], {read: false})
-		.pipe(clean());
+		.pipe(rimraf());
 });
 
+var changeEvent = function(evt, src) {
+    gutil.log('File', gutil.colors.cyan(evt.path.replace(new RegExp('/.*(?=/' + src + ')/'), '')), 'was', gutil.colors.magenta(evt.type));
+};
+
 gulp.task('watch', function() {
-	gulp.watch(paths.scripts, ['scripts']);
-	gulp.watch(paths.images, ['images']);
-	gulp.watch(paths.sass.src, ['sass']);
+	//gulp.watch(paths.scripts, ['scripts']);
+	//gulp.watch(paths.images, ['images']);
+	gulp.watch(paths.sass.src, ['sass']).on('change', function(evt) {
+        changeEvent(evt, 'sass/');
+    });
 });
 
 gulp.task('default', ['clean'], function() {
