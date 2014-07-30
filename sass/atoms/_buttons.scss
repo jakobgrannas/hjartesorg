@@ -1,20 +1,47 @@
 // Button important
-.button-important {
-	border: 3px solid #000;
-	height: 3.5em;
-	padding: 1.1em;
-	text-transform: uppercase;
-	font-size: 0.95em;
+%base-button {
+	line-height: 1em;
+	font-family: 'Asap', 'sans-serif';
 	font-weight: bold;
 	text-align: center;
 	box-sizing: border-box;
 	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.button-important {
+	@extend %base-button;
+	border: 3px solid #000;
+	height: 3.5em;
+	padding: 1.1em;
+	font-size: 0.95em;
 	letter-spacing: 0.05em;
-	line-height: 1em;
 
 	&:hover {
 		background-color: #000;
 		border: 0;
 		color: white;
+	}
+}
+
+.button-small {
+	@extend %base-button;
+	padding: 0.8em;
+	width: 9em;
+	height: 2.8em;
+	font-size: 0.9em;
+	letter-spacing: 0.1em;
+}
+
+.button-read-more {
+	@extend .button-small;
+	border: 2px solid $dark-text-color;
+	color: $dark-text-color;
+
+	&:hover {
+		background-color: $dark-text-color;
+		padding: 0.9em;
+		color: white;
+		border: 0;
 	}
 }

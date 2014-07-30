@@ -8,11 +8,12 @@
 	@include animation-timing-function(ease);
 }
 
-.centered-inner {
-	max-width: 45em;
-}
-
 .mobile-menu {
 	background: #222;
 	color: white;
+}
+
+.section--centered {
+	margin-left: auto;
+	margin-right: auto;
 }

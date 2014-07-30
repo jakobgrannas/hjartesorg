@@ -8,6 +8,7 @@ var gulp = require('gulp'),
 	minifyCSS = require('gulp-minify-css'),
 	uglify = require('gulp-uglify'),
     bourbon = require('node-bourbon'),
+    neat = require('node-neat'),
     gutil = require('gulp-util'),
     autoprefixer = require('gulp-autoprefixer'),
 	paths = {
@@ -36,10 +37,13 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('sass', function() {
+    var atomicPaths = ['utils', 'atoms', 'molecules', 'organisms', 'templates'],
+        includePaths = atomicPaths.concat(bourbon.includePaths, neat.includePaths);
+
 	return gulp.src(paths.sass.src)
 		.pipe(sass({
 			imagePath: '../images',
-			includePaths:  bourbon.with('utils', 'atoms', 'molecules', 'organisms', 'templates')
+			includePaths: includePaths
 		}))
 		.pipe(gulp.dest(paths.sass.dest))
         .pipe(autoprefixer('last 2 version', '> 1%', 'safari 5', 'ie 9', 'opera 12.1', 'ios 6', 'android 4', { cascade: true }))

@@ -2,6 +2,7 @@
  * Imports
  */
 @import "bourbon";
+@import "neat";
 
 @import 'utils/variables';
 @import 'utils/helpers';
@@ -16,9 +17,11 @@
 @import 'atoms/headlines';
 
 @import 'molecules/mobile-menu';
+@import 'molecules/services';
 
 @import 'organisms/banner';
 @import 'organisms/main-content';
+@import 'organisms/services-section';
 
 @import 'templates/default-layout';
 

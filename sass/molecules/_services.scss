@@ -1,0 +1,35 @@
+.service__block {
+	background-color: white;
+	padding: 1.5em 0.8em;
+	margin-left: 1em;
+	display: inline-block;
+	width: 15em;
+	height: 28em;
+	box-sizing: border-box;
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.service__image {
+	display: block;
+	margin: 0 auto;
+	border-radius: 100%;
+}
+
+.service__block__h3 {
+	@extend %headline;
+	color: black;
+	font-size: 1.25em;
+	line-height: 1.4em;
+	min-height: 2.7em;
+	letter-spacing: 0.05em;
+	text-align: center;
+}
+
+.service__button-read-more {
+	@extend .button-read-more;
+	margin: 1.5em auto 0 auto;
+	display: block;
+}

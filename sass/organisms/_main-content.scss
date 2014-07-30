@@ -8,10 +8,19 @@
 }
 
 .main__section {
-	max-width: 45em;
-	margin: 0 auto;
 	color: $body-text-color;
 	font-family: Cambo, serif, 'Times New Roman';
+	font-size: 1.05em;
+
+	&:nth-child(odd) {
+		margin-bottom: 8em;
+	}
+}
+
+.main__section--centered {
+	@extend .main__section;
+	max-width: 45em;
+	margin: 0 auto;
 }
 
 .main__image--centered {
@@ -19,12 +28,11 @@
 	margin: -4.5em auto 3.5em auto;
 	border: 0.5em solid $bg-color;
 	border-radius: 100%;
-	filter: #{'grayscale(100%)'};
-	-webkit-filter: #{'grayscale(100%)'};
+	@include filter(#{'grayscale(100%)'});
 }
 
 .main__h2 {
-	@extend .headline;
+	@extend %headline;
 	color: $dark-text-color;
 	font-size: 2.1em;
 	text-align: center;
