@@ -1,10 +1,10 @@
 .service__block {
 	background-color: white;
-	padding: 1.5em 0.8em;
+	padding: 1.8em 0.8em;
 	margin-left: 1em;
 	display: inline-block;
 	width: 15em;
-	height: 28em;
+	height: 27em;
 	box-sizing: border-box;
 
 	&:first-child {
@@ -30,6 +30,6 @@
 
 .service__button-read-more {
 	@extend .button-read-more;
-	margin: 1.5em auto 0 auto;
+	margin: 1.7em auto 0 auto;
 	display: block;
 }
