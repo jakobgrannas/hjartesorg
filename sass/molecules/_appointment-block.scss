@@ -74,6 +74,7 @@ $box-padding: 3em;
 	@extend %make-appointment__link;
 	font-size: 2em;
 	font-weight: bold;
+	margin-bottom: 0.2em;
 
 	&:before {
 		@extend %make-appointment__link-icon;
