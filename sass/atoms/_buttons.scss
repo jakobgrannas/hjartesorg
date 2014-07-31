@@ -27,9 +27,9 @@
 .button-small {
 	@extend %base-button;
 	padding: 0.8em;
-	width: 9em;
+	width: 9.5em;
 	height: 2.8em;
-	font-size: 0.9em;
+	font-size: 0.8em;
 	letter-spacing: 0.1em;
 }
 
@@ -40,7 +40,7 @@
 
 	&:hover {
 		background-color: $dark-text-color;
-		padding: 0.9em;
+		padding: 1em;
 		color: white;
 		border: 0;
 	}

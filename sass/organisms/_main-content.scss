@@ -25,7 +25,7 @@
 
 .main__image--centered {
 	display: block;
-	margin: -4.5em auto 3.5em auto;
+	margin: -65px auto 3.5em auto; // Height is fixed at 130px (130/2 == 65)
 	border: 0.5em solid $bg-color;
 	border-radius: 100%;
 	@include filter(#{'grayscale(100%)'});
