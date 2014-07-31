@@ -1,0 +1,18 @@
+.make-appointment {
+	margin-top: 8em;
+	text-align: center; // Used to center content, overridden in blocks
+}
+
+.make-appointment__field {
+	font-size: 0.9em;
+	padding: 0.5em;
+	width: 100%;
+	border: 1px solid $main-content-border-color;
+	background-color: white;
+}
+
+.make-appointment__button {
+	@extend .button-small;
+	display: block;
+	margin-top: 1.5em;
+}

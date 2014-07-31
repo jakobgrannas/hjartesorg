@@ -1,0 +1,93 @@
+// Block specific variables
+$box-padding: 3em;
+
+// Boxes
+%make-appointment__block {
+	@extend %column--half;
+	width: 45%;
+	color: $body-text-color;
+	font-family: 'Asap', sans-serif;
+
+	&:nth-of-type(odd) {
+		border-right: 1px solid $main-content-border-color;
+		padding-right: $box-padding;
+	}
+}
+
+.make-appointment__block-contact-info {
+	@extend %make-appointment__block;
+	text-align: right;
+}
+
+.make-appointment__block-call-me {
+	@extend %make-appointment__block;
+	text-align: left;
+	padding-left: $box-padding;
+}
+
+%make-appointment__block-header {
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	margin-top: 0;
+	margin-bottom: 0.2em;
+}
+
+.make-appointment__block-header-call-me {
+	@extend %make-appointment__block-header;
+	margin-bottom: 0.7em;
+}
+
+.make-appointment__block-header-opening-hours {
+	@extend %make-appointment__block-header;
+	margin-top: 1em;
+}
+
+.make-appointment__block-content {
+	margin-top: 0;
+}
+
+// Placeholders
+%make-appointment__link {
+	color: $link-color;
+	display: block;
+
+	&:hover {
+		color: $link-hover-color;
+		text-decoration: none;
+	}
+
+	&:visited {
+		color: $link-visited-color;
+	}
+}
+
+%make-appointment__link-icon {
+	@extend .fa;
+	vertical-align: middle;
+	font-size: 1em;
+	color: rgba(0,0,0,0.3);
+}
+
+// Submodules
+.make-appointment__phone-number {
+	@extend %make-appointment__link;
+	font-size: 2em;
+	font-weight: bold;
+
+	&:before {
+		@extend %make-appointment__link-icon;
+		content: "\f095";
+		padding-right: 0.4em;
+	}
+}
+
+.make-appointment__email {
+	@extend %make-appointment__link;
+
+	&:before {
+		@extend %make-appointment__link-icon;
+		content: "\f003";
+		padding-right: 0.5em;
+	}
+}

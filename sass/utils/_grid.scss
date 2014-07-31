@@ -1,0 +1,30 @@
+%column {
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+
+%column--full {
+	@extend %column;
+	width: 100%;
+}
+
+%column--half {
+	@extend %column;
+	width: 50%;
+}
+
+%column--third {
+	@extend %column;
+	width: 33%;
+}
+
+%column--quarter {
+	@extend %column;
+	width: 25%;
+}
+
+%column--fifth {
+	@extend %column;
+	width: 20%;
+}

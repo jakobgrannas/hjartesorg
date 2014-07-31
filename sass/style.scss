@@ -1,13 +1,14 @@
 /*
  * Imports
  */
-@import "bourbon";
+@import "bourbon"; // TODO: Remove?
 @import "neat";
 
 @import 'utils/variables';
 @import 'utils/helpers';
 @import 'utils/flex';
 @import 'utils/font-awesome';
+@import 'utils/grid';
 
 @import 'atoms/fonts';
 @import 'atoms/links';
@@ -18,10 +19,12 @@
 
 @import 'molecules/mobile-menu';
 @import 'molecules/services';
+@import 'molecules/appointment-block';
 
 @import 'organisms/banner';
 @import 'organisms/main-content';
 @import 'organisms/services-section';
+@import 'organisms/make-appointment';
 
 @import 'templates/default-layout';
 
@@ -43,8 +46,10 @@ body {
 	background: white;
 	color: black;
 	text-rendering: optimizeLegibility;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
-	position: relative;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 button, input, select, textarea {
@@ -53,21 +58,4 @@ button, input, select, textarea {
 
 img {
 	vertical-align: middle;
-}
-
-/*
-===============
-   Misc
-===============
-*/
-
-.chromeframe {
-	margin: 0;
-	background: #ccc;
-	color: black;
-	padding: 0.2em 0;
-	position: absolute;
-	top: 0;
-	display: block;
-	z-index: 9999;
 }

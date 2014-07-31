@@ -7,6 +7,7 @@
 	box-sizing: border-box;
 	text-decoration: none;
 	text-transform: uppercase;
+	background-color: transparent; // Remove button element base styling
 }
 
 .button-important {
@@ -31,10 +32,6 @@
 	height: 2.8em;
 	font-size: 0.8em;
 	letter-spacing: 0.1em;
-}
-
-.button-read-more {
-	@extend .button-small;
 	border: 2px solid $dark-text-color;
 	color: $dark-text-color;
 
