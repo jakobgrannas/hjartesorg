@@ -49,17 +49,8 @@ $box-padding: 3em;
 
 // Placeholders
 %make-appointment__link {
-	color: $link-color;
+	@extend %base-link;
 	display: block;
-
-	&:hover {
-		color: $link-hover-color;
-		text-decoration: none;
-	}
-
-	&:visited {
-		color: $link-visited-color;
-	}
 }
 
 %make-appointment__link-icon {

@@ -1,21 +1,31 @@
 .main {
 	background: $bg-color;
+
+	/*
+	 * I know, it's ugly, but adding classes to every paragraph
+	 * is not an option when writing content in a CMS.
+	 */
+	p > a {
+		@extend %base-link;
+	}
 }
 
 .main__section {
 	color: $body-text-color;
 	font-family: Cambo, serif, 'Times New Roman';
 	font-size: 1.05em;
+	margin-bottom: 8em;
 
-	&:nth-child(odd) {
-		margin-bottom: 8em;
+	&:last-child {
+		margin-bottom: 0;
 	}
 }
 
 .main__section--centered {
 	@extend .main__section;
 	max-width: 45em;
-	margin: 0 auto;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .main__image--centered {
