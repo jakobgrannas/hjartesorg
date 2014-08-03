@@ -7,6 +7,8 @@ var gulp = require('gulp'),
 	imagemin = require('gulp-imagemin'),
 	minifyCSS = require('gulp-minify-css'),
 	uglify = require('gulp-uglify'),
+	browserSync = require('browser-sync'),
+	reload = browserSync.reload,
     bourbon = require('node-bourbon'),
     neat = require('node-neat'),
     gutil = require('gulp-util'),
@@ -21,6 +23,13 @@ var gulp = require('gulp'),
 		fonts: './fonts/**/*'
 	};
 
+gulp.task('browser-sync', function() {
+	browserSync({
+		server: {
+			baseDir: "./"
+		}
+	});
+});
 gulp.task('scripts', function() {
 	return gulp.src(paths.scripts)
 		.pipe(order([
@@ -46,10 +55,11 @@ gulp.task('sass', function() {
 			includePaths: includePaths
 		}))
 		.pipe(gulp.dest(paths.sass.dest))
-        .pipe(autoprefixer('last 2 version', '> 1%', 'safari 5', 'ie 9', 'opera 12.1', 'ios 6', 'android 4', { cascade: true }))
+        //.pipe(autoprefixer('last 2 version', '> 1%', 'safari 5', 'ie 9', 'opera 12.1', 'ios 6', 'android 4', { cascade: true }))
 		.pipe(minifyCSS())
 		.pipe(rename({ suffix: '.min' }))
-		.pipe(gulp.dest(paths.sass.dest));
+		.pipe(gulp.dest(paths.sass.dest))
+		.pipe(reload({stream:true}));
 });
 
 gulp.task('images', function() {
@@ -76,10 +86,11 @@ gulp.task('watch', function() {
 	//gulp.watch(paths.scripts, ['scripts']);
 	//gulp.watch(paths.images, ['images']);
 	gulp.watch(paths.sass.src, ['sass']).on('change', function(evt) {
+		console.log('Sass is watched');
         changeEvent(evt, 'sass/');
     });
 });
 
-gulp.task('default', ['clean'], function() {
-	gulp.start('scripts', 'images', 'fonts', 'sass');
+gulp.task('default', ['clean', 'browser-sync'], function() {
+	gulp.start('scripts', 'images', 'fonts', 'sass', 'watch');
 });
