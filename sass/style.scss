@@ -11,6 +11,7 @@
 
 @import 'atoms/fonts';
 @import 'atoms/links';
+@import 'atoms/icons';
 @import 'atoms/logo';
 @import 'atoms/buttons';
 @import 'atoms/dividers';
@@ -20,12 +21,14 @@
 @import 'molecules/services';
 @import 'molecules/appointment-block';
 @import 'molecules/testimonial';
+@import 'molecules/footer-block';
 
 @import 'organisms/banner';
 @import 'organisms/main-content';
 @import 'organisms/services-section';
 @import 'organisms/make-appointment';
 @import 'organisms/testimonials';
+@import 'organisms/footer';
 
 @import 'templates/default-layout';
 

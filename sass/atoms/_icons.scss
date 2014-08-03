@@ -1,0 +1,11 @@
+%heart-icon {
+	@extend .fa;
+	content: "\f08a";
+	background-color: $base-color;
+	color: white;
+	font-size: 1em;
+	padding: 0.35em;
+	border-radius: 100%;
+	margin-right: 0.5em;
+	width: 1.05em;
+}

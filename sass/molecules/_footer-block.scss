@@ -1,0 +1,36 @@
+.footer__block {
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	margin-right: 6em;
+	max-width: 13em;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	p {
+		margin-top: 0.2em;
+		margin-bottom: 0.2em;
+	}
+
+	p:first-of-type {
+		margin-top: 0;
+	}
+
+	a {
+		@extend %base-link;
+		color: darken($link-color, 10%);
+
+		&:hover {
+			color: darken($link-hover-color, 10%);
+		}
+	}
+}
+
+.footer__block-header {
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: 0.25em;
+	margin-top: 0;
+}
