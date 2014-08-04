@@ -23,9 +23,11 @@
 
 .main__section--centered {
 	@extend .main__section;
-	max-width: 45em;
+	max-width: 46em;
 	margin-right: auto;
 	margin-left: auto;
+	padding-right: 1em;
+	padding-left: 1em;
 }
 
 .main__image--centered {
@@ -42,6 +44,6 @@
 	font-size: 2.1em;
 	text-align: center;
 	line-height: 1.3em;
-	margin-bottom: 1.2em;
+	margin: 0.5em 0.5em 1.2em 0.5em;
 	letter-spacing: 0.1em;
 }
