@@ -3,20 +3,38 @@
  * Todo: Fix BEM class names
  */
 
-.mobile-menu {
+.menu-mobile {
 	position: absolute;
-	color: white;
+	color: $light-text-color;
 	background-color: $tertiary-dark-bg-color;
 	width: $mobile-menu-width;
 	font-family: 'Asap', sans-serif;
 	height: 100%;
 	top: 0;
+	right: 0;
 	z-index: 0;
 	@include transition (transform 350ms ease);
 }
 
+.menu-mobile--closed {
+	overflow: hidden;
+	max-height: 100%;
+}
+
+.menu-mobile--animate-left {
+	-webkit-transform: translate3d($mobile-menu-negative-width, 0, 0);
+	transform: translate3d($mobile-menu-negative-width, 0, 0);
+}
+
+.menu-mobile--open {
+	position: relative !important;
+	width: auto !important;
+}
+
+
+// Menu items
 .menu-item {
-	color: #fff;
+	color: $light-text-color;
 	text-decoration: none;
 	font-size: 0.9em;
 	padding: .4em 1.2em;
@@ -32,34 +50,37 @@
 .menu-item--active {
 	@extend .menu-item;
 	font-weight: bold;
+	position: relative;
+	color: $secondary-light-text-color;
+
+	&:after {
+		@extend .fa;
+		content: "\f053";
+		position: absolute;
+		right: 1em;
+		top: 30%;
+		display: inline-block;
+		opacity: 0.4;
+	}
 }
 
-/* Orientation-dependent styles for the content of the menu */
 
-.menu-right {
-	right: 0;
-}
-
-.menu-closed {
-	overflow: hidden;
-	max-height: 100%;
-}
-
-.menu-animate-left {
-	-webkit-transform: translate3d($mobile-menu-negative-width, 0, 0);
-	transform: translate3d($mobile-menu-negative-width, 0, 0);
-}
-
-.menu-open {
-	position: relative !important;
-	width: auto !important;
+// Logo
+.menu__logo {
+	@extend .logo;
+	display: block;
+	margin: 1.2em 0em;
+	padding-bottom: 1.2em;
+	border-bottom: 1px dashed rgba(255,255,255,0.3);
+	text-align: center;
+	font-size: 1.1em;
 }
 
 // Search
 .menu__search {
 	height: 3em;
 	background: rgba(0,0,0,0.3);
-	margin-bottom: 0.8em;
+	margin-top: 2em;
 }
 
 .menu__search-field {
@@ -69,7 +90,7 @@
 	padding: 0.5em 0.5em 0.5em 1em;
 	font-size: 0.9em;
 	width: 80%;
-	color: white;
+	color: $light-text-color;
 	box-sizing: border-box;
 }
 
@@ -82,6 +103,6 @@
 
 	&:before {
 		@extend %search-button;
-		color: white;
+		color: $light-text-color;
 	}
 }
