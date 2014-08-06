@@ -23,12 +23,12 @@
 
 <nav class="mobile-menu menu-right menu-closed" id="main-nav">
 	<div class="menu__search">
-		<input type="text" id="search" class="search-field" name="search" placeholder="sök...">
+		<input type="text" id="search" class="menu__search-field" name="search" placeholder="sök...">
 		<button class="menu__button-search" title="Sök"></button>
 	</div>
 	<div class="menu-items">
 		<a href="index.html" class="menu-item">Startsida</a>
-		<a href="gallery.html" class="menu-item">Fotografi</a>
+		<a href="gallery.html" class="menu-item--active">Fotografi</a>
 		<a href="#" class="menu-item">Blogg</a>
 		<a href="#" class="menu-item">Kontakta mig</a>
 	</div>
@@ -45,11 +45,11 @@
 					<input type="text" id="search-alternate" class="banner__search-field" name="search" placeholder="sök...">
 					<button class="banner__button-search" title="Sök"></button>
 				</div>
-				<div class="banner__menu-item open-menu-btn">
-					<a href="#main-nav" id="menu-btn" class="banner__menu--main-btn banner__menu--btn">Meny</a>
+				<div class="banner__menu-item button-open-menu">
+					<a href="#main-nav" id="menu-btn" class="banner__menu-button-main banner__menu-button">Meny</a>
 				</div>
-				<div class="banner__menu-item close-menu-btn">
-					<a href="#" class="banner__menu--main-btn banner__menu--btn">Meny</a>
+				<div class="banner__menu-item button-close-menu">
+					<a href="#" class="banner__menu-button-close banner__menu-button">Meny</a>
 				</div>
 			</nav>
 		</div>

@@ -7,7 +7,7 @@
 	box-sizing: border-box;
 	text-decoration: none;
 	text-transform: uppercase;
-	background-color: transparent; // Remove button element base styling
+	background-color: transparent; // Removes button element base styling
 }
 
 .button-important {
@@ -41,4 +41,10 @@
 		color: white;
 		border: 0;
 	}
+}
+
+%search-button {
+	@extend .fa;
+	content: "\f002";
+	display: inline-block;
 }

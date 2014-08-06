@@ -30,7 +30,7 @@
 	}
 }
 
-.close-menu-btn {
+.button-close-menu {
 	display: none;
 }
 
@@ -41,7 +41,7 @@
 	margin-left: 0.6em;
 }
 
-.banner__menu--btn {
+.banner__menu-button {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -64,9 +64,14 @@
 }
 
 // Buttons
-.banner__menu--main-btn:after {
+.banner__menu-button-main:after {
 	@extend %nav__button--icon-base;
 	content: "\f0c9";
+}
+
+.banner__menu-button-close:after {
+	@extend %nav__button--icon-base;
+	content: "\f00d";
 }
 
 .banner__button-search {

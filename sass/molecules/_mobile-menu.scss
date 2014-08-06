@@ -2,9 +2,13 @@
  * Mobile menu
  * Todo: Fix BEM class names
  */
+
 .mobile-menu {
 	position: absolute;
+	color: white;
+	background-color: $tertiary-dark-bg-color;
 	width: $mobile-menu-width;
+	font-family: 'Asap', sans-serif;
 	height: 100%;
 	top: 0;
 	z-index: 0;
@@ -12,16 +16,22 @@
 }
 
 .menu-item {
-	list-style: none;
-	color: white;
+	color: #fff;
 	text-decoration: none;
 	font-size: 0.9em;
-	padding: 0.8em 1.2em 0.8em 1.2em;
+	padding: .4em 1.2em;
 	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+
+	&:hover {
+		color: rgba(255,255,255,0.4);
+	}
 }
 
-.menu-item a:hover {
-	color: #ddd;
+.menu-item--active {
+	@extend .menu-item;
+	font-weight: bold;
 }
 
 /* Orientation-dependent styles for the content of the menu */
@@ -41,25 +51,37 @@
 }
 
 .menu-open {
-	// CHanged from main-nav-open
 	position: relative !important;
 	width: auto !important;
 }
 
-/* No js nav*/
-#main-nav:target + .wrapper { // TODO: ADD no-js class
-	//left: $mobile-menu-negative-width;
-	@include transform(translate3d($mobile-menu-negative-width, 0, 0));
+// Search
+.menu__search {
+	height: 3em;
+	background: rgba(0,0,0,0.3);
+	margin-bottom: 0.8em;
 }
 
-#main-nav:target + .wrapper .open-menu-btn {
-	display: none;
+.menu__search-field {
+	background: none;
+	border: 0;
+	height: 100%;
+	padding: 0.5em 0.5em 0.5em 1em;
+	font-size: 0.9em;
+	width: 80%;
+	color: white;
+	box-sizing: border-box;
 }
 
-#main-nav:target + .wrapper .close-menu-btn {
-	display: inline-block;
-}
+.menu__button-search {
+	background: none;
+	border: 0;
+	height: 100%;
+	width: 18%;
+	text-align: center;
 
-#main-nav:target + .wrapper .banner {
-	left: 0;
+	&:before {
+		@extend %search-button;
+		color: white;
+	}
 }
