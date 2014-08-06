@@ -1,0 +1,99 @@
+// Menu
+.banner__menu {
+	float: right;
+	padding: 0.3em 0 0 0;
+	margin: 0;
+	letter-spacing: 0.01em;
+	font-size: 1em;
+	box-sizing: border-box;
+}
+
+.banner__menu-item {
+	list-style: none;
+	display: inline-block;
+	line-height: 1em;
+
+	&:before {
+		background-color: rgba(255,255,255,0.25);
+		margin-left: 0.8em;
+		margin-right: 0.8em;
+		content: "";
+		display: inline-block;
+		height: 1.2em;
+		width: 0.1em;
+		box-sizing: border-box;
+		vertical-align: bottom;
+	}
+
+	&:first-child:before {
+		display: none;
+	}
+}
+
+.close-menu-btn {
+	display: none;
+}
+
+%nav__button--icon-base {
+	@extend .fa;
+	color: white;
+	font-size: 1.1em;
+	margin-left: 0.6em;
+}
+
+.banner__menu--btn {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: 0;
+	color: white;
+	padding-bottom: 0.2em;
+
+	&:hover {
+		color: white;
+		border-bottom: 0.2em solid rgba(255,255,255,0.4);
+	}
+
+	&:after {
+		@extend %nav__button--icon-base;
+	}
+}
+
+.banner__search-field {
+	display: none;
+}
+
+// Buttons
+.banner__menu--main-btn:after {
+	@extend %nav__button--icon-base;
+	content: "\f0c9";
+}
+
+.banner__button-search {
+	display: none;
+}
+
+// Breakpoints
+@media all and (min-width: $bp-medium) {
+	.banner__search-field {
+		border: 1px solid rgba(255,255,255,0.5);
+		background-color: transparent;
+		padding: 0.3em;
+		color: white;
+		display: inline;
+	}
+
+	.banner__button-search {
+		display: inline;
+		background: none;
+		border: 0;
+		padding-right: 0;
+		padding-left: 0;
+
+		&:before {
+			@extend %nav__button--icon-base;
+			content: "\f002";
+			display: inline-block;
+		}
+	}
+}

@@ -9,8 +9,7 @@ body {
 .wrapper {
 	z-index: 20; // Required for mobile menu to work
 	position: relative; // Required for mobile menu to work
-	@include animation-duration(350ms);
-	@include animation-timing-function(ease);
+	@include transition (transform 350ms ease);
 }
 
 .mobile-menu {

@@ -1,78 +1,9 @@
 .banner {
-	@include animation-duration(350ms); // TODO: Add autoprefixer plugin and remove Bourbon
-	@include animation-timing-function(ease);
+	@include transition (transform 350ms ease);
 	background: transparent image-url('banner.png') no-repeat center center scroll;
 	background-size: cover;
 	height: 45em;
 	padding: 2em;
-}
-
-// Menu
-.banner__menu {
-	float: right;
-	padding: 0.5em 0 0 0;
-	margin: 0;
-	letter-spacing: 0.01em;
-	font-size: 1em;
-	box-sizing: border-box;
-}
-
-.banner__menu-item {
-	list-style: none;
-	display: inline-block;
-	line-height: 1em;
-
-	&:nth-child(even):before {
-		background-color: rgba(255,255,255,0.25);
-		margin-left: 0.8em;
-		margin-right: 0.9em;
-		content: "";
-		display: inline-block;
-		height: 1.2em;
-		width: 0.1em;
-		box-sizing: border-box;
-		vertical-align: bottom;
-	}
-}
-
-.close-menu-btn {
-	display: none;
-}
-
-%nav__button--icon-base {
-	@extend .fa;
-	color: white;
-	font-size: 1.1em;
-	margin-left: 0.6em;
-}
-
-.banner__menu--btn {
-	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
-	border: 0;
-	color: white;
-	padding-bottom: 0.2em;
-
-	&:hover {
-		color: white;
-		border-bottom: 0.2em solid rgba(255,255,255,0.4);
-	}
-
-	&:after {
-		@extend %nav__button--icon-base;
-	}
-}
-
-// Buttons
-.banner__menu--main-btn:after {
-	@extend %nav__button--icon-base;
-	content: "\f0c9";
-}
-
-.banner__search--btn:after {
-	@extend %nav-button-icon-base;
-	content: "\f002";
 }
 
 .banner__button-important {
@@ -95,7 +26,7 @@
 .banner__slogan {
 	position: relative;
 	top: 45%;
-	transform: translateY(-50%);
+	@include transform(translateY(-50%));
 }
 
 .banner__slogan-text {

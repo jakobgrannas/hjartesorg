@@ -22,9 +22,9 @@
 <![endif]-->
 
 <nav class="mobile-menu menu-right menu-closed" id="main-nav">
-	<div class="boxsized search-field-container">
-		<input type="text" id="search" class="search-field" name="search" placeholder="search...">
-		<button class="btn search-btn"><span class="fa search-icon"></span></button>
+	<div class="menu__search">
+		<input type="text" id="search" class="search-field" name="search" placeholder="sök...">
+		<button class="menu__button-search" title="Sök"></button>
 	</div>
 	<div class="menu-items">
 		<a href="index.html" class="menu-item">Startsida</a>
@@ -40,17 +40,18 @@
 		<div class="clearfix">
 			<a href="#" class="logo">Hjärtesorg</a>
 
-			<ul class="banner__menu">
-				<li class="banner__menu-item">
-					<a href="#" class="banner__menu--btn banner__search--btn">Sök</a>
-				</li>
-				<li class="banner__menu-item open-menu-btn">
+			<nav class="banner__menu">
+				<div class="banner__menu-item banner__search">
+					<input type="text" id="search-alternate" class="banner__search-field" name="search" placeholder="sök...">
+					<button class="banner__button-search" title="Sök"></button>
+				</div>
+				<div class="banner__menu-item open-menu-btn">
 					<a href="#main-nav" id="menu-btn" class="banner__menu--main-btn banner__menu--btn">Meny</a>
-				</li>
-				<li class="banner__menu-item close-menu-btn">
+				</div>
+				<div class="banner__menu-item close-menu-btn">
 					<a href="#" class="banner__menu--main-btn banner__menu--btn">Meny</a>
-				</li>
-			</ul>
+				</div>
+			</nav>
 		</div>
 		<div class="banner__slogan">
 			<h1 class="banner__slogan-text">Sorgbearbetning för barn och vuxna</h1>

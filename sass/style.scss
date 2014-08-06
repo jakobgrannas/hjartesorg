@@ -18,6 +18,7 @@
 @import 'atoms/headlines';
 
 @import 'molecules/mobile-menu';
+@import 'molecules/banner-menu';
 @import 'molecules/services';
 @import 'molecules/appointment-block';
 @import 'molecules/testimonial';
@@ -31,9 +32,6 @@
 @import 'organisms/footer';
 
 @import 'templates/default-layout';
-
-// Media queries
-@import 'utils/media-queries'; // TODO: Spread across affected modules
 
 /* Preload banner */
 body:after{

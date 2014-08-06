@@ -8,8 +8,7 @@
 	height: 100%;
 	top: 0;
 	z-index: 0;
-	@include animation-duration(350ms);
-	@include animation-timing-function(ease);
+	@include transition (transform 350ms ease);
 }
 
 .menu-item {
@@ -48,18 +47,19 @@
 }
 
 /* No js nav*/
-.no-js #main-nav:target + .wrapper {
-	left: $mobile-menu-negative-width;
+#main-nav:target + .wrapper { // TODO: ADD no-js class
+	//left: $mobile-menu-negative-width;
+	@include transform(translate3d($mobile-menu-negative-width, 0, 0));
 }
 
-.no-js #main-nav:target + .wrapper .open-menu-btn {
+#main-nav:target + .wrapper .open-menu-btn {
 	display: none;
 }
 
-.no-js #main-nav:target + .wrapper .close-menu-btn {
-	display: block;
+#main-nav:target + .wrapper .close-menu-btn {
+	display: inline-block;
 }
 
-.no-js #main-nav:target + .wrapper .banner {
+#main-nav:target + .wrapper .banner {
 	left: 0;
 }
