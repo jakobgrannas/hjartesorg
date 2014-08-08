@@ -1,14 +1,16 @@
 .service__block {
 	background-color: white;
 	padding: 1.8em 0.8em;
-	margin-left: 1em;
-	display: inline-block;
-	width: 15em;
-	height: 27em;
 	box-sizing: border-box;
+	margin-bottom: 1em;
+	/*border: 2px solid #E2DBCE;
+	border-top: 0;
+	border-left: 0;*/
 
-	&:first-child {
-		margin-left: 0;
+	p {
+		max-width: 35em;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
@@ -26,10 +28,62 @@
 	min-height: 2.7em;
 	letter-spacing: 0.05em;
 	text-align: center;
+	max-width: 11em;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .service__button-read-more {
 	@extend .button-small;
 	margin: 1.7em auto 0 auto;
 	display: block;
+}
+
+
+// Breakpoints
+@media all and (min-width: $bp-medium) and (max-width: $bp-large) {
+	.service__block:nth-last-child(-n+2) {
+		margin-bottom: 0;
+	}
+}
+
+@media all and (max-width: $bp-medium) {
+	.service__block {
+		p {
+			text-align: center;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media all and (min-width: $bp-medium) {
+	.service__block {
+		display: inline-block;
+	}
+}
+
+@media all and (min-width: $bp-medium) and (max-width: $bp-large) {
+	.service__block {
+		width: 48%;
+
+		&:nth-child(even) {
+			margin-left: 1em;
+		}
+	}
+}
+
+@media all and (min-width: $bp-large) {
+	.service__block {
+		max-width: 15em;
+		height: 27em;
+		margin-left: 1em;
+		margin-bottom: 0;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
 }

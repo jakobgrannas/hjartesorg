@@ -4,7 +4,19 @@
 	box-sizing: border-box;
 
 	.section--centered {
-		max-width: 64em;
 		margin: 0 auto;
+	}
+}
+
+// Breakpoints
+@media all and (min-width: $bp-medium) {
+	.services .section--centered {
+		max-width: 45em;
+	}
+}
+
+@media  all and (min-width: $bp-large) {
+	.services .section--centered {
+		max-width: 64em;
 	}
 }
