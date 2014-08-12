@@ -2,8 +2,17 @@
 	@include transition (transform 350ms ease);
 	background: transparent image-url('banner.png') no-repeat center center scroll;
 	background-size: cover;
-	height: 45em;
-	padding: 2em;
+	height: 24em;
+	//max-height: 90vh;
+	padding: 1em;
+
+	@media all and (min-height: $bp-small-2) {
+		height: 28em;
+	}
+
+	@media all and (min-height: $bp-medium) {
+		height: 45em;
+	}
 }
 
 .banner__button-important {
@@ -30,7 +39,7 @@
 }
 
 .banner__slogan-text {
-	font-size: 3em;
+	font-size: 1.7em;
 	line-height: 1.3em;
 	color: $light-text-color;
 	text-align: center;
@@ -47,4 +56,21 @@
 	color: $light-text-color;
 	margin-top: 1.2em;
 	margin-bottom: 3em;
+}
+
+// Breakpoints
+@media all and (min-width: $bp-small) {
+	.banner__slogan-text {
+		font-size: 1.8em;
+	}
+}
+
+@media all and (min-width: $bp-medium-2) {
+	.banner__slogan-text {
+		font-size: 3em;
+	}
+
+	.banner {
+		padding: 2em;
+	}
 }

@@ -41,9 +41,22 @@
 .main__h2 {
 	@extend %headline;
 	color: $dark-text-color;
-	font-size: 2.1em;
+	font-size: 1.4em;
 	text-align: center;
 	line-height: 1.3em;
 	margin: 0.5em 0.5em 1.2em 0.5em;
 	letter-spacing: 0.1em;
+}
+
+// Breakpoints
+@media all and (min-width: $bp-small-2) {
+	.main__h2 {
+		font-size: 1.9em;
+	}
+}
+
+@media all and (min-width: $bp-medium-3) {
+	.main__h2 {
+		font-size: 2.1em;
+	}
 }
