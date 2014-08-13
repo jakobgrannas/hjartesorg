@@ -3,26 +3,21 @@ $box-padding: 3em;
 
 // Boxes
 %make-appointment__block {
-	@extend %column--half;
-	width: 45%;
 	color: $body-text-color;
 	font-family: 'Asap', sans-serif;
-
-	&:nth-of-type(odd) {
-		border-right: 1px solid $main-content-border-color;
-		padding-right: $box-padding;
-	}
+	max-width: 18em;
+	margin: 2em auto;
 }
 
 .make-appointment__block-contact-info {
 	@extend %make-appointment__block;
-	text-align: right;
+	border-bottom: 1px solid $main-content-border-color;
+	padding-bottom: 1em;
 }
 
 .make-appointment__block-call-me {
 	@extend %make-appointment__block;
 	text-align: left;
-	padding-left: $box-padding;
 }
 
 %make-appointment__block-header {
@@ -31,6 +26,7 @@ $box-padding: 3em;
 	letter-spacing: 0.1em;
 	margin-top: 0;
 	margin-bottom: 0.2em;
+	font-size: 1em;
 }
 
 .make-appointment__block-header-call-me {
@@ -81,5 +77,23 @@ $box-padding: 3em;
 		@extend %make-appointment__link-icon;
 		content: "\f003";
 		padding-right: 0.5em;
+	}
+}
+
+// Breakpoints
+
+@media all and (min-width: $bp-medium-3) {
+	.make-appointment__block-call-me {
+		@include appointment-block(); // Couldn't use only @extend because it applied itself to non-breakpoint instances as well
+		padding-left: $box-padding;
+	}
+
+	.make-appointment__block-contact-info {
+		@include appointment-block();
+		text-align: right;
+		border-bottom: 0;
+		border-right: 1px solid $main-content-border-color;
+		padding-right: $box-padding;
+		padding-bottom: 0;
 	}
 }

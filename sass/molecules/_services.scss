@@ -41,7 +41,7 @@
 
 
 // Breakpoints
-@media all and (min-width: $bp-medium) and (max-width: $bp-large) {
+@media all and (min-width: $bp-medium) and (max-width: $bp-large-2) {
 	.service__block:nth-last-child(-n+2) {
 		margin-bottom: 0;
 	}
@@ -65,7 +65,7 @@
 	}
 }
 
-@media all and (min-width: $bp-medium) and (max-width: $bp-large) {
+@media all and (min-width: $bp-medium) and (max-width: $bp-large-2) {
 	.service__block {
 		width: 48%;
 
@@ -75,7 +75,7 @@
 	}
 }
 
-@media all and (min-width: $bp-large) {
+@media all and (min-width: $bp-large-2) {
 	.service__block {
 		max-width: 15em;
 		height: 27em;
