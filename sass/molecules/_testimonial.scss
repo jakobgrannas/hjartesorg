@@ -18,7 +18,7 @@ $bullet-diameter: 0.5em;
 }
 
 .testimonial__quote {
-	font-size: 1.6em;
+	font-size: 1.3em;
 	line-height: 1.5em;
 	font-family: 'Libre Baskerville', serif;
 	font-style: italic;
@@ -91,4 +91,11 @@ $bullet-diameter: 0.5em;
 .testimonials__bullet--active {
 	@extend .testimonials__bullet;
 	background-color: white;
+}
+
+// Breakpoints
+@media all and (min-width: $bp-medium) {
+	.testimonial__quote {
+		font-size: 1.6em;
+	}
 }

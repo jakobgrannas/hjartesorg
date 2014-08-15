@@ -1,12 +1,14 @@
 .footer__block {
-	display: inline-block;
-	vertical-align: top;
-	text-align: left;
-	margin-right: 6em;
+	text-align: center;
 	max-width: 13em;
+	border-bottom: 1px dashed #bbb;
+	padding-bottom: 2em;
+	margin: 2em auto;
 
 	&:last-child {
-		margin-right: 0;
+		border-bottom: 0;
+		padding-bottom: 0;
+		margin-bottom: 0;
 	}
 
 	p {
@@ -23,7 +25,11 @@
 		color: darken($link-color, 10%);
 
 		&:hover {
-			color: darken($link-hover-color, 10%);
+			color: darken($link-color, 10%);
+		}
+
+		&:visited:hover {
+			color: lighten($link-visited-color, 15%);
 		}
 	}
 }
@@ -34,4 +40,20 @@
 	font-size: 0.95em;
 	margin-bottom: 0.25em;
 	margin-top: 0;
+}
+
+// Breakpoints
+@media all and (min-width: $bp-large) {
+	.footer__block {
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 0;
+		margin-right: 6em;
+		text-align: left;
+		border-bottom: 0;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
 }
