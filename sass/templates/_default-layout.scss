@@ -32,23 +32,12 @@ body {
 	z-index: 30;
 }
 
-// Mobile no-js menu
-#main-nav:target + .wrapper { // TODO: ADD no-js class
-	@include transform(translate3d($mobile-menu-negative-width, 0, 0));
+// Selection styling
+*::selection,
+*::-moz-selection {
+	background-color: rgba($base-color, 0.75);
+	color: white;
 }
-
-#main-nav:target + .wrapper .button-open-menu {
-	display: none;
-}
-
-#main-nav:target + .wrapper .button-close-menu {
-	display: inline-block;
-}
-
-#main-nav:target + .wrapper .banner {
-	left: 0;
-}
-
 
 // Chrome frame for old browsers
 .chromeframe {

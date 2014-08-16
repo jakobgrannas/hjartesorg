@@ -1,9 +1,8 @@
 /**
  * Mobile menu
- * Todo: Fix BEM class names
  */
 
-.menu-mobile {
+.main-menu {
 	position: absolute;
 	color: $light-text-color;
 	background-color: $tertiary-dark-bg-color;
@@ -13,20 +12,19 @@
 	top: 0;
 	right: 0;
 	z-index: 0;
-	@include transition (transform 350ms ease);
+	@include transition(transform 350ms ease);
 }
 
-.menu-mobile--closed {
+.main-menu--closed {
 	overflow: hidden;
 	max-height: 100%;
 }
 
-.menu-mobile--animate-left {
-	-webkit-transform: translate3d($mobile-menu-negative-width, 0, 0);
-	transform: translate3d($mobile-menu-negative-width, 0, 0);
+.main-menu--animate-left { // TODO: Remove if not to be used in JS
+	@include transform(translate3d($mobile-menu-negative-width, 0, 0));
 }
 
-.menu-mobile--open {
+.main-menu--open {
 	position: relative !important;
 	width: auto !important;
 }
@@ -63,7 +61,6 @@
 		opacity: 0.4;
 	}
 }
-
 
 // Logo
 .menu__logo {
@@ -104,5 +101,84 @@
 	&:before {
 		@extend %search-button;
 		color: $light-text-color;
+	}
+}
+
+
+// Mobile no-js menu
+#main-nav:target + .wrapper { // TODO: ADD no-js class
+	@include transform(translate3d($mobile-menu-negative-width, 0, 0));
+}
+
+#main-nav:target + .wrapper .button-open-menu {
+	display: none;
+}
+
+#main-nav:target + .wrapper .button-close-menu {
+	display: inline-block;
+}
+
+#main-nav:target + .wrapper .banner {
+	left: 0;
+}
+
+
+// Breakpoints
+@media all and (min-width: $bp-large-2) {
+	.main-menu {
+		max-width: none;
+		height: auto;
+		z-index: 30;
+		top: 2.2em;
+		right: 2em;
+		background: none;
+		width: auto;
+	}
+
+	.menu__logo {
+		display: none;
+	}
+
+	.menu-items {
+		display: inline-block;
+	}
+
+	.menu-item {
+		display: inline-block;
+		line-height: 1.2em;
+		font-weight: bold;
+		padding: 0 0.9em 0 0;
+		margin-right: 0.9em;
+		border-right: 2px solid rgba(255,255,255,0.5);
+
+		&:last-child {
+			border-right: 0;
+		}
+
+		&:hover,
+		&:visited:hover {
+			color: rgba(255,255,255,0.6)
+		}
+	}
+
+	.menu-item--active:after {
+		display: none;
+	}
+
+	.menu__search {
+		height: auto;
+		margin-top: 0;
+		display: inline-block;
+		background: none;
+	}
+
+	.menu__search-field {
+		border: 1px solid rgba(255,255,255,0.5);
+		padding: 0.4em;
+		width: auto;
+	}
+
+	.menu__button-search {
+		width: auto;
 	}
 }
