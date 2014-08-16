@@ -20,7 +20,11 @@ var gulp = require('gulp'),
 			dest: './dist/css/'
 		},
 		images: './images/**/*',
-		fonts: './fonts/**/*'
+		fonts: './fonts/**/*',
+		bower: {
+			src: './bower_components',
+			dest: './dist/vendor'
+		}
 	};
 
 gulp.task('browser-sync', function() {
@@ -34,10 +38,10 @@ gulp.task('browser-sync', function() {
 gulp.task('bower-files', function() {
 	return gulp.src(mainBowerFiles({
 			paths: {
-				bowerDirectory: './bower_components'
+				bowerDirectory: paths.bower.src
 			}
 		}))
-		.pipe(gulp.dest("./dist/vendor"));
+		.pipe(gulp.dest(paths.bower.dest));
 });
 
 gulp.task('scripts', function() {
@@ -49,9 +53,7 @@ gulp.task('scripts', function() {
 		.pipe(concat('scripts.js'))
 		.pipe(gulp.dest('./dist/js/'))
 		.pipe(uglify())
-		.pipe(rename(function(path) {
-			path.extname = '.min.js';
-		}))
+		.pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest('./dist/js/'));
 });
 
