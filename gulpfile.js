@@ -12,6 +12,7 @@ var gulp = require('gulp'),
     bourbon = require('node-bourbon'),
     gutil = require('gulp-util'),
     autoprefixer = require('gulp-autoprefixer'),
+	mainBowerFiles = require('main-bower-files'),
 	paths = {
 		scripts: './js/*.js',
 		sass: {
@@ -29,6 +30,16 @@ gulp.task('browser-sync', function() {
 		}
 	});
 });
+
+gulp.task('bower-files', function() {
+	return gulp.src(mainBowerFiles({
+			paths: {
+				bowerDirectory: './bower_components'
+			}
+		}))
+		.pipe(gulp.dest("./dist/vendor"));
+});
+
 gulp.task('scripts', function() {
 	return gulp.src(paths.scripts)
 		.pipe(order([
@@ -88,11 +99,10 @@ gulp.task('watch', function() {
 	//gulp.watch(paths.scripts, ['scripts']);
 	//gulp.watch(paths.images, ['images']);
 	gulp.watch(paths.sass.src, ['sass']).on('change', function(evt) {
-		console.log('Sass is watched');
         changeEvent(evt, 'sass/');
     });
 });
 
 gulp.task('default', ['clean', 'browser-sync'], function() {
-	gulp.start('scripts', 'images', 'fonts', 'sass', 'watch');
+	gulp.start('bower-files', 'scripts', 'images', 'fonts', 'sass', 'watch');
 });

@@ -1,0 +1,29 @@
+{
+  "name": "Hjärtesorg.se",
+  "version": "1.0.0",
+  "homepage": "https://github.com/jakobgrannas/hjartesorg",
+  "authors": [
+    "Jakob Grannas"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "gulpfile.js",
+    "bower_components"
+  ],
+  "overrides": {
+    "BOWER-PACKAGE": {
+      "main": {
+        "development": "dependencies.js",
+        "production": "dependencies.min.js"
+      }
+    }
+  },
+  "description": "Dependencies for Hjärtesorg.se",
+  "main": "dependencies.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "headroom.js": "~0.7.0"
+  }
+}

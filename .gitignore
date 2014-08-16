@@ -1,6 +1,7 @@
 *.idea/
 node_modules/
 dist/
+bower_components/
 *.log
 nbproject/
 **/*.DS_Store
