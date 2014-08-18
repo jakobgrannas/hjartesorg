@@ -1,39 +1,4 @@
-<!DOCTYPE html>
-<!--[if lt IE 9]>
-<html class="no-js ie8"> <![endif]-->
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Hjärtesorg</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width">
-
-	<link rel="stylesheet" href="assets/dist/css/normalize.min.css">
-	<link rel="stylesheet" href="assets/dist/css/style.min.css">
-
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
-</head>
-<body>
-<!--[if lt IE 9]>
-<p class="chromeframe alert alert-warning">You are using an <strong>outdated</strong> browser. Please <a
-		href="http://browsehappy.com/">upgrade
-	your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
-	improve your experience.</p>
-<![endif]-->
-
-<nav class="main-menu clearfix" id="main-nav">
-	<a href="#" class="menu__logo"></a>
-	<div class="menu-items">
-		<a href="index.html" class="menu-item">Startsida</a>
-		<a href="gallery.html" class="menu-item--active">Fotografi</a>
-		<a href="#" class="menu-item">Blogg</a>
-		<a href="#" class="menu-item">Kontakta mig</a>
-	</div>
-	<div class="menu__search">
-		<input type="text" id="search" class="menu__search-field" name="search" placeholder="sök...">
-		<button class="menu__button-search" title="Sök"></button>
-	</div>
-</nav>
+<?php echo ipView('_header.php')->render(); ?>
 
 <div id="wrapper" class="wrapper menu-push">
 
@@ -60,15 +25,7 @@
 
 	<main class="main main--banner-overlap clearfix">
 		<div class="main__section--centered">
-			<img class="main__image--centered" src="http://i.istockimg.com/file_thumbview_approve/43938370/3/stock-photo-43938370-business-team.jpg" width="130" height="130" alt=""/>
-
-			<h2 class="main__h2">Vi är certifierade sorgbearbetare och nånnapedagoger</h2>
-
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-				laoreet dolore magna aliquam erat volutpat.
-				Ut wisi enim ad <a href="#">minim veniam</a>, quis nostrud exerci tation ullamcorper suscipit lobortis
-				nisl ut aliquip ex ea commodo consequat.
-				Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+			<?php echo ipBlock('main')->render(); ?>
 		</div>
 
 		<div class="main__section services">
@@ -175,7 +132,9 @@
 			</div>
 		</div>
 	</footer>
+	<?php echo ipJs(); ?>
 </div>
+</div> <!-- Site wrapper end -->
 
 <!-- Load Javascripts -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

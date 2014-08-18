@@ -13,17 +13,27 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     autoprefixer = require('gulp-autoprefixer'),
 	mainBowerFiles = require('main-bower-files'),
+	basePath = './assets',
 	paths = {
-		scripts: './js/*.js',
-		sass: {
-			src: './sass/**/*.scss',
-			dest: './dist/css/'
+		scripts:  {
+			src: basePath + '/js/*.js',
+			dest: basePath + '/dist/js'
 		},
-		images: './images/**/*',
-		fonts: './fonts/**/*',
+		sass: {
+			src: basePath + '/sass/**/*.scss',
+			dest: basePath + '/dist/css'
+		},
+		images: {
+			src: basePath + '/images/**/*',
+			dest: basePath + '/dist/images'
+		},
+		fonts: {
+			src: basePath + '/fonts/**/*',
+			dest: basePath + '/dist/fonts'
+		},
 		bower: {
 			src: './bower_components',
-			dest: './dist/vendor'
+			dest: basePath + '/dist/vendor'
 		}
 	};
 
@@ -45,16 +55,16 @@ gulp.task('bower-files', function() {
 });
 
 gulp.task('scripts', function() {
-	return gulp.src(paths.scripts)
+	return gulp.src(paths.scripts.src)
 		.pipe(order([
 			'*.js',
 			'main.js'
 		]))
 		.pipe(concat('scripts.js'))
-		.pipe(gulp.dest('./dist/js/'))
+		.pipe(gulp.dest(paths.scripts.dest))
 		.pipe(uglify())
 		.pipe(rename({ suffix: '.min' }))
-		.pipe(gulp.dest('./dist/js/'));
+		.pipe(gulp.dest(paths.scripts.dest));
 });
 
 gulp.task('sass', function() {
@@ -78,18 +88,18 @@ gulp.task('sass', function() {
 });
 
 gulp.task('images', function() {
-	return gulp.src(paths.images)
+	return gulp.src(paths.images.src)
 		.pipe(imagemin())
-		.pipe(gulp.dest('./dist/images/'));
+		.pipe(gulp.dest(paths.images.dest));
 });
 
 gulp.task('fonts', function() {
-	return gulp.src(paths.fonts)
-		.pipe(gulp.dest('./dist/fonts/'));
+	return gulp.src(paths.fonts.src)
+		.pipe(gulp.dest(paths.fonts.dest));
 });
 
 gulp.task('clean', function() {
-	return gulp.src(['dist/css', 'dist/js'], {read: false})
+	return gulp.src([paths.sass.dest, paths.scripts.dest], {read: false})
 		.pipe(rimraf());
 });
 
@@ -105,6 +115,6 @@ gulp.task('watch', function() {
     });
 });
 
-gulp.task('default', ['clean', 'browser-sync'], function() {
+gulp.task('default', ['clean'], function() { // browser-sync
 	gulp.start('bower-files', 'scripts', 'images', 'fonts', 'sass', 'watch');
 });
