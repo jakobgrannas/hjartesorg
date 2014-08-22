@@ -16,7 +16,8 @@
 			</nav>
 		</div>
 		<div class="banner__slogan">
-			<h1 class="banner__slogan-text">Sorgbearbetning för barn och vuxna</h1>
+			<?php echo ipSlot('text', array('id' => 'banner-slogan', 'tag' => 'div',
+				'default' => __('Sorgbearbetning för barn och vuxna', 'Hjartesorg', false), 'class' => 'banner__slogan-text')); ?>
 
 			<div class="banner__divider"><span class="divider__symbol"></span></div>
 			<a href="#" class="banner__button-important">Berätta mer!</a>
@@ -24,23 +25,35 @@
 	</header>
 
 	<main class="main main--banner-overlap clearfix">
-		<div class="main__section--centered">
+		<article class="main__section--centered">
 			<?php echo ipBlock('main')->render(); ?>
-		</div>
+		</article>
 
 		<div class="main__section services">
 			<div class="section--centered">
-				<div class="service__block">
-					<img src="assets/images/child.png" class="service__image" width="102" height="102" alt="">
+				<section class="service__block">
+					<?php
+					$options = array(
+						'id' => 'testImage',
+						'width' => '102',
+						'height'=>'102',
+						'class' => 'service__image',
+						'default' => ipThemeUrl('assets/images/child.png')
+					);
+					echo ipSlot('image', $options);
+					?>
 
-					<h3 class="service__block__h3">Sorgbearbetning för barn</h3>
+					<?php echo ipSlot('text', array('id' => 'service1-header', 'tag' => 'h3',
+						'default' => 'The default text', 'class' => 'service__block__h3')); ?>
 
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-						ut laoreet dolore magna aliquam erat </p>
+					<?php echo ipSlot('text', array('id' => 'service1-text', 'tag' => 'div',
+						'default' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+						ut laoreet dolore magna aliquam erat', 'class' => 'service__block__text')); ?>
+
 					<a href="#" class="service__button-read-more">Läs mer</a>
-				</div>
+				</section>
 
-				<div class="service__block">
+				<section class="service__block">
 					<img src="assets/images/rose.png" class="service__image" width="102" height="102" alt="">
 
 					<h3 class="service__block__h3">Sorgbearbetning för vuxna</h3>
@@ -48,9 +61,9 @@
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
 						ut laoreet dolore magna aliquam erat </p>
 					<a href="#" class="service__button-read-more">Läs mer</a>
-				</div>
+				</section>
 
-				<div class="service__block">
+				<section class="service__block">
 					<img src="assets/images/lecture.png" class="service__image" width="102" height="102" alt="">
 
 					<h3 class="service__block__h3">Hjälp till föräldrar</h3>
@@ -58,9 +71,9 @@
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
 						ut laoreet dolore magna aliquam erat </p>
 					<a href="#" class="service__button-read-more">Läs mer</a>
-				</div>
+				</section>
 
-				<div class="service__block">
+				<section class="service__block">
 					<img src="assets/images/blackboard.png" class="service__image" width="102" height="102" alt="">
 
 					<h3 class="service__block__h3">Hjälp till skolpersonal</h3>
@@ -68,7 +81,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
 						ut laoreet dolore magna aliquam erat </p>
 					<a href="#" class="service__button-read-more">Läs mer</a>
-				</div>
+				</section>
 			</div>
 		</div>
 
@@ -91,7 +104,7 @@
 			</div>
 		</div>
 
-		<div class="main__section testimonials">
+		<aside class="main__section testimonials">
 			<div class="testimonial">
 				<img src="assets/images/girl.png" width="75" height="75" class="testimonial__image" alt="">
 				<q class="testimonial__quote">Hjärtesorg hjälpte vår son att komma över vår skilsmässa. Vi är så himla tacksamma!</q>
@@ -102,53 +115,6 @@
 				<li class="testimonials__bullet--active"></li>
 				<li class="testimonials__bullet"></li>
 			</ul>
-		</div>
+		</aside>
 	</main>
-	<footer class="footer">
-		<span class="footer__heart-icon"></span>
-
-		<p class="footer__copyright">Copyright 2014 - Hjartesorg.se</p>
-
-		<div class="footer__contact-info">
-			<div class="footer__block">
-				<h4 class="footer__block-header">Kontakta oss</h4>
-				<a href="#" class="footer__phone-number">070-123 45 67</a>
-				<a href="#" class="footer__email">kontakt@hjartesorg.se</a>
-			</div>
-			<div class="footer__block">
-				<h4 class="footer__block-header">Här finns vi</h4>
-
-				<p>Testvägen 12b</p>
-
-				<p>132 35</p>
-
-				<p>Saltsjöbaden</p>
-				<a href="#" class="footer__show-map">Visa karta</a>
-			</div>
-			<div class="footer__block">
-				<h4 class="footer__block-header">Öppettider</h4>
-
-				<p>Vardagar 8 - 17</p>
-			</div>
-		</div>
-	</footer>
-	<?php echo ipJs(); ?>
-</div>
-</div> <!-- Site wrapper end -->
-
-<!-- Load Javascripts -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="assets/dist/vendor/headroom.js"></script>
-<script>
-	var _gaq = [
-		['_setAccount', 'UA-XXXXX-X'],
-		['_trackPageview']
-	];
-	(function (d, t) {
-		var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-		g.src = '//www.google-analytics.com/ga.js';
-		s.parentNode.insertBefore(g, s)
-	}(document, 'script'));
-</script>
-</body>
-</html>
+<?php echo ipView('_footer.php')->render(); ?>
