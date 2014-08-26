@@ -1,0 +1,9 @@
+.footer {
+	.ipWidget-FooterBlock {
+		@extend .footer__block;
+	}
+
+	& a {
+		@extend %base-link;
+	}
+}

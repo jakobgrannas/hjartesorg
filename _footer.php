@@ -6,22 +6,21 @@
 
 	<div class="footer__contact-info">
 		<div class="footer__block">
+			<?php echo ipSlot('text', array('id' => 'footer__header1', 'tag' => 'h4',
+				'default' => __('Rubrik', 'Hjartesorg', false), 'class' => '.footer__header--small')); ?>
 			<?php echo ipBlock('footer-block1')->asStatic()->render(); ?>
 		</div>
+
 		<div class="footer__block">
-			<h4 class="footer__block-header">Här finns vi</h4>
-
-			<p>Testvägen 12b</p>
-
-			<p>132 35</p>
-
-			<p>Saltsjöbaden</p>
-			<a href="#" class="footer__show-map">Visa karta</a>
+			<?php echo ipSlot('text', array('id' => 'footer__header2', 'tag' => 'h4',
+				'default' => __('Rubrik', 'Hjartesorg', false), 'class' => '.footer__header--small')); ?>
+			<?php echo ipBlock('footer-block2')->asStatic()->render(); ?>
 		</div>
-		<div class="footer__block">
-			<h4 class="footer__block-header">Öppettider</h4>
 
-			<p>Vardagar 8 - 17</p>
+		<div class="footer__block">
+			<?php echo ipSlot('text', array('id' => 'footer__header3', 'tag' => 'h4',
+				'default' => __('Rubrik', 'Hjartesorg', false), 'class' => '.footer__header--small')); ?>
+			<?php echo ipBlock('footer-block3')->asStatic()->render(); ?>
 		</div>
 	</div>
 </footer>
