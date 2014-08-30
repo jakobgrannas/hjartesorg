@@ -3,7 +3,75 @@
 		@extend .footer__block;
 	}
 
-	& a {
+	a {
 		@extend %base-link;
 	}
+}
+
+/** Widget **/
+
+.ipWidget {
+	margin-bottom: 0;
+	font-size: inherit;
+
+	a {
+		text-decoration: underline;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+}
+
+// Titles
+.ipWidget h1,
+.ipWidget h2._title, {
+	@extend .main__h2;
+}
+
+.ipbEmpty .ipWidget ._title {
+	@extend .main__h2;
+	font-size: 1.2em;
+	margin-bottom: 0;
+}
+
+%widget__label {
+	@extend %make-appointment__block-header;
+	font-family: 'Asap', sans-serif;
+	color: #565a67;
+}
+
+.ipWidget h3._title {
+	@extend %widget__label;
+}
+
+.ipModuleForm label {
+	@extend %widget__label;
+	margin-bottom: 0.6em;
+}
+
+.ipWidget-Heading {
+	margin-top: 1em;
+}
+
+
+.ipbEmpty .ipWidget {
+	text-align: center;
+}
+
+.ipsContainer {
+	@extend %main-text;
+}
+
+// Form
+.ipModuleForm .form-control {
+	@extend .input-field;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.ipModuleForm .btn-default {
+	@extend .button-small;
+	border-radius: 0;
+	box-shadow: none;
 }

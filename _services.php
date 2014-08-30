@@ -1,3 +1,4 @@
+<?php for ($i=1; $i < 5; $i++) : ?>
 <section class="service__block">
 	<?php
 	$options = array(
@@ -10,42 +11,14 @@
 	echo ipSlot('image', $options);
 	?>
 
-	<?php echo ipSlot('text', array('id' => 'service1-header', 'tag' => 'h3',
-		'default' => 'The default text', 'class' => 'service__block__h3')); ?>
+	<?php echo ipSlot('text', array('id' => 'service'. $i .'-header', 'tag' => 'h3',
+		'default' => __('En bra rubrik', 'Hjartesorg'), 'class' => 'service__block__h3')); ?>
 
-	<?php echo ipSlot('text', array('id' => 'service1-text', 'tag' => 'div',
-		'default' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-						ut laoreet dolore magna aliquam erat', 'class' => 'service__block__text')); ?>
+	<?php echo ipBlock( 'service-block' . $i )->asStatic()->render(); ?>
 
-	<a href="#" class="service__button-read-more">Läs mer</a>
+	<a href="#" class="service__button-read-more">
+		<?php echo ipSlot('text', array('id' => 'service'. $i .'-button', 'tag' => 'span',
+			'default' => __('Läs mer', 'Hjartesorg'), 'class' => 'service__button-text')); ?>
+	</a>
 </section>
-
-<section class="service__block">
-	<img src="assets/images/rose.png" class="service__image" width="102" height="102" alt="">
-
-	<h3 class="service__block__h3">Sorgbearbetning för vuxna</h3>
-
-	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-		ut laoreet dolore magna aliquam erat </p>
-	<a href="#" class="service__button-read-more">Läs mer</a>
-</section>
-
-<section class="service__block">
-	<img src="assets/images/lecture.png" class="service__image" width="102" height="102" alt="">
-
-	<h3 class="service__block__h3">Hjälp till föräldrar</h3>
-
-	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-		ut laoreet dolore magna aliquam erat </p>
-	<a href="#" class="service__button-read-more">Läs mer</a>
-</section>
-
-<section class="service__block">
-	<img src="assets/images/blackboard.png" class="service__image" width="102" height="102" alt="">
-
-	<h3 class="service__block__h3">Hjälp till skolpersonal</h3>
-
-	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-		ut laoreet dolore magna aliquam erat </p>
-	<a href="#" class="service__button-read-more">Läs mer</a>
-</section>
+<?php endfor; ?>

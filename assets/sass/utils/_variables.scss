@@ -24,8 +24,9 @@ $main-content-border-color: #d6d3cf;
 
 //Links
 $link-color: #7D9E77;
-$link-hover-color: darken($link-color, 10%);
-$link-visited-color: #663E60;
+$link-hover-color: darken($link-color, 20%);
+$link-visited-color: #a3679a;
+$link-visited-hover-color: darken($link-visited-color, 20%);
 
 //Logo
 $logo-color: #efefef;

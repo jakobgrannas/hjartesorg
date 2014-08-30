@@ -46,8 +46,7 @@
 	@include filter(#{'grayscale(100%)'});
 }
 
-.main__h2,
-.ipWidget ._title {
+.main__h2 {
 	@extend %headline;
 	color: $dark-text-color;
 	font-size: 2.1rem;
@@ -55,11 +54,6 @@
 	line-height: 1.3em;
 	margin: 0.5em 0.5em 1em 0.5em;
 	letter-spacing: 0.1em;
-}
-
-// IP Classes
-.ipsContainer {
-	@extend %main-text;
 }
 
 // Breakpoints

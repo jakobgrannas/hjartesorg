@@ -3,9 +3,8 @@
 	padding: 1.8em 0.8em;
 	box-sizing: border-box;
 	margin-bottom: 1em;
-	/*border: 2px solid #E2DBCE;
-	border-top: 0;
-	border-left: 0;*/
+	position: relative;
+	vertical-align: top;
 
 	p {
 		max-width: 35em;
@@ -37,6 +36,9 @@
 	@extend .button-small;
 	margin: 1.7em auto 0 auto;
 	display: block;
+	position: absolute;
+	bottom: 2em;
+	left: 25%;
 }
 
 

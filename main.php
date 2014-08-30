@@ -40,21 +40,20 @@
 		</div>
 
 		<div class="main__section--centered make-appointment">
-			<h2 class="main__h2">Boka tid</h2>
+			<?php echo ipSlot('text', array('id' => 'booking-header', 'tag' => 'h2',
+				'default' => __('Boka tid', 'Hjartesorg', false), 'class' => 'main__h2')); ?>
 
 			<div class="make-appointment__block-contact-info">
-				<a href="#" class="make-appointment__phone-number">070-123 45 67</a>
-				<a href="#" class="make-appointment__email">kontakt@hjartesorg.se</a>
-				<h4 class="make-appointment__block-header-opening-hours">Öppettider</h4>
+				<?php echo ipSlot('text', array('id' => 'phone-number1', 'tag' => 'a',
+					'default' => '070-123 456 78', 'class' => 'make-appointment__phone-number')); ?>
 
-				<p class="make-appointment__block-content">Vardagar 8 - 17</p>
+				<?php echo ipSlot('text', array('id' => 'email-address1', 'tag' => 'a',
+					'default' => 'kontakt@hjartesorg.se', 'class' => 'make-appointment__email')); ?>
+
+				<?php echo ipBlock('left-block1')->render(); ?>
 			</div>
 			<div class="make-appointment__block-call-me">
-				<form>
-					<h4 class="make-appointment__block-header-call-me">Vill du hellre bli uppringd?</h4>
-					<input type="text" placeholder="ditt nummer här..." name="callee-number" class="make-appointment__field">
-					<button type="submit" class="make-appointment__button">Ring mig!</button>
-				</form>
+				<?php echo ipBlock('right-block1')->render(); ?>
 			</div>
 		</div>
 

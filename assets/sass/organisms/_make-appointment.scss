@@ -1,14 +1,17 @@
 .make-appointment {
 	text-align: center; // Used to center content, overridden in blocks
+
+	.ipsContainer {
+		font-family: 'Asap', sans-serif;
+	}
+
+	.ipWidget p {
+		margin-bottom: 0;
+	}
 }
 
 .make-appointment__field {
-	font-size: 0.9em;
-	padding: 0.5em;
-	width: 100%;
-	border: 1px solid $main-content-border-color;
-	background-color: white;
-	box-sizing: border-box;
+	@extend .input-field;
 }
 
 .make-appointment__button {

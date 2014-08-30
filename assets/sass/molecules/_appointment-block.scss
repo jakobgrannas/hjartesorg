@@ -47,6 +47,7 @@ $box-padding: 3em;
 %make-appointment__link {
 	@extend %base-link;
 	display: block;
+	text-decoration: underline;
 }
 
 %make-appointment__link-icon {
@@ -72,6 +73,7 @@ $box-padding: 3em;
 
 .make-appointment__email {
 	@extend %make-appointment__link;
+	margin-bottom: 1em;
 
 	&:before {
 		@extend %make-appointment__link-icon;
