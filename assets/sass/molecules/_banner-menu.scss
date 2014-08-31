@@ -47,8 +47,9 @@
 	}
 }
 
+
 .banner__search-field {
-	display: none;
+	display: inline;
 }
 
 // Buttons
@@ -59,8 +60,13 @@
 
 
 .banner__button-search {
+	display: inline;
+}
+
+.desktop__menu {
 	display: none;
 }
+
 
 // Breakpoints
 @media all and (min-width: $bp-medium) {
@@ -87,8 +93,55 @@
 	}
 }
 
+
 @media all and (min-width: $bp-large-2) {
-	.banner__menu { // Hide banner mobile menu buttons while desktop menu is visible
+	.banner__menu-item { // Hide banner mobile menu buttons while desktop menu is visible
 		display: none;
+	}
+
+	.desktop__menu {
+		display: inline-block;
+	}
+
+	.menu-item {
+		display: inline-block;
+		padding: 0 0.9em 0 0;
+		margin-right: 0.9em;
+		border-right: 2px solid rgba(255,255,255,0.5);
+
+		&:last-child {
+			border-right: 0;
+		}
+	}
+
+	.menu-item--link {
+		line-height: 1.2em;
+		font-weight: bold;
+
+		&:hover,
+		&:visited:hover {
+			color: rgba(255,255,255,0.6)
+		}
+	}
+
+	.menu-link--active:after {
+		display: none;
+	}
+
+	.menu__search {
+		height: auto;
+		margin-top: 0;
+		display: inline-block;
+		background: none;
+	}
+
+	.menu__search-field {
+		border: 1px solid rgba(255,255,255,0.5);
+		padding: 0.4em;
+		width: auto;
+	}
+
+	.menu__button-search {
+		width: auto;
 	}
 }

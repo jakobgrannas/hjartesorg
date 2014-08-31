@@ -7,19 +7,19 @@
 	<div class="footer__contact-info">
 		<div class="footer__block">
 			<?php echo ipSlot('text', array('id' => 'footer__header1', 'tag' => 'h4',
-				'default' => __('Rubrik', 'Hjartesorg', false), 'class' => '.footer__header--small')); ?>
+				'default' => __('Rubrik', 'Hjartesorg', false), 'class' => 'footer__header--small')); ?>
 			<?php echo ipBlock('footer-block1')->asStatic()->render(); ?>
 		</div>
 
 		<div class="footer__block">
 			<?php echo ipSlot('text', array('id' => 'footer__header2', 'tag' => 'h4',
-				'default' => __('Rubrik', 'Hjartesorg', false), 'class' => '.footer__header--small')); ?>
+				'default' => __('Rubrik', 'Hjartesorg', false), 'class' => 'footer__header--small')); ?>
 			<?php echo ipBlock('footer-block2')->asStatic()->render(); ?>
 		</div>
 
 		<div class="footer__block">
 			<?php echo ipSlot('text', array('id' => 'footer__header3', 'tag' => 'h4',
-				'default' => __('Rubrik', 'Hjartesorg', false), 'class' => '.footer__header--small')); ?>
+				'default' => __('Rubrik', 'Hjartesorg', false), 'class' => 'footer__header--small')); ?>
 			<?php echo ipBlock('footer-block3')->asStatic()->render(); ?>
 		</div>
 	</div>
@@ -28,8 +28,8 @@
 </div> <!-- Site wrapper end -->
 
 <!-- Load Javascripts -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="assets/dist/vendor/headroom.js"></script>
+<?php echo ipAddJs('assets/dist/vendor/headroom.js'); ?>
+<?php echo ipAddJs('assets/dist/js/scripts.js'); ?>
 <script>
 	var _gaq = [
 		['_setAccount', 'UA-XXXXX-X'],

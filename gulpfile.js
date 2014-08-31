@@ -108,7 +108,7 @@ var changeEvent = function(evt, src) {
 };
 
 gulp.task('watch', function() {
-	//gulp.watch(paths.scripts, ['scripts']);
+	gulp.watch(paths.scripts.src, ['scripts']);
 	//gulp.watch(paths.images, ['images']);
 	gulp.watch(paths.sass.src, ['sass']).on('change', function(evt) {
         changeEvent(evt, 'sass/');

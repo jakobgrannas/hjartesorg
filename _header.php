@@ -28,7 +28,7 @@
 	$options = array(
 		'items' => 'menu1',
 		'active' => 'menu-link--active',
-		'attributes' => array('class' => 'menu-items')
+		'attributes' => array('class' => 'mobile__menu menu-items')
 	);
 	echo ipSlot('menu', $options);
 	?>

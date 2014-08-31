@@ -1,0 +1,28 @@
+.headroom {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	width: 100%;
+	padding: 1em 2em;
+	box-sizing: border-box;
+	background-color: $tertiary-dark-bg-color;
+	@include transition(all 0.3s ease-in-out);
+}
+
+.headroom.headroom--pinned {
+	@include transform (translateY(0%));
+}
+
+.headroom.headroom--unpinned {
+	@include transform (translateY(-100%));
+}
+
+// Move header down in edit mode
+.ipHasAdminNavbar .headroom {
+	top: 2.5em;
+}
+
+.ipHasAdminPanel .headroom {
+	top: 9em;
+}
