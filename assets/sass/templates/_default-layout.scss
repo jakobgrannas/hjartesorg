@@ -7,6 +7,7 @@
 }
 
 .wrapper {
+	background-color: $bg-color;
 	z-index: 20; // Required for mobile menu to work
 	position: relative; // Required for mobile menu to work
 	@include transition (transform 350ms ease);

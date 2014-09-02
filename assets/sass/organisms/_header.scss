@@ -2,12 +2,15 @@
 	position: fixed;
 	top: 0;
 	left: 0;
+	right: 0;
 	z-index: 50;
-	width: 100%;
 	padding: 1em 2em;
 	box-sizing: border-box;
+	@include transition(all 0.4s ease-in-out);
+}
+
+.headroom.headroom--not-top {
 	background-color: $tertiary-dark-bg-color;
-	@include transition(all 0.3s ease-in-out);
 }
 
 .headroom.headroom--pinned {

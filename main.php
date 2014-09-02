@@ -14,10 +14,10 @@
 				echo ipSlot('menu', $options);
 			?>
 			<div class="banner__menu-item button-open-menu">
-				<a href="#main-nav" id="menu-btn" class="banner__menu-button-main banner__menu-button">Meny</a>
+				<a href="#main-nav" id="menu-btn" class="banner__menu-button-main banner__menu-button"><?php _e('Meny', 'Hjartesorg'); ?></a>
 			</div>
 			<div class="banner__menu-item button-close-menu">
-				<a href="#" class="banner__menu-button-main banner__menu-button">Meny</a>
+				<a href="#" class="banner__menu-button-main banner__menu-button"><?php _e('Meny', 'Hjartesorg'); ?></a>
 			</div>
 		</nav>
 	</header>

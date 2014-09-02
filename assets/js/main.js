@@ -6,12 +6,12 @@
 	document.onload = init();
 
 	function init () {
-		var myElement = document.querySelector("#site-header"),
-			headroom  = new Headroom(myElement),
+		var headerEl = document.querySelector("#site-header"),
 			options = {
-				offset: 80 // Unpinning offset in pixels
-			};
+				offset: 100 // Unpinning offset in pixels
+			},
+			headroom  = new Headroom(headerEl, options);
 
-		headroom.init(options);
+		headroom.init();
 	}
 })();
