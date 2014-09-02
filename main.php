@@ -37,10 +37,6 @@
 			<?php echo ipBlock('main')->render(); ?>
 		</article>
 
-		<article class="main__section--centered">
-			<?php echo ipBlock('section1')->render(); ?>
-		</article>
-
 		<div class="main__section services">
 			<div class="section--centered">
 				<?php echo ipView('_services.php')->render(); ?>

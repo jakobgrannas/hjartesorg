@@ -3,7 +3,6 @@
 	padding: 1.8em 0.8em;
 	box-sizing: border-box;
 	margin-bottom: 1em;
-	position: relative;
 	vertical-align: top;
 
 	p {
@@ -36,9 +35,6 @@
 	@extend .button-small;
 	margin: 1.7em auto 0 auto;
 	display: block;
-	position: absolute;
-	bottom: 2em;
-	left: 25%;
 }
 
 
@@ -83,9 +79,16 @@
 		height: 27em;
 		margin-left: 1em;
 		margin-bottom: 0;
+		position: relative;
 
 		&:first-child {
 			margin-left: 0;
 		}
+	}
+
+	.service__button-read-more {
+		position: absolute;
+		bottom: 2em;
+		left: 25%;
 	}
 }
