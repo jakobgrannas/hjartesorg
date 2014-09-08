@@ -1,0 +1,48 @@
+.bx-wrapper .bx-viewport {
+	background: transparent;
+	box-shadow: none;
+	border: 0;
+}
+
+.bx-wrapper:hover .bx-controls-direction a {
+	opacity: 1;
+}
+
+.bx-wrapper .bx-controls-direction a {
+	text-indent: 0;
+	height: 40px;
+	width: 40px;
+	margin-top: 0;
+	opacity: 0;
+	@include transition(opacity 0.3s ease-in-out);
+}
+
+%bx-button {
+	background: none;
+	background-color: rgba(0,0,0,0.4);
+	color: white;
+	border-radius: 100%;
+	padding-top: 9px;
+	box-sizing: border-box;
+	font-size: 1.2em;
+	text-align: center;
+	overflow: hidden;
+}
+
+.bx-wrapper .bx-prev {
+	@extend %bx-button;
+
+	&:before {
+		@extend .fa;
+		content: "\f053";
+	}
+}
+
+.bx-wrapper .bx-next {
+	@extend %bx-button;
+
+	&:before {
+		@extend .fa;
+		content: "\f054";
+	}
+}

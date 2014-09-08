@@ -75,3 +75,8 @@
 	border-radius: 0;
 	box-shadow: none;
 }
+
+// Images
+.ipWidget .testimonial__image {
+	@extend .testimonial__image;
+}

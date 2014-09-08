@@ -62,16 +62,7 @@
 		</div>
 
 		<aside class="main__section testimonials">
-			<div class="testimonial">
-				<img src="assets/images/girl.png" width="75" height="75" class="testimonial__image" alt="">
-				<q class="testimonial__quote">Hjärtesorg hjälpte vår son att komma över vår skilsmässa. Vi är så himla tacksamma!</q>
-				<span class="testimonial__quote-author">Marie Svensson</span>
-			</div>
-			<ul class="testimonials__bullets">
-				<li class="testimonials__bullet"></li>
-				<li class="testimonials__bullet--active"></li>
-				<li class="testimonials__bullet"></li>
-			</ul>
+			<?php echo ipBlock('testimonials')->render(); ?>
 		</aside>
 	</main>
 <?php echo ipView('_footer.php')->render(); ?>

@@ -37,7 +37,6 @@ $bullet-diameter: 0.5em;
 	&:after {
 		@extend %quotation-symbol;
 		content: "”";
-		padding-left: 0.07em;
 		margin-right: -0.8em; // Fix to not mess up text centering
 	}
 }
