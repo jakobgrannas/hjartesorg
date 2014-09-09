@@ -46,3 +46,18 @@
 		content: "\f054";
 	}
 }
+
+// Pager buttons
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+	bottom: -60px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+	@extend .testimonial__bullet;
+
+	&:hover,
+	&.active {
+		background-color: white;
+	}
+}
