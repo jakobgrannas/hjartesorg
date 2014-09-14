@@ -32,8 +32,5 @@
 	);
 	echo ipSlot('menu', $options);
 	?>
-	<div class="menu__search">
-		<input type="text" id="search" class="menu__search-field" name="search" placeholder="sök...">
-		<button class="menu__button-search" title="Sök"></button>
-	</div>
+	<?php echo ipSlot('searchBox'); ?>
 </nav>

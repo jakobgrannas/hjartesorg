@@ -1,7 +1,7 @@
 // Menu
 .banner__menu {
 	float: right;
-	padding: 0.3em 0 0 0;
+	padding: 0;
 	margin: 0;
 	letter-spacing: 0.01em;
 	font-size: 1em;
@@ -11,7 +11,9 @@
 .banner__menu-item {
 	list-style: none;
 	display: inline-block;
+	vertical-align: middle;
 	line-height: 1em;
+	padding-top: 0.2em;
 
 	&:first-child:before {
 		display: none;
@@ -111,6 +113,8 @@
 
 		&:last-child {
 			border-right: 0;
+			margin-right: 0;
+			padding-right: 0;
 		}
 	}
 

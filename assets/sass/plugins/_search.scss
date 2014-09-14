@@ -1,0 +1,162 @@
+$bg: rgba(0,0,0,0.3);
+
+.ipsSearch .ipModuleForm .form-control:focus {
+	border-color: rgba(255,255,255,0.5);
+	box-shadow: none;
+}
+
+.ipsSearch {
+	margin-top: 3em;
+}
+
+// Main section search box
+.main .ipsSearch .type-submit .btn,
+.main .ipsSearch .type-submit .btn:hover,
+.main .ipsSearch .name-search {
+	background: $secondary-dark-bg-color;
+}
+
+.main .ipsSearch .type-submit .btn {
+	color: $light-text-color;
+}
+
+.main .ipsSearch {
+	margin-bottom: 1.5em;
+}
+
+// Mobile Search box
+.ipsSearch .form-group {
+	float: left;
+	margin-bottom: 0;
+	margin-top: 0;
+	height: 3em;
+}
+
+.name-search {
+	background: $bg;
+	margin: 0;
+	width: 80%;
+
+	& label {
+		display: none;
+	}
+}
+
+.name-search .form-control {
+	background: none;
+	border: 0;
+	height: 100%;
+	padding: 0.5em 0.5em 0.5em 1em;
+	font-size: 0.9em;
+	color: $light-text-color;
+	box-sizing: border-box;
+}
+
+.ipsSearch .type-submit {
+	width: 20%;
+	overflow: hidden;
+}
+
+.ipsSearch .type-submit .btn {
+	background: $bg;
+	border: 0;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	padding: 0;
+	color: transparent;
+
+	&:before {
+		@extend %search-button;
+		color: $light-text-color;
+		padding: 0.5em;
+		text-align: left;
+	}
+
+	&:hover {
+		background: $bg;
+		border: 0;
+		padding: 0;
+	}
+}
+
+// Search results page
+.ipSearch ._title ._url {
+	@extend .main__h2;
+	font-size: 1.6em;
+	text-align: left;
+	margin-left: 0;
+	margin-bottom: 0.6em;
+	display: inline-block;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.ipSearch ._result {
+	margin-top: 3em;
+	padding-bottom: 1em;
+	border-bottom: 1px dashed rgba(0,0,0,0.2);
+}
+
+// Desktop search box
+.banner__menu .ipsSearch { // Hidden when mobile menu is visible
+	display: none;
+}
+
+@media all and (min-width: $bp-large-2) {
+	.desktop__menu {
+		padding-top: 0.2em;
+		vertical-align: middle;
+	}
+
+	.banner__menu {
+		// Hidden when mobile menu is visible
+		display: inline-block;
+		vertical-align: middle;
+
+		.ipsSearch { // Hidden when mobile menu is visible
+			display: inline-block;
+			float: left;
+			margin-top: 0;
+
+			.form-group {
+				height: 2em;
+			}
+
+			.type-submit .btn {
+				display: inline;
+				background: none;
+				border: 0;
+				padding-right: 0;
+				padding-left: 0;
+				width: auto;
+
+				&:before {
+					@extend %nav__button--icon-base;
+					content: "\f002";
+					display: inline-block;
+					//padding: 0.5em 1.5em 0.5em 0.5em;
+				}
+			}
+		}
+
+		.name-search {
+			height: auto;
+			margin-top: 0;
+			display: inline-block;
+			background: none;
+
+			.form-control {
+				//padding: 0.4em;
+				border: 1px solid rgba(255,255,255,0.5);
+				background-color: transparent;
+				padding: 0.3em;
+				color: white;
+				display: inline;
+				width: 100%;
+			}
+		}
+	}
+}

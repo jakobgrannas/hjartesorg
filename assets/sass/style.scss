@@ -25,7 +25,6 @@
 @import 'molecules/appointment-block';
 @import 'molecules/testimonial';
 @import 'molecules/footer-block';
-@import 'molecules/bxslider';
 
 @import 'organisms/banner';
 @import 'organisms/header';
@@ -34,6 +33,9 @@
 @import 'organisms/make-appointment';
 @import 'organisms/testimonials';
 @import 'organisms/footer';
+
+@import 'plugins/bxslider';
+@import 'plugins/search';
 
 @import 'templates/default-layout';
 @import 'templates/impresspages';
