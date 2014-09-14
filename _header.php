@@ -25,12 +25,9 @@
 <nav class="main-menu clearfix" id="main-nav">
 	<a href="#" class="menu__logo"></a>
 	<?php
-	$options = array(
-		'items' => 'menu1',
-		'active' => 'menu-link--active',
-		'attributes' => array('class' => 'mobile__menu menu-items')
-	);
-	echo ipSlot('menu', $options);
+		$mobileConfig = array (
+			'customClassNames' => array('mobile__menu')
+		);
 	?>
-	<?php echo ipSlot('searchBox'); ?>
+	<?php echo ipView('_menu.php', $mobileConfig)->render(); ?>
 </nav>

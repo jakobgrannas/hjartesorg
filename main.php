@@ -6,14 +6,12 @@
 
 		<nav class="banner__menu">
 			<?php
-				$options = array(
-					'items' => 'menu1',
-					'active' => 'menu-link--active',
-					'attributes' => array('class' => 'desktop__menu menu-items')
+				$desktopConfig = array(
+					'customClassNames' => array('desktop__menu')
 				);
-				echo ipSlot('menu', $options);
 			?>
-			<?php echo ipSlot('searchBox'); ?>
+			<?php echo ipView('_menu.php', $desktopConfig)->render(); ?>
+
 			<div class="banner__menu-item button-open-menu">
 				<a href="#main-nav" id="menu-btn" class="banner__menu-button-main banner__menu-button"><?php _e('Meny', 'Hjartesorg'); ?></a>
 			</div>
@@ -29,7 +27,8 @@
 				'default' => __('Sorgbearbetning för barn och vuxna', 'Hjartesorg', false), 'class' => 'banner__slogan-text')); ?>
 
 			<div class="banner__divider"><span class="divider__symbol"></span></div>
-			<a href="#" class="banner__button-important">Berätta mer!</a>
+			<?php echo ipSlot('text', array('id' => 'tell-me-more', 'tag' => 'a',
+				'default' => __('Berätta mer!','Hjartesorg'), 'class' => 'banner__button-important')); ?>
 		</div>
 	</div>
 
