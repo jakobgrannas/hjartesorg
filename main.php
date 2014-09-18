@@ -3,7 +3,7 @@
 <div id="wrapper" class="wrapper menu-push">
 	<?php echo ipView('_banner.php'); ?>
 
-	<main class="main main--banner-overlap clearfix">
+	<main class="main main--banner-overlap">
 		<article class="main__section--centered">
 			<?php echo ipBlock('main')->render(); ?>
 		</article>
