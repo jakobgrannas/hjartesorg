@@ -4,9 +4,8 @@
 	left: 0;
 	right: 0;
 	z-index: 50;
-	padding: 1em 2em;
+	padding: 1em 0.5em;
 	box-sizing: border-box;
-	@include transform(inherit); // Fix to animate header in IE (works fine in Chrome, FF & Safari
 	@include transition(all 0.4s ease-in-out);
 	background-color: $tertiary-dark-bg-color;
 }
@@ -34,4 +33,11 @@
 
 .ipHasAdminPanel .site-header {
 	top: 9.2em;
+}
+
+@media all and (min-width: $bp-small) {
+	.site-header {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
 }
