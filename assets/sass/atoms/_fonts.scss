@@ -8,7 +8,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
-@font-face {
+/*@font-face {
 	font-family: 'Asap';
 	font-style: normal;
 	font-weight: 400;
@@ -31,7 +31,7 @@
 	font-style: italic;
 	font-weight: 700;
 	src: local('Asap Bold Italic'), local('Asap-BoldItalic'), url(http://fonts.gstatic.com/s/asap/v3/_sVKdO-TLWvaH-ptGimJBbO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
-}
+}*/
 @font-face {
 	font-family: 'Cambo';
 	font-style: normal;
@@ -55,4 +55,86 @@
 	font-style: italic;
 	font-weight: 400;
 	src: local('Libre Baskerville Italic'), local('LibreBaskerville-Italic'), url(http://fonts.gstatic.com/s/librebaskerville/v3/QHIOz1iKF3bIEzRdDFaf5SO-5kXrvlsa0llgP70kI5w.woff) format('woff');
+}
+
+// Hind
+/* latin-ext
+@font-face {
+	font-family: 'Hind';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Hind Light'), local('Hind-Light'), url(http://fonts.gstatic.com/s/hind/v5/WWCzXbkBuuC4_xgCfWCnVVKPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}*/
+/* latin */
+@font-face {
+	font-family: 'Hind';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Hind Light'), local('Hind-Light'), url(http://fonts.gstatic.com/s/hind/v5/j0nw79-SK78CoHOhg6MGG1KPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext
+@font-face {
+	font-family: 'Hind';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Hind Regular'), local('Hind-Regular'), url(http://fonts.gstatic.com/s/hind/v5/_nGZcTICJK7Og5TmI2ZPqxTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}*/
+/* latin */
+@font-face {
+	font-family: 'Hind';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Hind Regular'), local('Hind-Regular'), url(http://fonts.gstatic.com/s/hind/v5/Pmrg92KFJKj-hq44c2dqphTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext
+@font-face {
+	font-family: 'Hind';
+	font-style: normal;
+	font-weight: 500;
+	src: local('Hind Medium'), local('Hind-Medium'), url(http://fonts.gstatic.com/s/hind/v5/nnS4i7BKxGmIfxNrHr-vZFKPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}*/
+/* latin */
+@font-face {
+	font-family: 'Hind';
+	font-style: normal;
+	font-weight: 500;
+	src: local('Hind Medium'), local('Hind-Medium'), url(http://fonts.gstatic.com/s/hind/v5/AVPJIwmCdO7y8S0MQagSalKPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext
+@font-face {
+	font-family: 'Hind';
+	font-style: normal;
+	font-weight: 600;
+	src: local('Hind Semibold'), local('Hind-Semibold'), url(http://fonts.gstatic.com/s/hind/v5/urMn04ooOKClqk1j3KANyFKPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}*/
+/* latin */
+@font-face {
+	font-family: 'Hind';
+	font-style: normal;
+	font-weight: 600;
+	src: local('Hind Semibold'), local('Hind-Semibold'), url(http://fonts.gstatic.com/s/hind/v5/PBH86v3Kf1cOLg_Efc95LlKPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext
+@font-face {
+	font-family: 'Hind';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Hind Bold'), local('Hind-Bold'), url(http://fonts.gstatic.com/s/hind/v5/VCkhynrP0938QbpS1dWBDlKPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}*/
+/* latin */
+@font-face {
+	font-family: 'Hind';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Hind Bold'), local('Hind-Bold'), url(http://fonts.gstatic.com/s/hind/v5/YWN4i-sCVy4NTFbAK0yO4FKPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }

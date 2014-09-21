@@ -4,7 +4,7 @@ $box-padding: 3em;
 // Boxes
 %make-appointment__block {
 	color: $body-text-color;
-	font-family: 'Asap', sans-serif;
+	font-family: $main-font;
 	max-width: 18em;
 	margin: 2em auto;
 }

@@ -37,8 +37,7 @@
 
 %widget__label {
 	@extend %make-appointment__block-header;
-	font-family: 'Asap', sans-serif;
-	color: #565a67;
+	font-family: $main-font;
 }
 
 .ipWidget h3._title {
@@ -53,7 +52,6 @@
 .ipWidget-Heading {
 	margin-top: 1em;
 }
-
 
 .ipbEmpty .ipWidget {
 	text-align: center;

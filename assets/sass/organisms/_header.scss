@@ -7,7 +7,11 @@
 	padding: 1em 0.5em;
 	box-sizing: border-box;
 	@include transition(all 0.4s ease-in-out);
-	background-color: $tertiary-dark-bg-color;
+	background-color: $header-bg-color;
+}
+
+.site-header__logo {
+
 }
 
 .headroom {
@@ -15,7 +19,7 @@
 }
 
 .headroom--not-top {
-	background-color: $tertiary-dark-bg-color;
+	background-color: $header-bg-color;
 }
 
 .headroom--pinned {

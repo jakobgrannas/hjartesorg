@@ -43,7 +43,7 @@
 /* Preload banner */
 body:after{
 	display:none;
-	content: image-url('banner.png');
+	content: image-url('foggy-hill.png'); // TODO: FIx _2x for this
 }
 
 /* General styling */
@@ -51,7 +51,7 @@ body {
 	text-align: left;
 	line-height: 1.5em;
 	font-size: 100%;
-	font-family: 'Asap', sans-serif, Arial, Verdana, Helvetica, 'Times New Roman';
+	font-family: $main-fonts;
 	background: white;
 	color: black;
 	text-rendering: optimizeLegibility;

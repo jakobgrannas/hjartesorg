@@ -1,7 +1,7 @@
 // Button important
 %base-button {
 	line-height: 1em;
-	font-family: 'Asap', 'sans-serif';
+	font-family: $button-font;
 	font-weight: bold;
 	text-align: center;
 	box-sizing: border-box;
@@ -22,6 +22,46 @@
 		background-color: #000;
 		border: 0;
 		color: white;
+	}
+}
+
+// TODO: Make button mixins with calc for borders/height?
+.button-important-filled {
+	@extend .button-positive;
+	color: white;
+	background-color: $button-positive-color;
+	border: 0;
+	padding: 1.3em;
+
+	&:hover {
+		background: none;
+		border: 3px solid rgba(0,0,0,0.5);
+		padding: 1.1em;
+	}
+}
+
+.button-positive {
+	@extend .button-important;
+	color: $button-positive-color;
+	border-color: $button-positive-color;
+
+	&:hover {
+		background-color: $button-positive-color;
+		padding: 1.3em 1.1em;
+	}
+}
+
+.button-positive-filled {
+	@extend .button-positive;
+	color: white;
+	background-color: $button-positive-color;
+	border: 0;
+	padding: 1.3em;
+
+	&:hover {
+		background: none;
+		border: 3px solid rgba(0,0,0,0.5);
+		padding: 1.1em;
 	}
 }
 

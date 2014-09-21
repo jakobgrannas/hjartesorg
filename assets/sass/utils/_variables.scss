@@ -3,7 +3,8 @@
  */
 
 // Base colors
-$base-color: #B63F3F;
+$base-color: #9E382F; //#B63F3F;
+$positive-color: #66A35F; //#589052;
 
 // Background colors
 $bg-color: #fffcf7;
@@ -14,6 +15,7 @@ $tertiary-dark-bg-color: #351F29;
 // Text colors
 $light-text-color: #fff8e6;
 $secondary-light-text-color: #efd5ac;
+$tertiary-light-text-color: #fff;
 $dark-text-color: #C65454;
 $secondary-dark-text-color: #A9585B;
 $tertiary-dark-text-color: darken($secondary-dark-bg-color, 10%);
@@ -21,6 +23,9 @@ $body-text-color: #565a67;
 
 // Borders
 $main-content-border-color: #d6d3cf;
+
+// Buttons
+$button-positive-color: $positive-color;
 
 //Links
 $link-color: #7D9E77;
@@ -30,6 +35,9 @@ $link-visited-hover-color: darken($link-visited-color, 20%);
 
 //Logo
 $logo-color: #efefef;
+
+// Header
+$header-bg-color: darken($base-color, 5%);
 
 // Mobile
 $mobile-menu-width: 15em;
@@ -49,3 +57,28 @@ $bp-medium-3: 45em;
 $bp-large: 52em;
 $bp-large-2: 60em;
 $bp-large-3: 70em;
+
+// Typefaces
+$main-font: 'Hind', sans-serif;
+$main-fonts: $main-font, Arial, Verdana, Helvetica, 'Times New Roman';
+$main-bold: 700;
+$main-semibold: 600;
+$main-medium: 500;
+$main-normal: 400;
+$main-light: 300;
+
+$headline-font: $main-font;
+$headline-bold: $main-bold;
+$headline-semibold: $main-semibold;
+$headline-medium: $main-medium;
+$headline-normal: $main-normal;
+$headline-light: $main-light;
+
+$button-font: $main-font;
+
+$body-font: 'Cambo', serif, 'Times New Roman';
+$body-normal: 400;
+
+$quote-font: 'Libre Baskerville', serif;
+$quote-bold: 700;
+$quote-normal: 400;

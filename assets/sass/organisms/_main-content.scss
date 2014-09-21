@@ -12,7 +12,7 @@
 
 %main-text {
 	color: $body-text-color;
-	font-family: Cambo, serif, 'Times New Roman';
+	font-family: $body-font;
 	font-size: 1.05rem;
 }
 
@@ -27,7 +27,7 @@
 
 .main__section--centered {
 	@extend .main__section;
-	max-width: 46em;
+	max-width: 48em;
 	margin-right: auto;
 	margin-left: auto;
 	padding-right: 1em;
