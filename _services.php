@@ -2,7 +2,7 @@
 <section class="service__block">
 	<?php
 	$options = array(
-		'id' => 'testImage',
+		'id' => 'service-image-' . $i,
 		'width' => '102',
 		'height'=>'102',
 		'class' => 'service__image',

@@ -3,8 +3,18 @@
 <div id="wrapper" class="wrapper menu-push">
 	<?php echo ipView('_banner.php'); ?>
 
-	<main class="main main--banner-overlap">
+	<main class="main main--banner-overlap clearfix">
 		<article class="main__section--centered">
+			<?php
+			$options = array(
+				'id' => 'founders-picture',
+				'width' => '130',
+				'height'=>'130',
+				'class' => 'main__image--centered',
+				'default' => ipThemeUrl('assets/images/us.png')
+			);
+			echo ipSlot('image', $options);
+			?>
 			<?php echo ipBlock('main')->render(); ?>
 		</article>
 
