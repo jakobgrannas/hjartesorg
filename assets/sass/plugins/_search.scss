@@ -106,16 +106,7 @@ $bg: rgba(0,0,0,0.3);
 }
 
 @media all and (min-width: $bp-large-2) {
-	.desktop__menu {
-		padding-top: 0.2em;
-		vertical-align: middle;
-	}
-
 	.banner__menu {
-		// Hidden when mobile menu is visible
-		display: inline-block;
-		vertical-align: middle;
-
 		.ipsSearch { // Hidden when mobile menu is visible
 			display: inline-block;
 			float: left;

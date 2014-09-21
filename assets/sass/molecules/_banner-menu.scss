@@ -101,14 +101,23 @@
 		display: none;
 	}
 
+	.banner__menu {
+		// Hidden when mobile menu is visible
+		display: inline-block;
+		vertical-align: middle;
+	}
+
 	.desktop__menu {
 		display: inline-block;
+		padding-top: 0.3em;
+		vertical-align: middle;
 
 		.menu-item {
 			display: inline-block;
 			padding: 0 0.9em 0 0;
 			margin-right: 0.9em;
-			border-right: 2px solid rgba(255,255,255,0.5);
+			line-height: 1.5em;
+			border-right: 1px solid rgba(255,255,255,0.2);
 
 			&:last-child {
 				border-right: 0;

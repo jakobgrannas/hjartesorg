@@ -3,8 +3,8 @@
  */
 
 // Base colors
-$base-color: #9E382F; //#B63F3F;
-$positive-color: #66A35F; //#589052;
+$base-color: #9E372F; //#B63F3F;
+$positive-color: #7D9C5B; //#589052;
 
 // Background colors
 $bg-color: #fffcf7;
@@ -37,7 +37,7 @@ $link-visited-hover-color: darken($link-visited-color, 20%);
 $logo-color: #efefef;
 
 // Header
-$header-bg-color: darken($base-color, 5%);
+$header-bg-color: #85332C;
 
 // Mobile
 $mobile-menu-width: 15em;
@@ -59,8 +59,7 @@ $bp-large-2: 60em;
 $bp-large-3: 70em;
 
 // Typefaces
-$main-font: 'Hind', sans-serif;
-$main-fonts: $main-font, Arial, Verdana, Helvetica, 'Times New Roman';
+$main-font: 'Hind', sans-serif, Helvetica, Arial, Verdana, 'Times New Roman';
 $main-bold: 700;
 $main-semibold: 600;
 $main-medium: 500;

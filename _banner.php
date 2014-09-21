@@ -1,5 +1,5 @@
 <header class="site-header clearfix" id="site-header">
-	<a href="#" class="logo site-header__logo"><span class="logo__text">Hjärtesorg</span></a>
+	<a href="#" class="logo"><span class="logo__text">Hjärtesorg</span></a>
 
 	<nav class="banner__menu">
 		<?php
