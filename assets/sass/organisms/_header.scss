@@ -4,7 +4,7 @@
 	left: 0;
 	right: 0;
 	z-index: 50;
-	padding: 2.4em 0.5em;
+	padding: 1em 0.5em;
 	box-sizing: border-box;
 	@include transition(all 0.4s ease-in-out);
 	background-color: $header-bg-color;
@@ -42,5 +42,12 @@
 	.site-header {
 		padding-left: 2em;
 		padding-right: 2em;
+	}
+}
+
+@media all and (min-width: $bp-medium-2) {
+	.site-header {
+		padding-top: 2.4em;
+		padding-bottom: 2.4em;
 	}
 }

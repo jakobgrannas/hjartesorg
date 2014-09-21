@@ -1,5 +1,8 @@
+// Variables
 $bg: rgba(0,0,0,0.3);
 
+
+// Styling
 .ipsSearch .ipModuleForm .form-control:focus {
 	border-color: rgba(255,255,255,0.5);
 	box-shadow: none;
@@ -128,7 +131,6 @@ $bg: rgba(0,0,0,0.3);
 					@extend %nav__button--icon-base;
 					content: "\f002";
 					display: inline-block;
-					//padding: 0.5em 1.5em 0.5em 0.5em;
 				}
 			}
 		}
@@ -140,7 +142,6 @@ $bg: rgba(0,0,0,0.3);
 			background: none;
 
 			.form-control {
-				//padding: 0.4em;
 				border: 1px solid rgba(255,255,255,0.5);
 				background-color: transparent;
 				padding: 0.3em;
