@@ -1,7 +1,7 @@
 /*
  * Imports
  */
-@import "bourbon"; // TODO: Remove?
+@import "bourbon";
 
 @import 'utils/variables';
 @import 'utils/mixins';
@@ -39,6 +39,7 @@
 
 @import 'templates/default-layout';
 @import 'templates/impresspages';
+@import 'templates/subpage';
 
 /* Preload banner */
 body:after{

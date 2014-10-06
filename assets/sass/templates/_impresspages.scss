@@ -24,9 +24,10 @@
 }
 
 // Titles
-.ipWidget h1,
+.homepage .ipWidget h1,
 .ipWidget h2._title, {
 	@extend .main__h2;
+	max-width: 100%;
 }
 
 .ipbEmpty .ipWidget ._title {

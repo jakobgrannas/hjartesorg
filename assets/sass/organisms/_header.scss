@@ -1,13 +1,20 @@
-.site-header {
+%fixed-position {
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 50;
+}
+
+.site-header {
 	padding: 1em;
 	box-sizing: border-box;
 	@include transition(all 0.4s ease-in-out);
 	background-color: $header-bg-color;
+}
+
+.homepage .site-header {
+	@extend %fixed-position;
 }
 
 .headroom {
@@ -15,6 +22,7 @@
 }
 
 .headroom--not-top {
+	@extend %fixed-position;
 	background-color: $header-bg-color;
 	padding-top: 1em;
 	padding-bottom: 1em;
