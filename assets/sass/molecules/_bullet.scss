@@ -1,0 +1,50 @@
+.bullet {
+	width: 50%;
+	float: left;
+	margin-bottom: 2em;
+	box-sizing: border-box;
+	padding-left: 1em;
+}
+
+.bullet__image {
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+	width: 4em;
+
+	&:before {
+		@extend .fa;
+		font-size: 1.6em;
+		content: "\f086";
+		text-align: center;
+		color: #DA5454;
+		background-color: $bg-color;
+		padding-top: 0.75em;
+		width: 2.5em;
+		height: 2.5em;
+		border-radius: 100%;
+		box-sizing: border-box;
+	}
+}
+
+.bullet__header {
+	font-family: $headline-font;
+	font-weight: $headline-bold;
+	text-transform: uppercase;
+	color: rgba(#000, 0.7);
+	font-size: 1.1em;
+	margin: 0;
+}
+
+.bullet__content {
+	display: inline-block;
+	vertical-align: top;
+	font-family: $headline-font;
+	font-size: 0.9em;
+	width: 75%;
+	padding-left: 1em;
+}
+
+.bullet__text {
+	margin-top: 0.3em;
+}
