@@ -1,0 +1,22 @@
+.call-to-action-section {
+	background-color: $call-to-action-bg-color;
+	font-family: $headline-font;
+	text-align: center;
+	padding-top: 5em;
+	padding-bottom: 5em;
+
+	.ipWidget h3._title {
+		color: white;
+		font-size: 1.2em;
+	}
+
+	.ipsContainer {
+		color: lighten($body-text-color, 15%);
+	}
+
+	.button--action {
+		display: inline-block;
+		margin-top: 2.3em;
+		width: 15em;
+	}
+}

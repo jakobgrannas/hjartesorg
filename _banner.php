@@ -9,6 +9,6 @@
 		<div class="banner__divider"><span class="divider__symbol"></span></div>
 
 		<?php echo ipSlot('text', array('id' => 'tell-me-more', 'tag' => 'a',
-			'default' => __('Berätta mer!','Hjartesorg'), 'class' => 'banner__button-important button-positive-filled')); ?>
+			'default' => __('Berätta mer!','Hjartesorg'), 'class' => 'banner__button-important button-positive--filled')); ?>
 	</div>
 </div>

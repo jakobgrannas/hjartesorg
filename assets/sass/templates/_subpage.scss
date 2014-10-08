@@ -9,29 +9,3 @@
 	margin-left: 0;
 	margin-bottom: 0.5em;
 }
-
-// Columns
-.main__content .ipWidget-Text .ipsContainer {
-	@include columns(2);
-	@include column-gap(7em);
-}
-
-// Sections
-.side-info {
-	background-color: $dark-desaturated-bg-color;
-	padding-top: 2em;
-
-	.main__h2:after {
-		content: "";
-		display: block;
-		margin: 0.8em auto 1.2em auto;
-		width: 2em;
-		height: 0.15em;
-		background-color: darken($dark-desaturated-bg-color, 7%);
-	}
-}
-
-.bullet-grid {
-	padding-top: 3.5em;
-	padding-bottom: 3.5em;
-}

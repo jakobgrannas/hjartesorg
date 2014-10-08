@@ -18,11 +18,6 @@
 
 .main__section {
 	@extend %main-text;
-	margin-bottom: 8em;
-
-	&:last-child {
-		margin-bottom: 0;
-	}
 }
 
 .main__section--centered {

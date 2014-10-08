@@ -1,0 +1,42 @@
+.related-article__button {
+	border: 1px dashed rgba(0,0,0,0.5);
+	padding: 0.8em;
+	box-sizing: border-box;
+	width: 32%;
+	float: left;
+	margin-right: 1%;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.related-article__image {
+	border-radius: 100%;
+	width: 4em;
+	height: 4em;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.related-article__content {
+	width: 70%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.related-article__link {
+	text-decoration: underline;
+	text-transform: uppercase;
+	font-family: $headline-font;
+	font-weight: $headline-bold;
+	color: rgba(0,0,0,0.8);
+	letter-spacing: 0em;
+	padding-left: 0.6em;
+	display: inline-block;
+
+	&:hover {
+		text-decoration: none;
+		color: rgba(0,0,0,0.5);
+	}
+}

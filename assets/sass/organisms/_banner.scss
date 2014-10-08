@@ -35,7 +35,7 @@ $slogan-base-font-size-unit: 4;
 }
 
 .banner__button-important {
-	@extend .button-important-filled;
+	@extend .button-important--filled;
 	width: 15em;
 	display: block;
 	margin: 0 auto;
