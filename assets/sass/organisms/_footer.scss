@@ -1,8 +1,6 @@
-$footer-bg-color: #ECECEB;
-
 .footer {
-	background-color: $footer-bg-color;
-	color: darken($footer-bg-color, 70%);
+	background-color: $dark-desaturated-bg-color;
+	color: darken($dark-desaturated-bg-color, 70%);
 	padding: 0 1em 2em 1em;
 	text-align: center;
 }
@@ -24,11 +22,11 @@ $footer-bg-color: #ECECEB;
 .footer__copyright {
 	text-transform: uppercase;
 	font-size: 0.85em;
-	color: darken($footer-bg-color, 60%);
+	color: darken($dark-desaturated-bg-color, 60%);
 	letter-spacing: 0.2em;
 
 	&:after {
-		background-color: darken($footer-bg-color, 20%);
+		background-color: darken($dark-desaturated-bg-color, 20%);
 		vertical-align: middle;
 		content: "";
 		width: 4em;

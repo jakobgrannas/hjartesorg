@@ -12,6 +12,7 @@
 
 	.ipsContainer {
 		color: lighten($body-text-color, 15%);
+		font-family: $headline-font;
 	}
 
 	.button--action {

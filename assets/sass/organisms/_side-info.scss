@@ -9,7 +9,7 @@
 		margin: 0.8em auto 1.5em auto;
 		width: 2em;
 		height: 0.15em;
-		background-color: darken($dark-desaturated-bg-color, 7%);
+		background-color: desaturate(darken($dark-desaturated-bg-color, 7%), 10%);
 	}
 }
 

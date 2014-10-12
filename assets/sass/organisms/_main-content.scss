@@ -47,6 +47,10 @@
 	letter-spacing: 0.1em;
 }
 
+.main__article {
+	margin-top: 6em;
+}
+
 // Breakpoints
 @media all and (min-width: $bp-small-2) {
 	.main__h2 {

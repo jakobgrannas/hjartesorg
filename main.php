@@ -5,7 +5,7 @@
 
 	<main class="main clearfix">
 		<article class="main__section--centered clearfix">
-			<section class="main__content">
+			<section class="main__article">
 				<?php echo ipBlock('main')->render(); ?>
 			</section>
 		</article>

@@ -60,9 +60,9 @@
 	border-bottom: 3px solid darken($button-positive-color, 11%);
 
 	&:hover {
-		background: none;
-		border: 3px solid rgba(0,0,0,0.5);
-		padding: 1.1em;
+		background: darken($button-positive-color, 10%);
+		border: 0;
+		border-bottom: 3px solid darken($button-positive-color, 17%);
 	}
 }
 

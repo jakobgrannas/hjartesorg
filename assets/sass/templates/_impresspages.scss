@@ -63,7 +63,7 @@
 }
 
 // Content
-.main__content .ipWidget-Text .ipsContainer {
+.main__article .ipWidget-Text .ipsContainer {
 	@include columns(2);
 	@include column-gap(7em);
 }
