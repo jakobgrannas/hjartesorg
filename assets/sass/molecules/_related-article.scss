@@ -2,13 +2,8 @@
 	border: 1px dashed rgba(0,0,0,0.5);
 	padding: 0.8em;
 	box-sizing: border-box;
-	width: 15em;
-	float: left;
-	margin-right: 2.5em;
-
-	&:last-child {
-		margin-right: 0;
-	}
+	width: 60%;
+	margin: 0 auto 1.5em auto;
 }
 
 .related-article__image {
@@ -38,5 +33,23 @@
 	&:hover {
 		text-decoration: none;
 		color: rgba(0,0,0,0.5);
+	}
+}
+
+@media all and (min-width: $bp-large) {
+	.related-article__button {
+		margin: 0 1em 0 0;
+		float: left;
+		width: 15em;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+@media all and (min-width: $bp-large-2) {
+	.related-article__button {
+		margin-right: 2.5em;
 	}
 }

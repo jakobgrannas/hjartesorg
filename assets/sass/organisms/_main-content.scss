@@ -16,17 +16,25 @@
 	font-size: 1.05rem;
 }
 
+%centered-section {
+	@extend .main__section;
+	max-width: 48em;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 .main__section {
 	@extend %main-text;
 }
 
 .main__section--centered {
-	@extend .main__section;
-	max-width: 48em;
-	margin-right: auto;
-	margin-left: auto;
+	@extend %centered-section;
 	padding-right: 1em;
 	padding-left: 1em;
+}
+
+.section--centered {
+	@extend %centered-section;
 }
 
 .main__image--centered {

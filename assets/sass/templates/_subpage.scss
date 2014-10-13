@@ -2,10 +2,18 @@
 .ipWidget h1 {
 	@extend .main__h2;
 	max-width: 10em;
-	font-size: 4em;
+	font-size: 3em;
 	text-align: left;
 	letter-spacing: 0;
 	line-height: 1.2em;
 	margin-left: 0;
 	margin-bottom: 0.5em;
+	box-sizing: border-box;
+}
+
+// Breakpoints
+@media all and (min-width: $bp-small-2) {
+	.ipWidget h1 {
+		font-size: 4em;
+	}
 }

@@ -11,7 +11,7 @@
 		</article>
 
 		<aside class="main__section side-info bullet-grid">
-			<div class="main__section--centered clearfix">
+			<div class="section--centered clearfix">
 				<?php echo ipSlot('text', array('id' => 'bullets__header', 'tag' => 'h2',
 					'default' => __('Rubrik', 'Hjartesorg', false), 'class' => 'main__h2')); ?>
 

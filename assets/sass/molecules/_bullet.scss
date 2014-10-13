@@ -1,16 +1,15 @@
 .bullet {
-	width: 50%;
-	float: left;
-	margin-bottom: 2em;
 	box-sizing: border-box;
-	padding-left: 1em;
+	margin-bottom: 3em;
+	text-align: center;
 }
 
 .bullet__image {
-	display: inline-block;
+	display: block;
 	vertical-align: top;
 	height: 100%;
 	width: 4em;
+	margin: 0 auto 1em auto;
 
 	&:before {
 		@extend .fa;
@@ -34,6 +33,7 @@
 	color: rgba(#000, 0.7);
 	font-size: 1.1em;
 	margin: 0;
+	padding-top: 0.3em;
 }
 
 .bullet__content {
@@ -42,9 +42,35 @@
 	font-family: $headline-font;
 	font-size: 0.9em;
 	width: 75%;
-	padding-left: 1em;
 }
 
 .bullet__text {
 	margin-top: 0.3em;
+}
+
+// Breakpoints
+
+@media all and (max-width: $bp-large) {
+	.bullet:nth-child(odd) {
+		background-color: rgba(0,0,0,0.05);
+		padding: 2em 0;
+	}
+}
+@media all and (min-width: $bp-large) {
+	.bullet {
+		width: 50%;
+		float: left;
+		margin-bottom: 2em;
+		padding-left: 1em;
+		text-align: left;
+	}
+
+	.bullet__image {
+		display: inline-block;
+		margin: 0;
+	}
+
+	.bullet__content {
+		padding-left: 1em;
+	}
 }
