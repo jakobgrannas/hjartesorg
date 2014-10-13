@@ -2,6 +2,17 @@
 	box-sizing: border-box;
 	margin-bottom: 3em;
 	text-align: center;
+
+	&:last-child:after {
+		display: none;
+	}
+
+	&:after {
+		@extend %divider-stroke--thick;
+		background-color: desaturate(darken($dark-desaturated-bg-color, 7%), 10%);
+		width: 0.12em;
+		height: 2em;
+	}
 }
 
 .bullet__image {
@@ -49,20 +60,18 @@
 }
 
 // Breakpoints
-
-@media all and (max-width: $bp-large) {
-	.bullet:nth-child(odd) {
-		background-color: rgba(0,0,0,0.05);
-		padding: 2em 0;
-	}
-}
 @media all and (min-width: $bp-large) {
 	.bullet {
 		width: 50%;
 		float: left;
 		margin-bottom: 2em;
+		padding: 0;
 		padding-left: 1em;
 		text-align: left;
+
+		&:after {
+			display: none;
+		}
 	}
 
 	.bullet__image {

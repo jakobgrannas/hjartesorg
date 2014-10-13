@@ -26,3 +26,12 @@
 	font-size: 0.7em;
 	content: "\f004";
 }
+
+%divider-stroke--thick {
+	content: "";
+	display: block;
+	margin: 0.8em auto 1.5em auto;
+	width: 2em;
+	height: 0.15em;
+	background-color: rgba(0,0,0,0.2);
+}

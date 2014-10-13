@@ -4,11 +4,7 @@
 	margin-top: 10em;
 
 	.main__h2:after {
-		content: "";
-		display: block;
-		margin: 0.8em auto 1.5em auto;
-		width: 2em;
-		height: 0.15em;
+		@extend %divider-stroke--thick;
 		background-color: desaturate(darken($dark-desaturated-bg-color, 7%), 10%);
 	}
 }
