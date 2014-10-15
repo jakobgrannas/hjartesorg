@@ -7,13 +7,16 @@
 	letter-spacing: 0;
 	line-height: 1.2em;
 	margin-left: 0;
-	margin-bottom: 0.5em;
+	margin-bottom: 1em;
 	box-sizing: border-box;
+	word-break: break-all;
+	@include hyphens(auto);
 }
 
 // Breakpoints
 @media all and (min-width: $bp-small-2) {
 	.ipWidget h1 {
 		font-size: 4em;
+		margin-bottom: 2em;
 	}
 }

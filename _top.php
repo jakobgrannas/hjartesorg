@@ -1,6 +1,7 @@
 <?php echo ipDoctypeDeclaration(); ?>
 <!--[if lt IE 9]>
 <html class="no-js ie8" <?php echo ipHtmlAttributes(); ?>> <![endif]-->
+<html <?php echo ipHtmlAttributes(); ?>>
 <head>
 	<?php
 	ipAddCss('Ip/Internal/Core/assets/ipContent/ipContent.css'); // include default CSS for widgets

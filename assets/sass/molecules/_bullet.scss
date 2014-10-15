@@ -1,50 +1,29 @@
 .bullet {
 	box-sizing: border-box;
-	margin-bottom: 3em;
+}
+
+%bullet__point {
+	@extend .fa;
+	width: 2.5em;
+	height: 2.5em;
+	border-radius: 100%;
+	box-sizing: border-box;
 	text-align: center;
-
-	&:last-child:after {
-		display: none;
-	}
-
-	&:after {
-		@extend %divider-stroke--thick;
-		background-color: desaturate(darken($dark-desaturated-bg-color, 7%), 10%);
-		width: 0.12em;
-		height: 2em;
-	}
+	color: $dark-text-color;
 }
 
 .bullet__image {
-	display: block;
 	vertical-align: top;
 	height: 100%;
-	width: 4em;
-	margin: 0 auto 1em auto;
 
 	&:before {
-		@extend .fa;
-		font-size: 1.6em;
-		content: "\f086";
-		text-align: center;
-		color: $dark-text-color;
-		background-color: $bg-color;
-		padding-top: 0.75em;
-		width: 2.5em;
-		height: 2.5em;
-		border-radius: 100%;
-		box-sizing: border-box;
+		@extend %bullet__point;
 	}
 }
 
-.bullet__header {
-	font-family: $headline-font;
-	font-weight: $headline-bold;
-	text-transform: uppercase;
-	color: rgba(#000, 0.7);
+.bullet__text--primary{
 	font-size: 1.1em;
-	margin: 0;
-	padding-top: 0.3em;
+	font-family: $headline-font;
 }
 
 .bullet__content {
@@ -52,34 +31,4 @@
 	vertical-align: top;
 	font-family: $headline-font;
 	font-size: 0.9em;
-	width: 75%;
-}
-
-.bullet__text {
-	margin-top: 0.3em;
-}
-
-// Breakpoints
-@media all and (min-width: $bp-large) {
-	.bullet {
-		width: 50%;
-		float: left;
-		margin-bottom: 2em;
-		padding: 0;
-		padding-left: 1em;
-		text-align: left;
-
-		&:after {
-			display: none;
-		}
-	}
-
-	.bullet__image {
-		display: inline-block;
-		margin: 0;
-	}
-
-	.bullet__content {
-		padding-left: 1em;
-	}
 }

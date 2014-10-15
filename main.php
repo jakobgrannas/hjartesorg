@@ -20,9 +20,9 @@
 					<div class="bullet__image"></div>
 					<div class="bullet__content">
 					<?php echo ipSlot('text', array('id' => 'bullet__header' . $i, 'tag' => 'h4',
-						'default' => __('Underrubrik', 'Hjartesorg', false), 'class' => 'bullet__header')); ?>
+						'default' => __('Underrubrik', 'Hjartesorg', false), 'class' => 'bullet__text--primary')); ?>
 					<?php echo ipSlot('text', array('id' => 'bullet__text' . $i, 'tag' => 'p',
-						'default' => __('Text här...', 'Hjartesorg', false), 'class' => 'bullet__text')); ?>
+						'default' => __('Text här...', 'Hjartesorg', false), 'class' => 'bullet__text--secondary')); ?>
 					</div>
 				</div>
 				<?php endfor; ?>
