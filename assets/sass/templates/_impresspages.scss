@@ -45,7 +45,7 @@
 	@extend %widget__label;
 }
 
-.ipModuleForm label {
+.ipModuleForm .field-label {
 	@extend %widget__label;
 	margin-bottom: 0.6em;
 }
@@ -65,14 +65,40 @@
 // Form
 .ipModuleForm .form-control {
 	@extend .input-field;
+	max-width: 100%;
 	border-radius: 0;
+	font-family: $main-font;
+	font-weight: $main-normal;
 	box-shadow: none;
+	@include transition(none);
+
+	&:focus {
+		box-shadow: inherit;
+	}
+}
+
+.ipModuleForm textarea.form-control {
+	font-family: $main-font;
+	font-weight: $main-normal;
 }
 
 .ipModuleForm .btn-default {
 	@extend .button-small;
 	border-radius: 0;
 	box-shadow: none;
+}
+
+.ipModuleForm .radio,
+.ipModuleForm .checkbox {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+// Buttons
+.ipModuleForm .btn-default.button-positive--filled {
+	@extend .button-positive--filled;
+	font-size: 0.8em;
 }
 
 // Images

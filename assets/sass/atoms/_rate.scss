@@ -1,0 +1,18 @@
+.ipModuleForm .rate {
+	margin: 0;
+}
+
+.rate-label:before {
+	@extend .fa;
+	cursor: pointer;
+	color: rgba(0,0,0,0.2);
+	content: "\f08a";
+	font-size: 2em;
+	@include transition(color 100ms ease-in-out);
+}
+
+.rate:checked + .rate-label:before,
+.rate.checked + .rate-label:before,
+.rate.hover + .rate-label:before {
+	color:$positive-color;
+}

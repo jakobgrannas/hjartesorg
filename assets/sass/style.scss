@@ -19,6 +19,8 @@
 @import 'atoms/headlines';
 @import 'atoms/form-field';
 @import 'atoms/layout';
+@import 'atoms/rate';
+@import 'atoms/checkbox';
 
 @import 'molecules/mobile-menu';
 @import 'molecules/banner-menu';
@@ -40,6 +42,7 @@
 @import 'organisms/call-to-action';
 @import 'organisms/related-articles';
 @import 'organisms/testimonials-article';
+@import 'organisms/submit-testimonial';
 
 @import 'plugins/bxslider';
 @import 'plugins/search';

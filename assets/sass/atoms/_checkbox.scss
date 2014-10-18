@@ -1,0 +1,24 @@
+.checkbox-field-label {
+	text-transform: none;
+	font-family: $main-font;
+
+	&:before {
+		@extend .fa;
+		background-color: white;
+		width: 1.3rem;
+		height: 1.3rem;
+		padding: 0.3em 0 0 0;
+		margin-right: 0.4em;
+		content: "";
+		font-size: 0.7em;
+		text-align: center;
+		vertical-align: middle;
+		display: inline-block;
+		box-sizing: border-box;
+	}
+}
+
+.checkbox-field:checked + .checkbox-field-label:before {
+	color: rgba(0,0,0,0.7);
+	content: "\f00c";
+}

@@ -54,10 +54,12 @@
 .button-positive--filled {
 	@extend .button-positive;
 	color: white;
+	font-size: 1rem;
+	font-weight: $main-light;
 	background-color: $button-positive-color;
 	border: 0;
 	padding: 1.3em;
-	border-bottom: 3px solid darken($button-positive-color, 11%);
+	border-bottom: 3px solid darken($button-positive-color, 9%);
 
 	&:hover {
 		background: darken($button-positive-color, 10%);

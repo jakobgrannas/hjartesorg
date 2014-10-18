@@ -61,6 +61,46 @@
 }
 
 
+
+// Form
+.side-info .ipModuleForm .field-label {
+	display: block;
+}
+
+.side-info .ipModuleForm {
+	max-width: 27em;
+	margin: 0 auto;
+}
+
+.side-info .input-field,
+.checkbox-field-label:before {
+	background-color: $bg-color;
+	border: none;
+	border-bottom: 1px solid rgba(0,0,0,0.13);
+	border-right: 1px solid rgba(0,0,0,0.13);
+
+	&:focus {
+		border-bottom: 1px solid rgba(0,0,0,0.13);
+		border-right: 1px solid rgba(0,0,0,0.13);
+	}
+}
+
+.side-info .ipModuleForm .form-group {
+	margin-bottom: 1.5em;
+}
+
+.side-info .button-positive--filled {
+	width: 16em;
+	height: 3.7em;
+	padding-top: 1.5em;
+	margin: 4em auto 0 auto;
+	display: block;
+	letter-spacing: 0.1em;
+	font-size: 0.9rem;
+}
+
+
+
 // Breakpoints
 @media all and (min-width: $bp-large) {
 	.bullet-grid .bullet {
