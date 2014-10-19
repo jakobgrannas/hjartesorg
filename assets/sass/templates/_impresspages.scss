@@ -1,3 +1,7 @@
+.footer .ipsContainer {
+	font-family: $main-font;
+}
+
 .footer {
 	.ipWidget-FooterBlock {
 		@extend .footer__block;

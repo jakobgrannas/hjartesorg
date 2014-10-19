@@ -1,6 +1,7 @@
 .footer {
 	background-color: $dark-desaturated-bg-color;
 	color: darken($dark-desaturated-bg-color, 70%);
+	font-family: $main-font;
 	padding: 0 1em 2em 1em;
 	text-align: center;
 }
