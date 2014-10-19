@@ -5,6 +5,7 @@
 // Base colors
 $base-color: #9E372F; //#B63F3F;
 $positive-color: #58b763; //#7D9C5B;
+$negative-color: #E24B4B;
 $primary-complementary-color: #69A996;
 
 // Background colors
@@ -22,7 +23,7 @@ $call-to-action-bg-color: #3f424c;
 $light-text-color: #fff8e6;
 $secondary-light-text-color: #efd5ac;
 $tertiary-light-text-color: #fff;
-$dark-text-color: #E24B4B; //#ee5050;
+$dark-text-color: $negative-color;
 $secondary-dark-text-color: #A9585B;
 $tertiary-dark-text-color: darken($secondary-dark-bg-color, 10%);
 $body-text-color: #565a67;

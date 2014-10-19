@@ -56,7 +56,7 @@
 		$(response.html).hide().appendTo(destinationEl).slideDown(350);
 
 		new hAlert({
-			el: $('.alert--success')
+			el: $('.alert')
 		});
 	}
 })();
