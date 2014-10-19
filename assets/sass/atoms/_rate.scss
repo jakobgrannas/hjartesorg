@@ -12,7 +12,7 @@
 }
 
 .rate:checked + .rate-label:before,
-.rate.checked + .rate-label:before,
-.rate.hover + .rate-label:before {
+.rate.js-checked + .rate-label:before,
+.rate.js-hover + .rate-label:before {
 	color:$positive-color;
 }

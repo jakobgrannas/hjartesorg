@@ -1,0 +1,73 @@
+// Variables
+$arrow-size: 8px;
+
+
+// Styling
+.alert--success {
+	font-family: $main-font;
+	width: 100%;
+	position: relative;
+	max-width: 25em;
+	background-color: $bg-color;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	border-right: 1px solid rgba(0,0,0,0.1);
+	border-radius: 5px;
+	box-sizing: border-box;
+	padding: 0.3em;
+	margin: 1em auto;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: -$arrow-size;
+		left: 50%;
+		left: calc(50% - $arrow-size);
+		color: $bg-color;
+		width: 0;
+		height: 0;
+		border-left: $arrow-size solid transparent;
+		border-right: $arrow-size solid transparent;
+		border-bottom: $arrow-size solid $bg-color;
+	}
+}
+
+.alert__icon {
+	display: inline-block;
+	padding-right: 1em;
+	height: 100%;
+	vertical-align: top;
+
+	&:before {
+		@extend .fa;
+		vertical-align: middle;
+		text-align: center;
+		content: "\f00c";
+		border-radius: 100%;
+		background-color: $bg-color;
+		font-size: 1em;
+		padding-top: 9px;
+		color: $positive-color;
+		width: 35px;
+		height: 35px;
+		box-sizing: border-box;
+	}
+}
+
+.alert__content {
+	display: inline-block;
+	padding-top: 0.4em;
+}
+
+.alert__title {
+	font-weight: $main-bold;
+	text-transform: uppercase;
+	margin-top: 0.3em;
+	margin-bottom: 0.5em;
+	font-size: 1.1em;
+	color: $positive-color;
+}
+
+.alert__message {
+	margin: 0;
+}
