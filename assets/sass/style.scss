@@ -31,6 +31,8 @@
 @import 'molecules/bullet';
 @import 'molecules/related-article';
 @import 'molecules/alert';
+@import 'molecules/employee';
+@import 'molecules/like-on-facebook';
 
 @import 'organisms/banner';
 @import 'organisms/header';
@@ -44,6 +46,7 @@
 @import 'organisms/related-articles';
 @import 'organisms/testimonials-article';
 @import 'organisms/submit-testimonial';
+@import 'organisms/employee-info';
 
 @import 'plugins/bxslider';
 @import 'plugins/search';

@@ -1,0 +1,16 @@
+.employee-info {
+	padding: 3.5em 1em 10em 1em;
+	position: relative;
+
+	&:nth-child(even) {
+		background-color: $dark-desaturated-bg-color;
+	}
+
+	&:first-of-type {
+		margin-top: 10em;
+	}
+
+	.main__section--centered {
+		max-width: 40em;
+	}
+}

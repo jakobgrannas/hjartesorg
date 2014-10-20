@@ -1,0 +1,21 @@
+.like-on-facebook {
+	text-align: center;
+}
+
+.like-on-facebook.main__section--centered {
+	max-width: 30em;
+	margin-bottom: 8em;
+	padding: 0;
+}
+
+.like-on-facebook .subheading {
+	font-family: $main-font;
+	font-weight: $main-bold;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+.like-on-facebook .button-facebook--filled {
+	margin: 0 auto;
+	text-decoration: none;
+}

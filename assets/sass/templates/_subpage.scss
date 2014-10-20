@@ -1,6 +1,6 @@
 // Headings
 .ipWidget h1 {
-	@extend .main__h2;
+	@extend %big-headline;
 	max-width: 10em;
 	font-size: 3.3em;
 	text-align: left;
@@ -16,6 +16,6 @@
 @media all and (min-width: $bp-small-2) {
 	.ipWidget h1 {
 		font-size: 4em;
-		margin-bottom: 2em;
+		margin-bottom: 0.7em;
 	}
 }

@@ -2,3 +2,13 @@
 	font-family: $headline-font;
 	text-transform: uppercase;
 }
+
+%big-headline {
+	@extend %headline;
+	color: $dark-text-color;
+	font-size: 1.5em;
+	text-align: center;
+	line-height: 1.3em;
+	margin: 0.5em 0 1em 0;
+	letter-spacing: 0.1em;
+}

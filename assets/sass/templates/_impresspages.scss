@@ -30,12 +30,12 @@
 // Titles
 .homepage .ipWidget h1,
 .ipWidget h2._title, {
-	@extend .main__h2;
+	@extend %big-headline;
 	max-width: 100%;
 }
 
 .ipbEmpty .ipWidget ._title {
-	@extend .main__h2;
+	@extend %big-headline;
 	font-size: 1.2em;
 	margin-bottom: 0;
 }

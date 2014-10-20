@@ -1,0 +1,65 @@
+.employee__image {
+	border-radius: 100%;
+	border: 0.6em solid $bg-color;
+	position: absolute;
+	top: -65px;
+	left: calc(50% - 63px);
+	display: block;
+}
+
+.employee__name {
+	@extend %big-headline;
+	font-size: 1.9em;
+	letter-spacing: 0.05em;
+	text-align: center;
+	font-family: $main-font;
+	margin-top: 1em;
+
+	&:after {
+		@extend %divider-stroke--thick;
+		margin-top: 0.3em;
+		margin-bottom: 0.8em;
+		background-color: rgba(0,0,0,0.1);
+	}
+}
+
+.employee__bio {
+	text-align: center;
+	font-family: $main-font;
+}
+
+.employee__contact-info {
+	text-align: center;
+}
+
+.employee__contact-info .contact-media{
+	font-family: $main-font;
+	font-weight: $main-semibold;
+	text-align: center;
+	display: inline-block;
+	margin: 0;
+	margin-right: 2em;
+	padding: 0;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+%contact-icon {
+	@extend .fa;
+	color: $dark-text-color;
+	margin-right: 0.4em;
+	font-size: 1.1em;
+	vertical-align: middle;
+}
+
+.employee__phonenumber:before {
+	@extend %contact-icon;
+	content: "\f095";
+}
+
+.employee__email:before {
+	@extend %contact-icon;
+	content: "\f003";
+}

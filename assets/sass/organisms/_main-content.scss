@@ -46,13 +46,7 @@
 }
 
 .main__h2 {
-	@extend %headline;
-	color: $dark-text-color;
-	font-size: 1.5em;
-	text-align: center;
-	line-height: 1.3em;
-	margin: 0.5em 0 1em 0;
-	letter-spacing: 0.1em;
+	@extend %big-headline;
 }
 
 .main__article {

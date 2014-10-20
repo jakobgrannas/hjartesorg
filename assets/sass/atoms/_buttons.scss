@@ -35,8 +35,7 @@
 
 	&:hover {
 		background: none;
-		border: 3px solid rgba(0,0,0,0.5);
-		padding: 1.1em;
+		padding: 1.3em;
 	}
 }
 
@@ -92,4 +91,51 @@
 	@extend .fa;
 	content: "\f002";
 	display: inline-block;
+}
+
+// Social media
+.button-facebook--filled {
+	padding: 0;
+	display: inline-block;
+	height: 3.5rem;
+
+	&:before {
+		@extend .fa;
+		background-color: darken($facebook-color, 10%);
+		border-bottom: 3px solid darken($facebook-color, 16%);
+		width: 3.2rem;
+		height: 100%;
+		content: "\f09a";
+		padding: 0.7em 0.9em;
+		margin-right: -5px; // Remove inline-block margin
+		vertical-align: top;
+		text-align: center;
+		font-size: 1.4em;
+		color: white;
+		box-sizing: border-box;
+	}
+
+	.button__text {
+		@extend .button-important--filled;
+		background-color: $facebook-color;
+		font-weight: $main-semibold;
+		color: white;
+		height: 100%;
+		display: inline-block;
+		border-bottom: 3px solid darken($facebook-color, 8%);
+	}
+
+	.button__text:hover {
+		padding: 1.3em;
+	}
+
+	&:hover .button__text {
+		background-color: darken($facebook-color, 10%);
+		border-bottom: 3px solid darken($facebook-color, 16%);
+	}
+
+	&:hover:before {
+		background-color: $facebook-color;
+		border-bottom-color: darken($facebook-color, 8);
+	}
 }

@@ -85,7 +85,7 @@ $bg: rgba(0,0,0,0.3);
 
 // Search results page
 .ipSearch ._title ._url {
-	@extend .main__h2;
+	@extend %big-headline;
 	font-size: 1.6em;
 	text-align: left;
 	margin-left: 0;
