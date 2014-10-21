@@ -12,7 +12,7 @@
 
 		<?php for($i=1; $i < 3; $i++) : ?>
 		<div class="main__section employee-info">
-			<section class="main__section--centered">
+			<section class="section--centered">
 				<?php
 				$options = array(
 					'id' => 'employee__image-' . $i,
