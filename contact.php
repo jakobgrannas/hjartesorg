@@ -53,15 +53,25 @@
 
 		<aside class="main__section side-info send-email-section">
 			<div class="section--centered clearfix">
-				<?php echo ipSlot('text', array('id' => 'post-testimonial-header', 'tag' => 'h2',
+				<?php echo ipSlot('text', array('id' => 'send-email-header', 'tag' => 'h2',
 					'default' => __('Rubrik', 'Hjartesorg', false), 'class' => 'main__h2')); ?>
 
-				<?php echo ipSlot('submitTestimonial'); ?>
+				<?php echo ipSlot('sendContactEmailForm'); ?>
 			</div>
 		</aside>
 
 		<div class="main__section map-section">
 			<?php echo ipBlock('map')->render(); ?>
+		</div>
+
+		<div class="main__section--centered like-on-facebook clearfix">
+			<?php echo ipSlot('text', array('id' => 'like-on-facebook-title', 'tag' => 'h3',
+				'default' => __('Vi finns på sociala medier också!', 'Hjartesorg', false), 'class' => 'subheading')); ?>
+
+			<a href="#" class="button-facebook--filled">
+				<?php echo ipSlot('text', array('id' => 'button-facebook1', 'tag' => 'span',
+					'default' => __('Gilla oss på Facebook!', 'Hjartesorg', false), 'class' => 'button__text')); ?>
+			</a>
 		</div>
 	</main>
 <?php echo ipView('_footer.php')->render(); ?>

@@ -32,6 +32,35 @@ $arrow-size: 8px;
 	}
 }
 
+.alert--success {
+	font-family: $main-font;
+	width: 100%;
+	position: relative;
+	max-width: 25em;
+	background-color: $bg-color;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	border-right: 1px solid rgba(0,0,0,0.1);
+	border-radius: 5px;
+	box-sizing: border-box;
+	padding: 0.8em;
+	margin: 1em auto;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: -$arrow-size;
+		left: 50%;
+		left: calc(50% - $arrow-size);
+		color: $bg-color;
+		width: 0;
+		height: 0;
+		border-left: $arrow-size solid transparent;
+		border-right: $arrow-size solid transparent;
+		border-bottom: $arrow-size solid $bg-color;
+	}
+}
+
 %alert-icon {
 	@extend .fa;
 	vertical-align: middle;
@@ -53,9 +82,15 @@ $arrow-size: 8px;
 
 	&:before {
 		@extend %alert-icon;
-		color: $positive-color;
-		content: "\f00c";
+		color: $facebook-color;
+		content: "\f129";
 	}
+}
+
+.alert--success .alert__icon:before{
+	@extend %alert-icon;
+	content: "\f00c";
+	color: $positive-color;
 }
 
 .alert--error .alert__icon:before{
