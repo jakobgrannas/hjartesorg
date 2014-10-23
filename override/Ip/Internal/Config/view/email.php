@@ -11,7 +11,7 @@
 
 	<span style="font-weight: bold;"><?php echo __('Kommentar:', 'Hjartesorg', false); ?></span>
 	<p><?php echo isset($message) ? esc($message) : '-'; ?></p>
-<?php else : ?>
+<?php else: ?>
 	<p>
 		<span style="font-weight: bold;"><?php echo __('Från:', 'Hjartesorg', false); ?></span>
 		<?php echo isset($author) ? esc($author) : __('Anonym', 'Hjartesorg', false); ?>
