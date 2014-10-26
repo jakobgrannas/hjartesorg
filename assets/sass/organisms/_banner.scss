@@ -5,13 +5,12 @@ $slogan-base-font-size-unit: 4;
 // Styling
 .banner {
 	@include transition (transform 350ms ease);
-	@include retina-image(foggy-hill, cover, 'png', null, '_x2', true);
-	background-position: center bottom;
-	background-repeat: no-repeat;
+	background: image-url('girl-sunset.jpg') center center no-repeat;
 	background-size: cover;
 	height: 28em;
 	padding: 1em;
 	font-family: $headline-font;
+	overflow-y: hidden;
 
 	&:before {
 		content: '';

@@ -3,7 +3,7 @@
 <div id="wrapper" class="wrapper menu-push">
 	<?php echo ipView('_header.php'); ?>
 
-	<main class="main clearfix">
+	<main class="main">
 		<article class="main__section--centered clearfix">
 			<section class="main__article">
 				<?php echo ipBlock('main')->render(); ?>

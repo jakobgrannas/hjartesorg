@@ -23,11 +23,11 @@
 .footer__copyright {
 	text-transform: uppercase;
 	font-size: 0.85em;
-	color: darken($dark-desaturated-bg-color, 60%);
+	color: rgba(0,0,0,0.5);
 	letter-spacing: 0.2em;
 
 	&:after {
-		background-color: darken($dark-desaturated-bg-color, 20%);
+		background-color: rgba(0,0,0,0.15);
 		vertical-align: middle;
 		content: "";
 		width: 4em;

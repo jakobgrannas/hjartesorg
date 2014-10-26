@@ -23,7 +23,7 @@
 	function initHeadroom() {
 		var headerEl = document.querySelector("#site-header"),
 			options = {
-				offset: 120 // Unpinning offset in pixels
+				offset: 80 // Unpinning offset in pixels
 			},
 			headroom  = new Headroom(headerEl, options);
 

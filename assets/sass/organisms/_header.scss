@@ -36,6 +36,19 @@
 	@include transform (translateY(-100%));
 }
 
+.headroom--not-top.headroom--pinned {
+	opacity: 1;
+}
+
+.headroom--not-top.headroom--unpinned {
+	opacity: 0;
+	@include transition(opacity 0.4s, height 0.4s, ease-in-out);
+}
+
+.headroom--top.headroom--pinned {
+	opacity: 1;
+}
+
 // Move header down in edit mode
 .ipHasAdminNavbar .site-header {
 	top: 2.5em;
@@ -56,10 +69,12 @@
 	.site-header {
 		padding-top: 2.4em;
 		padding-bottom: 2.4em;
+		//height: 110px;
 	}
 
 	.headroom.headroom--not-top {
 		padding-top: 1em;
 		padding-bottom: 1em;
+		//height: 70px;
 	}
 }
