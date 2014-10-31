@@ -114,6 +114,7 @@
 
 		.menu-item {
 			display: inline-block;
+			position: relative;
 			padding: 0 0.9em 0 0;
 			margin-right: 0.9em;
 			line-height: 1.5em;
@@ -156,5 +157,47 @@
 		.menu__button-search {
 			width: auto;
 		}
+	}
+
+	// Submenu
+	.desktop__menu .children {
+		@extend .visually-hidden;
+		@include transition(height 0.4s ease-in-out);
+	}
+
+	.desktop__menu .menu-item:hover .children {
+		background-color: $header-bg-color;
+		display: block;
+		overflow: visible;
+		clip: inherit;
+		position: absolute;
+		top: 1.2em;
+		right: -2em;
+		z-index: 10;
+		width: 11em;
+		height: 8em;
+		padding: 1em;
+		padding-top: 1.7em;
+		margin: 0;
+
+		&:before {
+			@extend %divider-stroke--thick;
+			background-color: rgba(255,255,255,0.2);
+			height: 0.1em;
+			margin-top: 0;
+		}
+	}
+
+	.desktop__menu .menu-item:hover .children .menu-item {
+		display: block;
+		text-align: center;
+		border: 0;
+		padding-right: 0;
+		margin-right: 0;
+		margin-bottom: 0.5em;
+	}
+
+	.desktop__menu .children .menu-link {
+		font-weight: $main-semibold;
 	}
 }

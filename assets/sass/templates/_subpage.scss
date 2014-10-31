@@ -12,6 +12,10 @@
 	@include hyphens(auto);
 }
 
+.subpage-main {
+	margin-bottom: 4em;
+}
+
 // Breakpoints
 @media all and (min-width: $bp-small-2) {
 	.ipWidget h1 {

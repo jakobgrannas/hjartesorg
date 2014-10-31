@@ -16,7 +16,7 @@ $bg: rgba(0,0,0,0.3);
 .main .ipsSearch .type-submit .btn,
 .main .ipsSearch .type-submit .btn:hover,
 .main .ipsSearch .name-search {
-	background: $secondary-dark-bg-color;
+	background: rgba(0,0,0,0.8);
 }
 
 .main .ipsSearch .type-submit .btn {
@@ -98,9 +98,16 @@ $bg: rgba(0,0,0,0.3);
 }
 
 .ipSearch ._result {
-	margin-top: 3em;
-	padding-bottom: 1em;
-	border-bottom: 1px dashed rgba(0,0,0,0.2);
+	margin-top: 2em;
+	//border-bottom: 1px dashed rgba(0,0,0,0.2);
+
+	&:after {
+		@extend %divider-stroke--thick;
+		margin-top: 3em;
+		margin-bottom: 0;
+		width: 3rem;
+		height: 0.2rem;
+	}
 }
 
 // Desktop search box

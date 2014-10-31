@@ -31,7 +31,7 @@
 
 		<div class="main__section call-to-action-section schedule-appointment">
 			<div class="main__section--centered">
-				<?php echo ipBlock('schedule-appointment')->render(); ?>
+				<?php echo ipBlock('schedule-appointment')->asStatic()->render(); ?>
 				<a href="#" class="button-positive--filled button--action">
 					<?php echo ipSlot('text', array('id' => 'schedule-appointment__button', 'tag' => 'span',
 						'default' => __('Boka tid', 'Hjartesorg', false), 'class' => 'button__text')); ?>

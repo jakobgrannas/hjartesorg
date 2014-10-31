@@ -61,16 +61,15 @@
 	font-weight: bold;
 	position: relative;
 	color: $secondary-light-text-color;
+}
 
-	&:after {
-		@extend .fa;
-		content: "\f053";
-		position: absolute;
-		right: 1em;
-		top: 30%;
-		display: inline-block;
-		opacity: 0.4;
-	}
+.main-menu .children {
+	padding-left: 0;
+	margin-bottom: 0.5em;
+}
+
+.main-menu .children .menu-item {
+	padding-bottom: 0;
 }
 
 // Logo

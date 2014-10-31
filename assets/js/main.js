@@ -10,7 +10,7 @@
 		initHeadroom();
 	}
 
-	function registerEventListeners() {
+	function registerEventListeners () {
 		$(document).on('click', '.type-heart .rate', rate);
 		$( '.type-heart .rate-label').on({
 			mouseenter: rateHover,
@@ -18,9 +18,15 @@
 		});
 
 		$(document).on('ipSubmitResponse', displaySuccessMessage);
+
+		// Drop down menu
+		$(document).on('mouseenter', '.desktop__menu > .menu-item', setDropDownHeight);
+		$(document).on('mouseleave', '.desktop__menu > .menu-item', function () {
+			$('.desktop__menu .level2').height(0);
+		});
 	}
 
-	function initHeadroom() {
+	function initHeadroom () {
 		var headerEl = document.querySelector("#site-header"),
 			options = {
 				offset: 80 // Unpinning offset in pixels
@@ -28,6 +34,18 @@
 			headroom  = new Headroom(headerEl, options);
 
 		headroom.init();
+	}
+
+	function setDropDownHeight () {
+		var me = $('.desktop__menu .level2'),
+			menuItems = $('.desktop__menu .level2 .menu-item'),
+			height = 20; // Add some padding as well
+
+		menuItems.each(function () {
+			height += parseInt($(this).outerHeight(true));
+		});
+
+		me.height(height);
 	}
 
 	function rate() {

@@ -4,7 +4,7 @@
 	<?php echo ipView('_header.php'); ?>
 
 	<main class="main clearfix">
-		<article class="main__section--centered clearfix">
+		<article class="main__section--centered subpage-main clearfix">
 			<section class="main__article">
 				<?php echo ipBlock('main')->render(); ?>
 			</section>
