@@ -27,7 +27,7 @@
 	<a href="#" class="menu__logo"></a>
 	<?php
 		$mobileConfig = array (
-			'customClassNames' => array('mobile__menu')
+			'customClassNames' => array('mobile__menu menu')
 		);
 	?>
 	<?php echo ipView('_menu.php', $mobileConfig)->render(); ?>

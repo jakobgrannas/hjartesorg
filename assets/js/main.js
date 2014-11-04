@@ -4,6 +4,7 @@
 
 (function() {
 	document.onload = init();
+	var ISSEARCHOPEN = false;
 
 	function init () {
 		registerEventListeners();
@@ -24,6 +25,13 @@
 		$(document).on('mouseleave', '.desktop__menu > .menu-item', function () {
 			$('.desktop__menu .level2').height(0);
 		});
+
+		$(document).on('mouseenter', '.menu .type-submit .btn', function () {
+			toggleSearchField(true);
+		});
+		$(document).on('blur', '.menu .name-search input', function () {
+			toggleSearchField(false);
+		});
 	}
 
 	function initHeadroom () {
@@ -36,8 +44,20 @@
 		headroom.init();
 	}
 
+	function toggleSearchField (showSearchField) {
+		var searchField = $('.menu .name-search'),
+			jsClass = 'js-show-search-field';
+
+		if(!showSearchField) {
+			searchField.removeClass(jsClass);
+		}
+		else if(showSearchField && !searchField.hasClass(jsClass)) {
+			searchField.addClass(jsClass);
+		}
+	}
+
 	function setDropDownHeight () {
-		var me = $('.desktop__menu .level2'),
+		var menu = $('.desktop__menu .level2'),
 			menuItems = $('.desktop__menu .level2 .menu-item'),
 			height = 20; // Add some padding as well
 
@@ -45,7 +65,7 @@
 			height += parseInt($(this).outerHeight(true));
 		});
 
-		me.height(height);
+		menu.height(height);
 	}
 
 	function rate() {
