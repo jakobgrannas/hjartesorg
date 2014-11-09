@@ -110,6 +110,23 @@
 	@extend .testimonial__image;
 }
 
+.bullet-grid .ipWidget-Bullet {
+	margin-bottom: 3em;
+	text-align: center;
+	box-sizing: border-box;
+
+	&:last-child:after {
+		display: none;
+	}
+
+	&:after {
+		@extend %divider-stroke--thick;
+		background-color: desaturate(darken($dark-desaturated-bg-color, 7%), 10%);
+		width: 0.12em;
+		height: 2em;
+	}
+}
+
 // Breakpoints
 @media all and (min-width: $bp-small-2) {
 	.homepage .ipWidget h1 {
@@ -122,10 +139,55 @@
 		@include columns(2);
 		@include column-gap(7em);
 	}
+
+	.ipHasAdminPanel .bullet-grid .ipWidget-Bullet {
+		width: 50%;
+		vertical-align: top;
+		display: inline-block;
+		margin-right: -5px;
+		margin-bottom: 1.5em;
+	}
+
+	.ipHasAdminPanel .bullet-grid .ipWidget-Bullet .bullet {
+		width: 100%;
+		margin-bottom: 0;
+	}
 }
 
 @media all and (min-width: $bp-large) {
 	.homepage .ipWidget h1 {
 		font-size: 2.1em;
+	}
+
+	.testimonials-article .ipWidget-Bullet:nth-child(odd) {
+		.bullet__image {
+			float: right;
+		}
+
+		.bullet__content {
+			padding-left: 0;
+		}
+
+		.bullet__text--secondary {
+			color: $dark-text-color;
+		}
+	}
+
+	.bullet-grid .ipWidget-Bullet {
+		width: 50%;
+		display: inline-block;
+		margin-right: -5px;
+		margin-bottom: 2em;
+		padding: 0;
+		padding-right: 2.5em;
+		text-align: left;
+
+		&:after {
+			display: none;
+		}
+	}
+
+	.ipHasAdminPanel .bullet-grid .ipWidget-Bullet .bullet {
+		width: 100%;
 	}
 }

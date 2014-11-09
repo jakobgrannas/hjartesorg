@@ -7,18 +7,6 @@
 		<article class="main__section--centered testimonials__article clearfix">
 			<section class="main__article">
 				<?php echo ipBlock('main')->render(); ?>
-
-				<?php for($i=0; $i < 3; $i++) : ?>
-				<div class="bullet">
-					<div class="bullet__image"></div>
-					<div class="bullet__content">
-						<?php echo ipSlot('text', array('id' => 'testimonial__header' . $i, 'tag' => 'p',
-							'default' => __('Kundens omdöme här...', 'Hjartesorg', false), 'class' => 'bullet__text--primary')); ?>
-						<?php echo ipSlot('text', array('id' => 'testimonial__author' . $i, 'tag' => 'p',
-							'default' => __('Kundens namn', 'Hjartesorg', false), 'class' => 'bullet__text--secondary')); ?>
-					</div>
-				</div>
-				<?php endfor; ?>
 			</section>
 		</article>
 

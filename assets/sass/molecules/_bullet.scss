@@ -3,7 +3,6 @@
 }
 
 %bullet__point {
-	@extend .fa;
 	width: 2.5em;
 	height: 2.5em;
 	border-radius: 100%;
@@ -15,9 +14,38 @@
 .bullet__image {
 	vertical-align: top;
 	height: 100%;
+}
+
+.bullet__icon {
+	@extend %bullet__point;
 
 	&:before {
-		@extend %bullet__point;
+		content: "";
+	}
+
+	&.heart:before {
+		vertical-align: middle;
+		content: "\f08a";
+	}
+
+	&.telephone:before {
+		vertical-align: middle;
+		content: "\f095";
+	}
+
+	&.thumbsup:before {
+		vertical-align: middle;
+		content: "\f087";
+	}
+
+	&.envelope:before {
+		vertical-align: middle;
+		content: "\f0e0";
+	}
+
+	&.star:before {
+		vertical-align: middle;
+		content: "\f006";
 	}
 }
 
