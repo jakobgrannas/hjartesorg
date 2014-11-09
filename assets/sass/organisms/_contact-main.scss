@@ -10,42 +10,42 @@
 
 
 // Bullet
-.contact__section .bullet {
+.contact-main .bullet {
 	display: block;
 	width: 100%;
 	margin-bottom: 2em;
+	font-family: $main-font;
+	color: $body-text-color;
 }
 
-.contact__section .bullet__image {
+.contact-main .bullet__image {
 	display: inline-block;
 	margin-right: 1.5em;
 }
 
-.contact__section .bullet__text--primary {
+.contact-main .bullet__text--primary {
 	text-transform: uppercase;
+	font-weight: $main-semibold;
 	margin-top: 0.4em;
 	margin-bottom: 0;
 }
 
 
 // General contact info
-.contact-info__general .bullet__text--primary {
+.contact-main .bullet__text--primary {
 	font-size: 1.2em;
 }
 
-.contact-info__general .bullet__text--secondary {
+.contact-main .bullet__text--secondary {
 	margin-top: 0.5em;
+	font-weight: $main-light;
 }
 
-.contact-info__general .bullet__image {
-	&:before {
-		@extend %bullet__point;
-		background-color: rgba(0,0,0,0.05);
-		color: $dark-text-color;
-		content: "\f08a";
-		font-size: 1.6em;
-		padding-top: 0.8em;
-	}
+.contact-main .bullet__icon {
+	background-color: rgba(0,0,0,0.05);
+	color: $dark-text-color;
+	font-size: 1.6em;
+	padding-top: 0.7em;
 }
 
 

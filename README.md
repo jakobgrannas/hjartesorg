@@ -1,6 +1,14 @@
 hjartesorg
 ==========
 
+## Dependencies
+ImpressPages CMS
+*Nested columns
+*Bullet (custom plugin)
+*Slider
+*Search
+*Application (custom plugin)
+
 ## Getting started
 
 Install Gulp globally

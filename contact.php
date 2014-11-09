@@ -6,7 +6,7 @@
 	<main class="main clearfix">
 		<article class="main__section--centered contact-main clearfix">
 			<?php echo ipBlock('main')->render(); ?>
-			<section class="contact__section contact-info__general">
+			<!--<section class="contact__section contact-info__general">
 				<?php $contactIconClasses = array('', '', ''); ?>
 				<?php for($i=0; $i < 3; $i++) : ?>
 				<div class="bullet">
@@ -48,7 +48,7 @@
 						</div>
 					</div>
 				<?php endfor; ?>
-			</section>
+			</section>-->
 		</article>
 
 		<aside class="main__section side-info send-email-section">
