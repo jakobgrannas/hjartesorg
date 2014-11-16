@@ -5,7 +5,9 @@
 
 	<main class="main clearfix">
 		<article class="main__section--centered contact-main clearfix">
-			<?php echo ipBlock('main')->render(); ?>
+			<section class="main__article">
+				<?php echo ipBlock('main')->render(); ?>
+			</section>
 			<!--<section class="contact__section contact-info__general">
 				<?php $contactIconClasses = array('', '', ''); ?>
 				<?php for($i=0; $i < 3; $i++) : ?>
@@ -65,13 +67,7 @@
 		</div>
 
 		<div class="main__section--centered like-on-facebook clearfix">
-			<?php echo ipSlot('text', array('id' => 'like-on-facebook-title', 'tag' => 'h3',
-				'default' => __('Vi finns på sociala medier också!', 'Hjartesorg', false), 'class' => 'subheading')); ?>
-
-			<a href="#" class="button-facebook--filled">
-				<?php echo ipSlot('text', array('id' => 'button-facebook1', 'tag' => 'span',
-					'default' => __('Gilla oss på Facebook!', 'Hjartesorg', false), 'class' => 'button__text')); ?>
-			</a>
+			<?php echo ipBlock('social-media')->render(); ?>
 		</div>
 	</main>
 <?php echo ipView('_footer.php')->render(); ?>

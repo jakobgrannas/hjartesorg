@@ -14,11 +14,6 @@
 	<?php echo ipSlot('text', array('id' => 'service'. $i .'-header', 'tag' => 'h3',
 		'default' => __('En bra rubrik', 'Hjartesorg'), 'class' => 'service__block__h3')); ?>
 
-	<?php echo ipBlock( 'service-block' . $i )->asStatic()->render(); ?>
-
-	<a href="#" class="service__button-read-more">
-		<?php echo ipSlot('text', array('id' => 'service'. $i .'-button', 'tag' => 'span',
-			'default' => __('Läs mer', 'Hjartesorg'), 'class' => 'service__button-text')); ?>
-	</a>
+	<?php echo ipBlock( 'service-block' . $i )->render(); ?>
 </section>
 <?php endfor; ?>

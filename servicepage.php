@@ -16,28 +16,12 @@
 					'default' => __('Rubrik', 'Hjartesorg', false), 'class' => 'main__h2')); ?>
 
 				<?php echo ipBlock('servicePage-services')->render(); ?>
-
-				<?php for($i=0; $i < 4; $i++) : ?>
-				<!--<div class="bullet">
-					<div class="bullet__image"></div>
-					<div class="bullet__content">
-					<?php echo ipSlot('text', array('id' => 'bullet__header' . $i, 'tag' => 'h4',
-						'default' => __('Underrubrik', 'Hjartesorg', false), 'class' => 'bullet__text--primary')); ?>
-					<?php echo ipSlot('text', array('id' => 'bullet__text' . $i, 'tag' => 'p',
-						'default' => __('Text här...', 'Hjartesorg', false), 'class' => 'bullet__text--secondary')); ?>
-					</div>
-				</div>-->
-				<?php endfor; ?>
 			</div>
 		</aside>
 
 		<div class="main__section call-to-action-section schedule-appointment">
 			<div class="main__section--centered">
 				<?php echo ipBlock('schedule-appointment')->asStatic()->render(); ?>
-				<a href="#" class="button-positive--filled button--action">
-					<?php echo ipSlot('text', array('id' => 'schedule-appointment__button', 'tag' => 'span',
-						'default' => __('Boka tid', 'Hjartesorg', false), 'class' => 'button__text')); ?>
-				</a>
 			</div>
 		</div>
 
