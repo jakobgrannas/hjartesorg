@@ -7,3 +7,14 @@
 	text-align: left;
 	box-sizing: border-box;
 }
+
+@mixin alignVertical() {
+	top: 50%;
+	@include transform(translateY(-50%));
+}
+
+@mixin alignCenter() {
+	left: 50%;
+	top: 50%;
+	@include transform(translate(-50%, -50%));
+}

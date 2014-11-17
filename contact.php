@@ -8,49 +8,6 @@
 			<section class="main__article">
 				<?php echo ipBlock('main')->render(); ?>
 			</section>
-			<!--<section class="contact__section contact-info__general">
-				<?php $contactIconClasses = array('', '', ''); ?>
-				<?php for($i=0; $i < 3; $i++) : ?>
-				<div class="bullet">
-					<div class="bullet__image <?php echo $contactIconClasses[$i] ?>"></div>
-					<div class="bullet__content">
-						<?php echo ipSlot('text', array('id' => 'contact-point-header' . $i, 'tag' => 'h3',
-							'default' => __('Underrubrik', 'Hjartesorg', false), 'class' => 'bullet__text--primary')); ?>
-						<?php echo ipSlot('text', array('id' => 'contact-point-text-' . $i, 'tag' => 'p',
-							'default' => __('Text här...', 'Hjartesorg', false), 'class' => 'bullet__text--secondary')); ?>
-					</div>
-				</div>
-				<?php endfor; ?>
-			</section>
-			<section class="contact__section contact-info__employees">
-				<?php for($i=1; $i < 3; $i++) : ?>
-					<div class="bullet">
-						<?php
-						$options = array(
-							'id' => 'employee-bullet__image-' . $i,
-							'width' => '70',
-							'height'=>'70',
-							'class' => 'bullet__image',
-							'default' => ipThemeUrl('assets/images/child.png')
-						);
-						echo ipSlot('image', $options);
-						?>
-						<div class="bullet__content">
-							<?php echo ipSlot('text', array('id' => 'contact-employee-header' . $i, 'tag' => 'h3',
-								'default' => __('Medarbetarens namn', 'Hjartesorg', false), 'class' => 'bullet__text--primary')); ?>
-
-							<a href="#" class="contact-media employee__phonenumber">
-							<?php echo ipSlot('text', array('id' => 'contact-employee-phone-' . $i, 'tag' => 'span',
-								'default' => __('Telefonnummer', 'Hjartesorg', false), 'class' => 'inner-text')); ?>
-							</a>
-							<a href="#" class="contact-media employee__email">
-							<?php echo ipSlot('text', array('id' => 'contact-employee-email-' . $i, 'tag' => 'span',
-								'default' => __('E-post', 'Hjartesorg', false), 'class' => 'inner-text')); ?>
-							</a>
-						</div>
-					</div>
-				<?php endfor; ?>
-			</section>-->
 		</article>
 
 		<aside class="main__section side-info send-email-section">
@@ -63,6 +20,9 @@
 		</aside>
 
 		<div class="main__section map-section">
+			<div class="map__overlay js-click-overlay">
+				<p class="button-important--filled overlay__text"><?php _e('Klicka för att visa karta','Hjartesorg', false); ?></p>
+			</div>
 			<?php echo ipBlock('map')->render(); ?>
 		</div>
 

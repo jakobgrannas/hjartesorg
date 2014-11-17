@@ -1,3 +1,42 @@
 .map-section {
 	height: 25em;
+	position: relative;
+}
+
+.map__overlay {
+	display: none;
+}
+
+.js-click-overlay.map__overlay {
+	display: block;
+	background-color: rgba(0,0,0,0.6);
+	cursor: pointer;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+}
+
+.button-important--filled.overlay__text {
+	background-color: black;
+	@include transition(background-color 300ms ease-in-out);
+
+	&:hover {
+		background-color: $dark-text-color;
+		padding-left: 1.3em;
+		padding-right: 1.3em;
+	}
+}
+
+.overlay__text {
+	position: absolute;
+	@include alignCenter();
+	min-width: 10em;
+	font-family: $main-font;
+	font-weight: $main-semibold;
+	color: white;
+	text-transform: uppercase;
 }

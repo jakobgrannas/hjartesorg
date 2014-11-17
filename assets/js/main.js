@@ -32,6 +32,8 @@
 		$(document).on('blur', '.menu .name-search input', function () {
 			toggleSearchField(false);
 		});
+
+		$(document).on('click', '.map__overlay', initMap);
 	}
 
 	function initHeadroom () {
@@ -42,6 +44,10 @@
 			headroom  = new Headroom(headerEl, options);
 
 		headroom.init();
+	}
+
+	function initMap () {
+		$(this).removeClass('js-click-overlay');
 	}
 
 	function toggleSearchField (showSearchField) {
