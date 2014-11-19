@@ -116,18 +116,20 @@
 
 
 // Mobile no-js menu
-#main-nav:target + .wrapper { // TODO: ADD no-js class
-	@include transform(translate3d($mobile-menu-negative-width, 0, 0));
-}
+.no-js {
+	#main-nav:target + .wrapper {
+		@include transform(translate3d($mobile-menu-negative-width, 0, 0));
+	}
 
-#main-nav:target + .wrapper .button-open-menu {
-	display: none;
-}
+	#main-nav:target + .wrapper .button-open-menu {
+		display: none;
+	}
 
-#main-nav:target + .wrapper .button-close-menu {
-	display: inline-block;
-}
+	#main-nav:target + .wrapper .button-close-menu {
+		display: inline-block;
+	}
 
-#main-nav:target + .wrapper .banner {
-	left: 0;
+	#main-nav:target + .wrapper .banner {
+		left: 0;
+	}
 }

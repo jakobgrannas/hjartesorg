@@ -57,6 +57,7 @@ gulp.task('bower-files', function() {
 gulp.task('scripts', function() {
 	return gulp.src(paths.scripts.src)
 		.pipe(order([
+			'!main.js',
 			'*.js',
 			'main.js'
 		]))

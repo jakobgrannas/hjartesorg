@@ -9,6 +9,7 @@
 	function init () {
 		registerEventListeners();
 		initHeadroom();
+		new Menu();
 	}
 
 	function registerEventListeners () {
