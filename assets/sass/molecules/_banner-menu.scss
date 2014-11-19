@@ -107,6 +107,10 @@
 		vertical-align: middle;
 	}
 
+	.site-header {
+		position: relative;
+	}
+
 	.desktop__menu {
 		display: inline-block;
 		padding-top: 0.3em;
@@ -161,23 +165,24 @@
 
 	// Submenu
 	.desktop__menu .children {
-		@extend .visually-hidden;
-		@include transition(height 0.4s ease-in-out);
-	}
-
-	.desktop__menu .menu-item:hover .children {
 		background-color: $header-bg-color;
 		display: block;
-		clip: inherit;
 		position: absolute;
 		top: 1.2em;
 		right: -2em;
-		z-index: 10;
 		width: 11em;
 		height: 8em;
 		padding: 1em;
 		padding-top: 1.7em;
 		margin: 0;
+		opacity: 0;
+		@include transition(all 0.4s ease);
+		@include transform(translateY(-100%));
+	}
+
+	.desktop__menu .menu-item:hover .children {
+		opacity: 1;
+		@include transform(translateY(0%));
 
 		&:before {
 			@extend %divider-stroke--thick;
