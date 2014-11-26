@@ -49,15 +49,6 @@
 	opacity: 1;
 }
 
-// Move header down in edit mode
-.ipHasAdminNavbar .site-header {
-	top: 2.5em;
-}
-
-.ipHasAdminPanel .site-header {
-	top: 9.2em;
-}
-
 @media all and (min-width: $bp-small) {
 	.site-header {
 		padding-left: 2em;

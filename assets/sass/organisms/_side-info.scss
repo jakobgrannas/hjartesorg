@@ -14,32 +14,19 @@
 	padding-bottom: 3.5em;
 }
 
-/*
-.bullet-grid .bullet {
-	margin-bottom: 3em;
-	text-align: center;
-
-	&:last-child:after {
-		display: none;
-	}
-
-	&:after {
-		@extend %divider-stroke--thick;
-		background-color: desaturate(darken($dark-desaturated-bg-color, 7%), 10%);
-		width: 0.12em;
-		height: 2em;
-	}
-}*/
-
 .bullet-grid .bullet__image {
 	display: block;
 	margin: 0 auto 1em auto;
 	width: 4em;
 }
 
-.bullet-grid .bullet__icon {
+.bullet-grid .bullet__point--icon,
+.bullet-grid .bullet__point--image {
 	font-size: 1.6em;
 	background-color: $bg-color;
+}
+
+.bullet-grid .bullet__point--icon {
 	padding-top: 0.75em;
 }
 
@@ -103,19 +90,6 @@
 
 // Breakpoints
 @media all and (min-width: $bp-large) {
-	/*.bullet-grid .bullet {
-		width: 50%;
-		float: left;
-		margin-bottom: 2em;
-		padding: 0;
-		padding-left: 1em;
-		text-align: left;
-
-		&:after {
-			display: none;
-		}
-	}*/
-
 	.bullet-grid .bullet__image {
 		display: inline-block;
 		margin: 0;

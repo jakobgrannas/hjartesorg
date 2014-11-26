@@ -41,10 +41,14 @@
 	font-weight: $main-light;
 }
 
-.contact-main .bullet__icon {
+.contact-main .bullet__point--icon,
+.contact-main .bullet__point--image {
 	background-color: rgba(0,0,0,0.05);
 	color: $dark-text-color;
 	font-size: 1.6em;
+}
+
+.contact-main .bullet__point--icon {
 	padding-top: 0.7em;
 }
 

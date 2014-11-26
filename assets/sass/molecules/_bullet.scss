@@ -16,7 +16,11 @@
 	height: 100%;
 }
 
-.bullet__icon {
+.bullet__point--image {
+	@extend %bullet__point;
+}
+
+.bullet__point--icon {
 	@extend %bullet__point;
 
 	&:before {

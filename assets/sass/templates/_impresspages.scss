@@ -169,11 +169,6 @@
 }
 
 @media all and (min-width: $bp-medium-3) {
-	.main__article .ipWidget-Text .ipsContainer {
-		@include columns(2);
-		@include column-gap(7em);
-	}
-
 	.ipHasAdminPanel .bullet-grid .ipWidget-Bullet {
 		width: 50%;
 		vertical-align: top;
