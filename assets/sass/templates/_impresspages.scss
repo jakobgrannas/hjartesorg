@@ -161,6 +161,24 @@
 	}
 }
 
+.related-articles .ipsNestedCol {
+	width: 100% !important; // Override inline style
+	margin-bottom: 1em;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.bullet {
+		width: 100%;
+	}
+}
+
+.related-articles .ipWidget-NestedColumns {
+	margin: 0 auto;
+	max-width: 25em;
+}
+
 // Breakpoints
 @media all and (min-width: $bp-small-2) {
 	.homepage .ipWidget h1 {
@@ -188,6 +206,7 @@
 		font-size: 2.1em;
 	}
 
+	// Bullets
 	.testimonials__article .ipWidget-Bullet:nth-child(odd) {
 		.bullet__image {
 			float: right;
@@ -214,6 +233,15 @@
 		&:after {
 			display: none;
 		}
+	}
+
+	.related-articles .ipsNestedCol {
+		width: 33.33% !important; // Override inline style
+		margin-bottom: 0;
+	}
+
+	.related-articles .ipWidget-NestedColumns {
+		max-width: none;
 	}
 
 	.ipHasAdminPanel .bullet-grid .ipWidget-Bullet .bullet {

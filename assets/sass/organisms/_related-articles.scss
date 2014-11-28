@@ -2,4 +2,73 @@
 	margin-top: 4em;
 	margin-bottom: 10em;
 	max-width: 50em;
+
+	.bullet {
+		border-radius: 10px;
+		background-color: $dark-desaturated-bg-color;
+		padding: 0.7em;
+		position: relative;
+
+		&:hover {
+			background-color: $dark-desaturated-bg-color;
+		}
+	}
+
+	.bullet__image {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.bullet__point--image,
+	.bullet__point--icon {
+		width: 3em;
+		height: 3em;
+	}
+
+	.bullet__point--icon {
+		background-color: $bg-color;
+		padding-top: 0.95em;
+
+		&:before {
+			font-size: 1.2em;
+		}
+	}
+
+	.bullet__content {
+		@include alignVertical();
+		@include transition(all 0.4s ease);
+		position: absolute;
+		width: 70%;
+
+		p {
+			line-height: 1.4em;
+		}
+
+		a {
+			color: rgba(0,0,0,0.8);
+			text-decoration: none;
+
+			&:hover {
+				color: $dark-text-color;
+			}
+		}
+	}
+
+	.bullet__text--primary {
+		text-transform: uppercase;
+		font-family: $headline-font;
+		font-weight: $headline-bold;
+		color: rgba(0,0,0,0.8);
+		letter-spacing: 0em;
+		padding-left: 0.9em;
+		display: inline-block;
+	}
+}
+
+// Breakpoints
+@media all and (min-width: $bp-medium-2) {
+
+	.bullet {
+		display: inline-block;
+	}
 }

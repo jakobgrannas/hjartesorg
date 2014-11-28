@@ -19,18 +19,18 @@
 			</div>
 		</aside>
 
-		<div class="main__section call-to-action-section schedule-appointment">
+		<section class="main__section call-to-action-section schedule-appointment">
 			<div class="main__section--centered">
 				<?php echo ipBlock('schedule-appointment')->asStatic()->render(); ?>
 			</div>
-		</div>
+		</section>
 
-		<div class="main__section--centered related-articles clearfix">
+		<section class="main__section--centered related-articles clearfix">
 			<?php echo ipSlot('text', array('id' => 'related-articles__title', 'tag' => 'h2',
 				'default' => __('Rubrik', 'Hjartesorg', false), 'class' => 'main__h2')); ?>
 
 			<?php for($i=0; $i < 3; $i++) : ?>
-			<div class="related-article__button">
+			<!--<div class="related-article__button">
 				<?php
 				$options = array(
 					'id' => 'related-article__image-' . $i,
@@ -47,8 +47,11 @@
 						'default' => __('Länktext', 'Hjartesorg', false), 'class' => '')); ?>
 					</a>
 				</div>
-			</div>
+			</div>-->
 			<?php endfor; ?>
-		</div>
+			<div class="related__article-boxes">
+				<?php echo ipBlock('other-services')->asStatic()->render(); ?>
+			</div>
+		</section>
 	</main>
 <?php echo ipView('_footer.php')->render(); ?>
