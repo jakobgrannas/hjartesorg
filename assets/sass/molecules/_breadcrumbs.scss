@@ -1,0 +1,34 @@
+.breadcrumb {
+	margin-top: 2em;
+	font-family: $main-font;
+	font-weight: $main-semibold;
+	text-transform: uppercase;
+	padding-bottom: 1em;
+	border-bottom: 1px dashed rgba(0,0,0,0.25);
+
+	& > li {
+		margin-right: -3px; // Fix inline-block margin
+	}
+
+	& > li + li:before {
+		@extend .fa;
+		content: "\f054";
+		color: rgba(0,0,0,0.25);
+		font-size: 0.5em;
+		padding: 0.8em;
+		vertical-align: middle;
+	}
+
+	a {
+		color: $dark-text-color;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.active {
+		color: $body-text-color;
+		font-weight: $main-normal;
+	}
+}

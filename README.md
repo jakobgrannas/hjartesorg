@@ -2,17 +2,19 @@ hjartesorg
 ==========
 
 ## Dependencies
-ImpressPages CMS
-*Nested columns
-*Bullet (custom plugin)
-*Slider
-*Search
-*Application (custom plugin)
+###ImpressPages CMS plugins
+* Nested columns
+* Bullet (custom plugin)
+* Button (custom plugin)
+* Slider
+* Search
+* Application (custom plugin)
+* Breadcrumbs
 
 ## Getting started
 
 Install Gulp globally
-``` npm install -g gulp ```
+```npm install -g gulp ```
 
 Install local node modules
 ``` npm install ```

@@ -4,6 +4,10 @@
 	<?php echo ipView('_header.php'); ?>
 
 	<main class="main">
+		<nav class="main__section--centered" role="navigation">
+			<?php echo ipSlot('breadcrumb'); ?>
+		</nav>
+
 		<article class="main__section--centered clearfix">
 			<section class="main__article">
 				<?php echo ipBlock('main')->render(); ?>

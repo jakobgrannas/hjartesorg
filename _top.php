@@ -23,7 +23,7 @@
 <![endif]-->
 
 <div class="site-wrapper">
-<nav class="main-menu clearfix main-menu--closed" id="main-nav">
+<nav class="main-menu clearfix main-menu--closed" id="main-nav" role="navigation">
 	<a href="#" class="menu__logo"></a>
 	<?php
 		$mobileConfig = array (
