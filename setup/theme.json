@@ -13,5 +13,19 @@
             "width": 160,
             "height": 100
         }
-    }
+    },
+	"options": [
+		{
+			"label": "Minify JavaScript files",
+			"name": "minifyJS",
+			"type": "checkbox",
+			"default": "yes"
+		},
+		{
+			"label": "Minify CSS files",
+			"name": "minifyCSS",
+			"type": "checkbox",
+			"default": "yes"
+		}
+	]
 }

@@ -28,8 +28,9 @@
 </div> <!-- Site wrapper end -->
 
 <!-- Load Javascripts -->
-<?php echo ipAddJs('assets/dist/vendor/headroom.js'); ?>
-<?php echo ipAddJs('assets/dist/js/scripts.js'); ?>
+<?php $jsPrefix = ipGetThemeOption('minifyJS') ? '.min'  : ''; ?>
+<?php echo ipAddJs('assets/dist/vendor/headroom' . $jsPrefix . '.js'); ?>
+<?php echo ipAddJs('assets/dist/js/scripts' . $jsPrefix . '.js'); ?>
 <script>
 	var _gaq = [
 		['_setAccount', 'UA-XXXXX-X'],

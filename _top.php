@@ -4,9 +4,11 @@
 <html <?php echo ipHtmlAttributes(); ?>>
 <head>
 	<?php
+	$cssPrefix = ipGetThemeOption('minifyCSS') && ipGetThemeOption('minifyCSS') ? '.min'  : '';
+
 	ipAddCss('Ip/Internal/Core/assets/ipContent/ipContent.css'); // include default CSS for widgets
-	ipAddCss("assets/dist/css/normalize.min.css");
-	ipAddCss("assets/dist/css/style.min.css");
+	ipAddCss("assets/dist/css/normalize" . $cssPrefix . ".css");
+	ipAddCss("assets/dist/css/style" . $cssPrefix . ".css");
 	echo ipHead();
 	?>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
