@@ -1,0 +1,80 @@
+.offer {
+	&:nth-child(even) {
+		background-color: rgba(0,0,0,0.03);
+		padding: 4.5em 0;
+	}
+
+	.ipsNestedCol {
+		width: 45% !important; // Fix inline size
+
+		&:first-of-type {
+			width: 55% !important; // Fix inline size
+
+			.ipBlock {
+				padding-right: 2em;
+			}
+		}
+	}
+
+	.ipWidget h2._title {
+		border-left: 3px solid $dark-text-color;
+		padding: 0;
+		padding-left: 0.35em;
+		margin-top: 0;
+		margin-bottom: 0.5em;
+		font-size: 2.5em;
+		text-align: left;
+		line-height: 1.1em;
+		letter-spacing: 0.01em;
+	}
+
+	.ipsContainer {
+		font-family: $main-font;
+		font-weight: $main-normal;
+	}
+
+	.button-small {
+		margin-top: 1.2em;
+	}
+
+	// Bullet
+	.bullet {
+		display: block;
+		width: 100%;
+		margin-bottom: 2em;
+		font-family: $main-font;
+		color: $body-text-color;
+
+		&__image {
+			display: inline-block;
+			margin-right: 1.5em;
+		}
+		&__text--primary {
+			text-transform: uppercase;
+			font-weight: $main-semibold;
+			margin-top: 0.4em;
+			margin-bottom: 0;
+		}
+
+		&__text--primary {
+			font-size: 1.2em;
+		}
+
+		&__text--secondary {
+			margin-top: 0.5em;
+			font-weight: $main-light;
+		}
+
+		&__point--icon,
+		&__point--image {
+			background-color: rgba(0,0,0,0.05);
+			color: $dark-text-color;
+			font-size: 1.4em;
+		}
+
+		&__point--icon {
+			padding-top: 0.5em;
+			@include size(2.1em 2.1em);
+		}
+	}
+}

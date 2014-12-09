@@ -32,27 +32,6 @@
 		<section class="main__section--centered related-articles clearfix">
 			<?php echo ipSlot('text', array('id' => 'related-articles__title', 'tag' => 'h2',
 				'default' => __('Rubrik', 'Hjartesorg', false), 'class' => 'main__h2')); ?>
-
-			<?php for($i=0; $i < 3; $i++) : ?>
-			<!--<div class="related-article__button">
-				<?php
-				$options = array(
-					'id' => 'related-article__image-' . $i,
-					'width' => '40',
-					'height'=>'40',
-					'class' => 'related-article__image',
-					'default' => ipThemeUrl('assets/images/child.png')
-				);
-				echo ipSlot('image', $options);
-				?>
-				<div class="related-article__content">
-					<a href="#" class="related-article__link">
-						<?php echo ipSlot('text', array('id' => 'related-article__link' . $i, 'tag' => 'span',
-						'default' => __('Länktext', 'Hjartesorg', false), 'class' => '')); ?>
-					</a>
-				</div>
-			</div>-->
-			<?php endfor; ?>
 			<div class="related__article-boxes">
 				<?php echo ipBlock('other-services')->asStatic()->render(); ?>
 			</div>
