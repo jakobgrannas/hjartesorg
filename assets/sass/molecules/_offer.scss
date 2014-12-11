@@ -4,6 +4,10 @@
 		padding: 4.5em 0;
 	}
 
+	&:last-child {
+		margin-bottom: 8em;
+	}
+
 	.ipsNestedCol {
 		width: 45% !important; // Fix inline size
 
@@ -45,19 +49,48 @@
 		font-family: $main-font;
 		color: $body-text-color;
 
-		&__image {
+		&__point {
 			display: inline-block;
 			margin-right: 1.5em;
+			box-sizing: border-box;
+
+			&-inner {
+				@extend %bullet__point;
+				background-color: rgba(0,0,0,0.05);
+				padding-top: 0.6em;
+				@include size(3.1em 3.1em);
+			}
+
+			&-text--primary,
+			&-text--secondary {
+				display: block;
+			}
+
+			&-text--primary {
+				color: $dark-text-color;
+				font-size: 1.6em;
+				font-weight: $main-bold;
+			}
+
+			&-text--secondary {
+				color: rgba(0,0,0,0.3);
+				font-size: 0.7em;
+				font-weight: $main-semibold;
+				text-transform: uppercase;
+				margin-top: -6px;
+			}
 		}
+
+		&__content {
+			width: 75%;
+		}
+
 		&__text--primary {
 			text-transform: uppercase;
 			font-weight: $main-semibold;
 			margin-top: 0.4em;
 			margin-bottom: 0;
-		}
-
-		&__text--primary {
-			font-size: 1.2em;
+			font-size: 1.1em;
 		}
 
 		&__text--secondary {
@@ -65,7 +98,7 @@
 			font-weight: $main-light;
 		}
 
-		&__point--icon,
+		/*&__point--icon,
 		&__point--image {
 			background-color: rgba(0,0,0,0.05);
 			color: $dark-text-color;
@@ -75,6 +108,14 @@
 		&__point--icon {
 			padding-top: 0.5em;
 			@include size(2.1em 2.1em);
-		}
+		}*/
+	}
+}
+
+// Breakpoints
+@media all and (min-width: $bp-medium-2) {
+
+	.offer .bullet {
+		display: inline-block;
 	}
 }
