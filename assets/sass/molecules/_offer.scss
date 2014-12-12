@@ -1,7 +1,20 @@
 .offer {
 	&:nth-child(even) {
-		background-color: rgba(0,0,0,0.03);
+		background-color: $dark-desaturated-bg-color;
 		padding: 4.5em 0;
+
+		.bullet__text--secondary:after {
+			@include background-image(linear-gradient(to right, transparent 0, $dark-desaturated-bg-color 20%));
+		}
+
+		.bullet__point-inner {
+			background-color: $bg-color;
+		}
+
+		.ipsNestedCol:first-of-type  .ipBlock {
+			padding-right: 0;
+			padding-left: 2em;
+		}
 	}
 
 	&:last-child {
@@ -64,6 +77,7 @@
 			&-text--primary,
 			&-text--secondary {
 				display: block;
+				font-family: $main-font;
 			}
 
 			&-text--primary {
@@ -73,7 +87,7 @@
 			}
 
 			&-text--secondary {
-				color: rgba(0,0,0,0.3);
+				color: rgba(0,0,0,0.4);
 				font-size: 0.7em;
 				font-weight: $main-semibold;
 				text-transform: uppercase;
@@ -93,29 +107,90 @@
 			font-size: 1.1em;
 		}
 
+
 		&__text--secondary {
-			margin-top: 0.5em;
 			font-weight: $main-light;
-		}
+			overflow: hidden;
+			margin-top: 0.5em;
+			max-height: 40px;
+			position: relative;
+			@include transform(translateZ(0)); // Force into GPU layer
+			@include transition(max-height 450ms ease-in-out);
 
-		/*&__point--icon,
-		&__point--image {
-			background-color: rgba(0,0,0,0.05);
-			color: $dark-text-color;
-			font-size: 1.4em;
-		}
+			
+			&:after {
+				content: "...";
+				font-family: $main-font;
+				font-weight: $main-light;
+				font-size: 1em;
+				text-align: left;
+				letter-spacing: 2px;
+				@include background-image(linear-gradient(to right, transparent 0, $bg-color 20%));
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				box-sizing: border-box;
+				padding-left: 1.4em;
+				padding-top: 0.3em;
+				line-height: 1.5em;
+				vertical-align: bottom;
+				width: 90px;
+				height: 1.5em;
+				@include transition(opacity 600ms ease-in);
+				opacity: 1;
+			}
 
-		&__point--icon {
-			padding-top: 0.5em;
-			@include size(2.1em 2.1em);
-		}*/
+			&.expanded {
+				word-break: normal;
+				max-height: 500px;
+
+				&:after {
+					@include transition-duration(200ms);
+					@include transition-timing-function(ease-out);
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	.button-small--secondary {
+		margin-top: 1em;
+		font-size: 0.9em;
+	}
+
+	.event-info {
+		margin-top: 1em;
+	}
+
+	.event-info-group {
+		display: inline-block;
+		width: 50%;
+		box-sizing: border-box;
+		margin-left: -5px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	.event__group-header {
+		font-size: 1em;
+		font-weight: $main-semibold;
+	}
+
+	.event__group-text {
+		color: $positive-color;
 	}
 }
 
 // Breakpoints
 @media all and (min-width: $bp-medium-2) {
-
 	.offer .bullet {
 		display: inline-block;
 	}
+
+	.offer:nth-child(even) .ipsNestedCol:first-of-type {
+		float: right;
+	}
 }
+

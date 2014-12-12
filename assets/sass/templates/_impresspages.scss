@@ -40,6 +40,13 @@
 	margin-bottom: 0;
 }
 
+.ipWidget h3,
+.ipWidget h4,
+.ipWidget h5,
+.ipWidget h6 {
+	font-family: $main-font;
+}
+
 .like-on-facebook h3._title {
 	margin-bottom: 1.5em;
 	font-family: $main-font;
@@ -123,6 +130,16 @@
 
 	&:hover {
 		color: $dark-text-color;
+	}
+}
+
+.ipWidget a.button-small--secondary {
+	display: block;
+	color: $dark-text-color;;
+	text-decoration: none;
+
+	&:hover {
+		color: white;
 	}
 }
 
