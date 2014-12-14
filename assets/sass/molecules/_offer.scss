@@ -1,3 +1,7 @@
+// Variables
+$bullet-info-max-height: 40px;
+
+
 .offer {
 	&:nth-child(even) {
 		background-color: $dark-desaturated-bg-color;
@@ -10,11 +14,6 @@
 		.bullet__point-inner {
 			background-color: $bg-color;
 		}
-
-		.ipsNestedCol:first-of-type  .ipBlock {
-			padding-right: 0;
-			padding-left: 2em;
-		}
 	}
 
 	&:last-child {
@@ -22,14 +21,11 @@
 	}
 
 	.ipsNestedCol {
-		width: 45% !important; // Fix inline size
+		width: 100% !important; // Fix inline size
+		margin-top: 3em;
 
 		&:first-of-type {
-			width: 55% !important; // Fix inline size
-
-			.ipBlock {
-				padding-right: 2em;
-			}
+			margin-top: 0;
 		}
 	}
 
@@ -39,9 +35,9 @@
 		padding-left: 0.35em;
 		margin-top: 0;
 		margin-bottom: 0.5em;
-		font-size: 2.5em;
+		font-size: 2em;
 		text-align: left;
-		line-height: 1.1em;
+		line-height: 0.9em;
 		letter-spacing: 0.01em;
 	}
 
@@ -96,7 +92,7 @@
 		}
 
 		&__content {
-			width: 75%;
+			@include calc(width, '75% - 1.5em');
 		}
 
 		&__text--primary {
@@ -112,7 +108,7 @@
 			font-weight: $main-light;
 			overflow: hidden;
 			margin-top: 0.5em;
-			max-height: 40px;
+			max-height: $bullet-info-max-height;
 			position: relative;
 			@include transform(translateZ(0)); // Force into GPU layer
 			@include transition(max-height 450ms ease-in-out);
@@ -179,18 +175,93 @@
 	}
 
 	.event__group-text {
-		color: $positive-color;
+		color: $emerald-color;
 	}
 }
 
 // Breakpoints
-@media all and (min-width: $bp-medium-2) {
-	.offer .bullet {
-		display: inline-block;
-	}
+@media all and (min-width: $bp-medium) {
+	.offer {
+		.bullet {
+			display: inline-block;
 
-	.offer:nth-child(even) .ipsNestedCol:first-of-type {
-		float: right;
+			&__text--secondary {
+				max-height: none;
+
+				&:after {
+					display: none;
+				}
+			}
+
+			.event__read-more {
+				display: none;
+			}
+		}
+	}
+}
+
+@media all and (min-width: $bp-medium-2) {
+	.offer {
+		.ipWidget-Event {
+			float: left;
+			width: 47.5%;
+
+			&:first-child {
+				margin-right: 5%;
+			}
+		}
+
+		.ipWidget h2._title {
+			font-size: 2.5em;
+			line-height: 1.1em;
+		}
+	}
+}
+
+@media all and (min-width: $bp-large) {
+	.offer {
+		&:nth-child(even) {
+			.ipsNestedCol:first-of-type {
+				float: right;
+
+				.ipBlock {
+					padding-right: 0;
+					padding-left: 2em;
+				}
+			}
+		}
+
+		.ipsNestedCol {
+			width: 45% !important; // Fix inline size
+			margin-top: 0;
+
+			&:first-of-type {
+				width: 55% !important; // Fix inline size
+
+				.ipBlock {
+					padding-right: 2em;
+				}
+			}
+		}
+
+		.bullet {
+			&__text--secondary {
+				max-height: $bullet-info-max-height;
+
+				&:after {
+					display: inline-block;
+				}
+			}
+
+			.event__read-more {
+				display: block;
+			}
+		}
+
+		.ipWidget-Event {
+			float: none;
+			width: 100%;
+		}
 	}
 }
 

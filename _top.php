@@ -7,6 +7,11 @@
 	$cssPrefix = ipGetThemeOption('minifyCSS') && ipGetThemeOption('minifyCSS') ? '.min'  : '';
 
 	ipAddCss('Ip/Internal/Core/assets/ipContent/ipContent.css'); // include default CSS for widgets
+
+	//if(ipUser()->isLoggedIn()) {
+	ipAddCss("assets/dist/css/admin" . $cssPrefix . ".css"); // include default CSS for widgets
+	//}
+
 	ipAddCss("assets/dist/css/normalize" . $cssPrefix . ".css");
 	ipAddCss("assets/dist/css/style" . $cssPrefix . ".css");
 	echo ipHead();

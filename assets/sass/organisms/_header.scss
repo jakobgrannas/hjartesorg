@@ -49,6 +49,15 @@
 	opacity: 1;
 }
 
+// Move header down in edit mode
+.ipHasAdminNavbar .site-header.headroom--not-top {
+	top: 2.5em;
+}
+
+.ipHasAdminPanel .site-header.headroom--not-top {
+	top: 9.2em;
+}
+
 @media all and (min-width: $bp-small) {
 	.site-header {
 		padding-left: 2em;

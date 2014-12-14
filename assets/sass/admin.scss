@@ -1,0 +1,19 @@
+/**
+ * Admin only styling fixes for ImpressPages
+ */
+
+.ipHasAdminPanel {
+	.ipsWidgetDropPlaceholder { //
+		z-index: 200;
+
+		&.ipAdminWidgetPlaceholderVertical,
+		&.ipAdminWidgetPlaceholderHorizontal {
+			._marker {
+				background: rgba(0, 0, 0, 0.3);
+				outline-color: rgba(0, 0, 0, 0.45)
+			}
+		}
+	}
+
+	//.ipHasAdminPanel .ipAdminWidgetPlaceholderVertical ._marker, .ipHasAdminPanel .ipAdminWidgetPlaceholderHorizontal ._marker
+}
