@@ -8,9 +8,9 @@
 
 	ipAddCss('Ip/Internal/Core/assets/ipContent/ipContent.css'); // include default CSS for widgets
 
-	//if(ipUser()->isLoggedIn()) {
-	ipAddCss("assets/dist/css/admin" . $cssPrefix . ".css"); // include default CSS for widgets
-	//}
+	if(\Ip\Internal\Admin\Backend::loggedIn()) {
+		ipAddCss("assets/dist/css/admin" . $cssPrefix . ".css"); // include default CSS for widgets
+	}
 
 	ipAddCss("assets/dist/css/normalize" . $cssPrefix . ".css");
 	ipAddCss("assets/dist/css/style" . $cssPrefix . ".css");
@@ -31,7 +31,7 @@
 
 <div class="site-wrapper">
 <nav class="main-menu clearfix main-menu--closed" id="main-nav" role="navigation">
-	<a href="#" class="menu__logo"></a>
+	<a href="<?php echo ipHomeUrl(); ?>" class="menu__logo"></a>
 	<?php
 		$mobileConfig = array (
 			'customClassNames' => array('mobile__menu menu')

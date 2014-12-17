@@ -1,4 +1,4 @@
-.logo-icon {
+%logo-icon {
 	background: transparent image-url("logo.svg") left center no-repeat;
 	width: 2em;
 	height: 1.6em;
@@ -7,12 +7,17 @@
 	vertical-align: middle;
 }
 
-.logo {
+.logo-icon {
+	@extend %logo-icon;
+}
+
+%logo {
 	font-family: $main-font;
-	font-size: 1.35em;
+	font-size: 1.2em;
 	text-transform: uppercase;
 	text-decoration: none;
 	font-weight: bold;
+	letter-spacing: 0.03em;
 	color: $logo-color;
 	display: inline-block;
 
@@ -22,7 +27,19 @@
 	}
 
 	&:before {
-		@extend .logo-icon;
+		@extend %logo-icon;
 		content: "";
+		background-position: center center;
+		width: 40px;
+		height: 40px;
+		padding: 0;
+		margin-right: 0.5em;
+		background-size: 25px 25px;
+		background-color: rgba(0,0,0,0.2);
+		border-radius: 100%;
 	}
+}
+
+.logo {
+	@extend %logo;
 }

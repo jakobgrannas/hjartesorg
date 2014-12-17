@@ -1,12 +1,17 @@
 .services {
-	background-color: $dark-bg-color;
+	background-color: $dark-desaturated-bg-color;
 	margin-top: 10em;
 	margin-bottom: 6em;
-	padding: 1.5em 1em;
+	padding: 2.5em 1em 3.5em;
 	box-sizing: border-box;
 
 	.section--centered {
 		margin: 0 auto;
+	}
+
+	.main__h2 {
+		color: $body-text-color;
+		text-align: center;
 	}
 }
 
@@ -19,6 +24,6 @@
 
 @media  all and (min-width: $bp-large) {
 	.services .section--centered {
-		max-width: 64em;
+		max-width: 50em;
 	}
 }

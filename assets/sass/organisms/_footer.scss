@@ -11,14 +11,24 @@
 	margin: 0 auto;
 }
 
-.footer__heart-icon:before {
-	@extend %heart-icon;
-	font-size: 1.5em;
-	margin: -0.85em auto 0.5em auto;
+.footer__heart-icon {
+	@extend %logo;
+	margin: -22px auto 0.5em auto;
 	display: inline-block;
 	line-height: 1.1em;
-	height: 1em;
 	vertical-align: middle;
+
+	&:before {
+		@extend %logo-icon;
+		content: "";
+		background-position: center center;
+		@include size(45px 45px);
+		padding: 0;
+		margin-right: 0;
+		background-size: 25px 25px;
+		background-color: $dark-text-color;
+		border-radius: 100%;
+	}
 }
 
 .footer__copyright {

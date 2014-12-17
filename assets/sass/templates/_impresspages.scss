@@ -143,10 +143,6 @@
 	}
 }
 
-.service__block .ipWidget .button-small {
-	margin-top: 1.7em;
-}
-
 .call-to-action-section .ipWidget .button-positive--filled {
 	display: inline-block;
 	margin-top: 2.3em;
@@ -194,6 +190,15 @@
 .related-articles .ipWidget-NestedColumns {
 	margin: 0 auto;
 	max-width: 25em;
+}
+
+.footer__block .ipWidget-Image img {
+	max-width: 100px;
+}
+
+.service__block .ipWidget-Button {
+	padding: 0 1em 1em;
+	margin-top: 1.7em;
 }
 
 // Breakpoints
@@ -265,7 +270,9 @@
 	// Buttons
 	.service__block .ipWidget-Button {
 		position: absolute;
-		bottom: 2em;
-		left: 25%;
+		bottom: 1em;
+		left: 1em;
+		padding: 0;
+		margin: 0;
 	}
 }

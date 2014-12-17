@@ -1,40 +1,52 @@
 .service__block {
-	background-color: white;
-	padding: 1.8em 0.8em;
+	background-color: $bg-color;
+	//padding: 1.8em 0.8em;
 	box-sizing: border-box;
 	margin-bottom: 1em;
 	vertical-align: top;
+	border-radius: 5px;
 
 	p {
 		max-width: 35em;
+		padding: 0 0.5em;
 		margin-left: auto;
 		margin-right: auto;
+		font-family: $main-font;
 	}
+}
+.service__image-block {
+	overflow: hidden;
+	width: 100%;
+	height: 100px;
 }
 
 .service__image {
 	display: block;
-	margin: 0 auto;
-	border-radius: 100%;
+	margin: 0;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 
-.service__block__h3 {
-	@extend %headline;
-	color: black;
-	font-size: 1.25em;
-	line-height: 1.4em;
+.service__title {
 	min-height: 2.7em;
-	letter-spacing: 0.05em;
-	text-align: center;
-	max-width: 11em;
-	margin-right: auto;
-	margin-left: auto;
+	margin: 1.8em auto 1em;
+}
+
+.service__title-row {
+	@extend %headline;
+	display: block;
+	color: $dark-text-color;
+	border-left: 4px solid $dark-text-color;
+	padding-left: 0.7em;
+	font-size: 1.25em;
+	line-height: 1.15em;
+	margin: 0;
 }
 
 .service__button-read-more {
-	@extend .button-small;
-	margin: 1.7em auto 0 auto;
+	@extend %button-small;
 	display: block;
+	margin: 0;
 }
 
 
@@ -47,10 +59,6 @@
 
 @media all and (max-width: $bp-medium) {
 	.service__block {
-		p {
-			text-align: center;
-		}
-
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -63,7 +71,7 @@
 	}
 }
 
-@media all and (min-width: $bp-medium) and (max-width: $bp-large-3) {
+@media all and (min-width: $bp-medium) and (max-width: $bp-large-2) {
 	.service__block {
 		width: 48%;
 
@@ -73,22 +81,25 @@
 	}
 }
 
-@media all and (min-width: $bp-large-3) {
+@media all and (min-width: $bp-large-2) {
 	.service__block {
 		max-width: 15em;
 		height: 27em;
-		margin-left: 1em;
+		margin-left: 1.5em;
 		margin-bottom: 0;
 		position: relative;
 
-		&:first-child {
+		p {
+			padding-right: 1em;
+			padding-left: 1em;
+		}
+
+		&:first-of-type {
 			margin-left: 0;
 		}
 	}
 
-	.service__button-read-more {
-		position: absolute;
-		bottom: 2em;
-		left: 25%;
+	.service__title {
+		margin-left: 0;
 	}
 }

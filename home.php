@@ -21,6 +21,9 @@
 
 		<div class="main__section services">
 			<div class="section--centered">
+				<?php echo ipSlot('text', array('id' => 'service-header', 'tag' => 'h2',
+					'default' => __('Rubrik', 'Hjartesorg'), 'class' => 'main__h2')); ?>
+
 				<?php echo ipView('_services.php')->render(); ?>
 			</div>
 		</div>

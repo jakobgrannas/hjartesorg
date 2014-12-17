@@ -87,7 +87,7 @@
 	}
 }
 
-.button-small {
+%button-small {
 	@extend %base-button;
 	width: 9.5em;
 	height: 2.8em;
@@ -105,6 +105,10 @@
 		background: none;
 		box-shadow: none;
 	}
+}
+
+.button-small {
+	@extend %button-small;
 }
 
 %search-button {
