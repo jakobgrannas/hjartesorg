@@ -1,71 +1,83 @@
-.testimonials__article .bullet {
-	width: 100%;
-	margin-bottom: 4em;
-	text-align: center;
-}
+.testimonials__article {
+	.bullet {
+		width: 100%;
+		margin-bottom: 4em;
+		text-align: center;
 
-.testimonials__article .bullet__image {
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	padding-bottom: 1em;
-	font-size: 2.2em;
-}
+		&__image {
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			padding-bottom: 1em;
+			font-size: 2.2em;
+		}
 
-.testimonials__article .bullet__point--icon,
-.testimonials__article .bullet__point--image {
-	background-color: rgba(0,0,0,0.05);
-	color: $dark-text-color;
-}
+		&__point--icon,
+		&__point--image {
+			background-color: rgba(0, 0, 0, 0.05);
+			color: $dark-text-color;
+		}
 
-.testimonials__article .bullet__point--icon {
-	padding-top: 0.7em;
-}
+		&__point--icon {
+			padding-top: 0.7em;
+		}
 
-.testimonials__article .bullet__text--primary {
-	color: $body-text-color;
-	font-family: $quote-font;
-	font-style: italic;
-	font-size: 1.6em;
-	line-height: 1.4em;
-	padding: 0.3em 0 0 0;
-	margin: 0;
-}
+		&__text--primary {
+			color: $body-text-color;
+			font-family: $quote-font;
+			font-style: italic;
+			font-size: 1.1em;
+			line-height: 1.4em;
+			padding: 0.3em 0 0 0;
+			margin: 0;
+		}
 
-.testimonials__article .bullet__text--secondary {
-	font-weight: $main-bold;
-	text-transform: uppercase;
-	color: $primary-complementary-color;
-	margin: 0.5em 0 0 0;
+		&__text--secondary {
+			font-weight: $main-bold;
+			text-transform: uppercase;
+			color: $primary-complementary-color;
+			margin: 0.5em 0 0 0;
 
-	&:before {
-		content: "";
-		border-top: 3px solid rgba(0,0,0,0.2);
-		width: 0.8em;
-		margin-right: 0.6em;
-		vertical-align: middle;
-		display: inline-block;
+			&:before {
+				content: "";
+				border-top: 3px solid rgba(0, 0, 0, 0.2);
+				width: 0.8em;
+				margin-right: 0.6em;
+				vertical-align: middle;
+				display: inline-block;
+			}
+
+			p {
+				display: inline-block;
+			}
+		}
 	}
 }
 
 // Breakpoints
 @media all and (min-width: $bp-large) {
-	.testimonials__article .bullet {
-		float: left;
-		text-align: left;
-	}
+	.testimonials__article {
+		.bullet {
+			float: left;
+			text-align: left;
 
-	.testimonials__article .bullet__image {
-		margin: 0;
-		display: inline-block;
+			&__image {
+				margin: 0;
+				display: inline-block;
 
-		&:before {
-			font-size: 2.2em;
+				&:before {
+					font-size: 2.2em;
+				}
+			}
+
+			&__content {
+				padding-left: 3em;
+				width: 75%;
+			}
+
+			&__text--primary {
+				font-size: 1.3em;
+			}
 		}
-	}
-
-	.testimonials__article .bullet__content {
-		padding-left: 3em;
-		width: 75%;
 	}
 }

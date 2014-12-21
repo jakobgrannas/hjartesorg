@@ -29,7 +29,10 @@
 
 	&.heart:before {
 		vertical-align: middle;
-		content: "\f08a";
+		display: inline-block;
+		content: image-url("logo-red.svg");
+		@include size(1.3em);
+		padding-top: 0.1em;
 	}
 
 	&.telephone:before {

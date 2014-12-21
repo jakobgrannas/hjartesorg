@@ -11,6 +11,19 @@
 	@extend %logo-icon;
 }
 
+%logo-icon--logo {
+	@extend %logo-icon;
+	content: "";
+	background-position: center center;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	margin-right: 0.5em;
+	background-size: 25px 25px;
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 100%
+}
+
 %logo {
 	font-family: $main-font;
 	font-size: 1.2em;
@@ -27,19 +40,19 @@
 	}
 
 	&:before {
-		@extend %logo-icon;
-		content: "";
-		background-position: center center;
-		width: 40px;
-		height: 40px;
-		padding: 0;
-		margin-right: 0.5em;
-		background-size: 25px 25px;
-		background-color: rgba(0,0,0,0.2);
-		border-radius: 100%;
+		@extend %logo-icon--logo;
 	}
 }
 
 .logo {
 	@extend %logo;
+}
+
+%logo-red {
+	@extend %logo;
+
+	&:before {
+		@extend %logo-icon--logo;
+		background-image: image-url("logo-red.svg");
+	}
 }

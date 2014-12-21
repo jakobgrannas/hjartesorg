@@ -2,7 +2,8 @@
 .ipWidget h1 {
 	@extend %big-headline;
 	max-width: 10em;
-	font-size: 3.3em;
+	font-size: 3em;
+	font-size: 11vw;
 	text-align: left;
 	letter-spacing: 0;
 	line-height: 1.2em;
@@ -10,6 +11,7 @@
 	margin-bottom: 1em;
 	box-sizing: border-box;
 	@include hyphens(auto);
+	word-break: break-all;
 }
 
 .subpage-main {

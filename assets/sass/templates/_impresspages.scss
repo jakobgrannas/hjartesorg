@@ -32,6 +32,7 @@
 .ipWidget h2._title, {
 	@extend %big-headline;
 	max-width: 100%;
+	word-break: normal;
 }
 
 .ipbEmpty .ipWidget ._title {
@@ -194,6 +195,8 @@
 
 .footer__block .ipWidget-Image img {
 	max-width: 100px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .service__block .ipWidget-Button {
