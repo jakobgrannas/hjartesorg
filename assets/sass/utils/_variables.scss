@@ -35,7 +35,7 @@ $main-content-border-color: #d6d3cf;
 $button-positive-color: $positive-color;
 
 //Links
-$link-color: #7D9E77;
+$link-color: darken($emerald-color, 10%);
 $link-hover-color: darken($link-color, 20%);
 $link-visited-color: #a3679a;
 $link-visited-hover-color: darken($link-visited-color, 20%);

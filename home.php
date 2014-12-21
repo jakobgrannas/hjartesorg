@@ -33,12 +33,6 @@
 				'default' => __('Boka tid', 'Hjartesorg', false), 'class' => 'main__h2')); ?>
 
 			<div class="make-appointment__block-contact-info">
-				<?php echo ipSlot('text', array('id' => 'phone-number1', 'tag' => 'a',
-					'default' => '070-123 456 78', 'class' => 'make-appointment__phone-number')); ?>
-
-				<?php echo ipSlot('text', array('id' => 'email-address1', 'tag' => 'a',
-					'default' => 'kontakt@hjartesorg.se', 'class' => 'make-appointment__email')); ?>
-
 				<?php echo ipBlock('left-block1')->render(); ?>
 			</div>
 			<div class="make-appointment__block-call-me">

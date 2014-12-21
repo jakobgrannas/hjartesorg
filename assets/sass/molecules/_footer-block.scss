@@ -16,16 +16,20 @@
 		margin-bottom: 0.2em;
 	}
 
+	strong {
+		font-weight: $main-semibold;
+	}
+
 	p:first-of-type {
 		margin-top: 0;
 	}
 
 	a {
 		@extend %base-link;
-		color: darken($link-color, 10%);
+		color: $emerald-color;
 
 		&:hover {
-			color: darken($link-color, 10%);
+			color: darken($emerald-color, 10%);
 		}
 
 		&:visited:hover {

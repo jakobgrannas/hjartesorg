@@ -43,46 +43,7 @@ $box-padding: 3em;
 	margin-top: 0;
 }
 
-// Placeholders
-%make-appointment__link {
-	@extend %base-link;
-	display: block;
-}
-
-%make-appointment__link-icon {
-	@extend .fa;
-	vertical-align: middle;
-	font-size: 1em;
-	color: rgba(0,0,0,0.3);
-}
-
-// Submodules
-.make-appointment__phone-number {
-	@extend %make-appointment__link;
-	font-size: 2em;
-	font-weight: bold;
-	margin-bottom: 0.2em;
-
-	&:before {
-		@extend %make-appointment__link-icon;
-		content: "\f095";
-		padding-right: 0.4em;
-	}
-}
-
-.make-appointment__email {
-	@extend %make-appointment__link;
-	margin-bottom: 1em;
-
-	&:before {
-		@extend %make-appointment__link-icon;
-		content: "\f003";
-		padding-right: 0.5em;
-	}
-}
-
 // Breakpoints
-
 @media all and (min-width: $bp-medium-3) {
 	.make-appointment__block-call-me {
 		@include appointment-block(); // Couldn't use only @extend because it applied itself to non-breakpoint instances as well

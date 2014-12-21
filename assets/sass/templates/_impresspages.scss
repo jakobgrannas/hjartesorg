@@ -124,6 +124,12 @@
 	font-size: 0.8em;
 }
 
+.ipWidget a.button-important--filled {
+	color: white;
+	text-decoration: none;
+	font-weight: $main-normal;
+}
+
 .ipWidget a.button-small {
 	display: block;
 	color: white;
