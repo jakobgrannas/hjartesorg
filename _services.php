@@ -1,18 +1,18 @@
 <?php for ($i=1; $i < 4; $i++) : ?>
 <section class="service__block">
-	<div class="service__image-block">
-		<?php
-		$options = array(
-			'id' => 'service-image-' . $i,
-			'type' => 'center',
-			'forced' => false,
-			'width' => '252',
-			'height'=>'100',
-			'class' => 'service__image',
-			'default' => ipThemeUrl('assets/images/child.png')
-		);
-		echo ipSlot('image', $options);
-		?>
+	<div class="service__header">
+			<?php
+			$options = array(
+				'id' => 'service-image-' . $i,
+				'type' => 'center',
+				'forced' => false,
+				'width' => '82',
+				'height'=>'82',
+				'class' => 'service__image',
+				'default' => ipThemeUrl('assets/images/child.png')
+			);
+			echo ipSlot('image', $options);
+			?>
 	</div>
 
 	<h3 class="service__title">

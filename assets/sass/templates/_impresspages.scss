@@ -133,6 +133,7 @@
 .ipWidget a.button-small {
 	display: block;
 	color: white;
+	margin: 0 auto;
 	text-decoration: none;
 
 	&:hover {
@@ -217,6 +218,17 @@
 	}
 }
 
+@media all and (min-width: $bp-medium) {
+	// Buttons
+	.service__block .ipWidget-Button {
+		position: absolute;
+		@include alignHorizontal();
+		bottom: 1em;
+		padding: 0;
+		margin: 0;
+	}
+}
+
 @media all and (min-width: $bp-medium-3) {
 	.ipHasAdminPanel .bullet-grid .ipWidget-Bullet {
 		width: 50%;
@@ -273,15 +285,5 @@
 
 	.related-articles .ipWidget-NestedColumns {
 		max-width: none;
-	}
-
-
-	// Buttons
-	.service__block .ipWidget-Button {
-		position: absolute;
-		bottom: 1em;
-		left: 1em;
-		padding: 0;
-		margin: 0;
 	}
 }

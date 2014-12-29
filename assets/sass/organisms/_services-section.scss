@@ -16,14 +16,20 @@
 }
 
 // Breakpoints
+@media all and (min-width: $bp-small-2) {
+	.services .section--centered {
+		text-align: center;
+	}
+}
+
 @media all and (min-width: $bp-medium) {
 	.services .section--centered {
-		max-width: 45em;
+		max-width: 49em;
 	}
 }
 
 @media  all and (min-width: $bp-large) {
 	.services .section--centered {
-		max-width: 50em;
+		max-width: 54em;
 	}
 }

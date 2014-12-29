@@ -2,29 +2,37 @@
 	background-color: $bg-color;
 	//padding: 1.8em 0.8em;
 	box-sizing: border-box;
-	margin-bottom: 1em;
+	margin-bottom: 2em;
 	vertical-align: top;
 	border-radius: 5px;
 
 	p {
 		max-width: 35em;
-		padding: 0 0.5em;
+		padding: 0 1.5em;
 		margin-left: auto;
 		margin-right: auto;
 		font-family: $main-font;
 	}
 }
-.service__image-block {
-	overflow: hidden;
-	width: 100%;
-	height: 100px;
+
+.service__header {
+	position: relative;
+	background-color: #FAF7F2;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	height: 5.5em;
+	margin-bottom: 65px;
+	//border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .service__image {
+	position: absolute;
+	@include alignHorizontal();
+	bottom: -50%;
 	display: block;
 	margin: 0;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+	border-radius: 100%;
+	border: 8px solid $bg-color;
 }
 
 .service__title {
@@ -35,25 +43,38 @@
 .service__title-row {
 	@extend %headline;
 	display: block;
+	box-sizing: border-box;
 	color: $dark-text-color;
-	border-left: 4px solid $dark-text-color;
-	padding-left: 0.7em;
+	text-align: center;
 	font-size: 1.25em;
+	font-weight: $main-semibold;
 	line-height: 1.15em;
 	margin: 0;
+	padding: 0 0.7em;
+	border-left: 4px solid $dark-text-color;
 }
 
 .service__button-read-more {
 	@extend %button-small;
 	display: block;
-	margin: 0;
+	margin: 0 auto;
 }
 
 
 // Breakpoints
+
+
 @media all and (min-width: $bp-medium) and (max-width: $bp-large-3) {
 	.service__block:nth-last-child(-n+2) {
 		margin-bottom: 0;
+	}
+}
+
+@media all and (min-width: $bp-medium) {
+	.service__block {
+		display: inline-block;
+		height: 27em;
+		position: relative;
 	}
 }
 
@@ -65,37 +86,33 @@
 	}
 }
 
-@media all and (min-width: $bp-medium) {
-	.service__block {
-		display: inline-block;
-	}
-}
-
 @media all and (min-width: $bp-medium) and (max-width: $bp-large-2) {
 	.service__block {
-		width: 48%;
+		width: 45%;
+		min-width: 15em;
 
-		&:nth-child(even) {
-			margin-left: 1em;
+		&:nth-of-type(even) {
+			margin-left: 5%;
 		}
 	}
 }
 
 @media all and (min-width: $bp-large-2) {
 	.service__block {
-		max-width: 15em;
-		height: 27em;
-		margin-left: 1.5em;
+		max-width: 16em;
+		margin-left: 2.5em;
 		margin-bottom: 0;
-		position: relative;
 
 		p {
-			padding-right: 1em;
-			padding-left: 1em;
+			padding: 0 1.5em;
 		}
 
 		&:first-of-type {
 			margin-left: 0;
+		}
+
+		&:nth-of-type(even) {
+			margin-left: 2.5em;
 		}
 	}
 
