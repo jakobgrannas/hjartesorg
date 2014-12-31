@@ -50,8 +50,13 @@
 
 
 // Form
-.side-info .ipModuleForm .field-label {
+.side-info .form-group label {
 	display: block;
+}
+
+.side-info .form-group .rate-label {
+	display: inline-block;
+	margin-bottom: 0;
 }
 
 .side-info .ipModuleForm {

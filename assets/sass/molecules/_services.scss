@@ -62,8 +62,6 @@
 
 
 // Breakpoints
-
-
 @media all and (min-width: $bp-medium) and (max-width: $bp-large-3) {
 	.service__block:nth-last-child(-n+2) {
 		margin-bottom: 0;

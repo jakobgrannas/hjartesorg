@@ -103,7 +103,6 @@ $bullet-info-max-height: 40px;
 			font-size: 1.1em;
 		}
 
-
 		&__text--secondary {
 			font-weight: $main-light;
 			overflow: hidden;
@@ -113,7 +112,6 @@ $bullet-info-max-height: 40px;
 			@include transform(translateZ(0)); // Force into GPU layer
 			@include transition(max-height 450ms ease-in-out);
 
-			
 			&:after {
 				content: "...";
 				font-family: $main-font;
@@ -147,6 +145,20 @@ $bullet-info-max-height: 40px;
 				}
 			}
 		}
+
+		// Remove this to reveal read more button on mobile
+		&__text--secondary {
+			max-height: none;
+
+			&:after {
+				display: none;
+			}
+		}
+
+		.event__read-more {
+			display: none;
+		}
+		// End read more stuff
 	}
 
 	.button-small--secondary {
@@ -203,8 +215,9 @@ $bullet-info-max-height: 40px;
 @media all and (min-width: $bp-medium-2) {
 	.offer {
 		.ipWidget-Event {
-			float: left;
-			width: 47.5%;
+			// Uncomment if you wish to show read more buttons on mobile
+			/*float: left;
+			width: 47.5%;*/
 
 			&:first-child {
 				margin-right: 5%;
@@ -242,19 +255,19 @@ $bullet-info-max-height: 40px;
 					padding-right: 2em;
 				}
 			}
-		}
 
-		.bullet {
-			&__text--secondary {
-				max-height: $bullet-info-max-height;
+			.bullet {
+				&__text--secondary {
+					max-height: $bullet-info-max-height;
 
-				&:after {
-					display: inline-block;
+					&:after {
+						display: inline-block;
+					}
 				}
-			}
 
-			.event__read-more {
-				display: block;
+				.event__read-more {
+					display: block;
+				}
 			}
 		}
 

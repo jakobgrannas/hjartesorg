@@ -66,11 +66,6 @@
 	@extend %widget__label;
 }
 
-.ipModuleForm .field-label {
-	@extend %widget__label;
-	margin-bottom: 0.6em;
-}
-
 .ipWidget-Heading {
 	margin-top: 1em;
 }
@@ -115,6 +110,16 @@
 	display: inline-block;
 	margin: 0;
 	padding: 0;
+}
+
+.form-group label {
+	@extend %widget__label;
+	margin-bottom: 0.6em;
+}
+
+.form-group .checkbox-field-label {
+	text-transform: none;
+	letter-spacing: 0;
 }
 
 

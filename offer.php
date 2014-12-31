@@ -21,7 +21,7 @@
 					<?php echo ipBlock('offer' . $i)->render(); ?>
 				</div>
 			</section>
-			<? endfor; ?>
+			<?php endfor; ?>
 		</article>
 	</main>
 <?php echo ipView('_footer.php')->render(); ?>

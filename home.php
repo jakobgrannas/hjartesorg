@@ -16,7 +16,9 @@
 			);
 			echo ipSlot('image', $options);
 			?>
-			<?php echo ipBlock('main')->render(); ?>
+			<div id="main-section">
+				<?php echo ipBlock('main')->render(); ?>
+			</div>
 		</article>
 
 		<div class="main__section services">
