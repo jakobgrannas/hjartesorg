@@ -1,5 +1,6 @@
 // Variables
-$bullet-info-max-height: 40px;
+$bullet-info-max-height: 45px;
+$event-expanded-max-height: 500px;
 
 
 .offer {
@@ -8,7 +9,7 @@ $bullet-info-max-height: 40px;
 		padding: 4.5em 0;
 
 		.bullet__text--secondary:after {
-			@include background-image(linear-gradient(to right, transparent 0, $dark-desaturated-bg-color 20%));
+			@include background-image(linear-gradient(to right, rgba(255,255,255,0) 0, $dark-desaturated-bg-color 20%));
 		}
 
 		.bullet__point-inner {
@@ -119,13 +120,13 @@ $bullet-info-max-height: 40px;
 				font-size: 1em;
 				text-align: left;
 				letter-spacing: 2px;
-				@include background-image(linear-gradient(to right, transparent 0, $bg-color 20%));
+				@include background-image(linear-gradient(to right, rgba(255,255,255,0) 0, $bg-color 20%));
 				position: absolute;
 				bottom: 0;
 				right: 0;
 				box-sizing: border-box;
 				padding-left: 1.4em;
-				padding-top: 0.3em;
+				padding-top: 0;
 				line-height: 1.5em;
 				vertical-align: bottom;
 				width: 90px;
@@ -136,7 +137,7 @@ $bullet-info-max-height: 40px;
 
 			&.expanded {
 				word-break: normal;
-				max-height: 500px;
+				max-height: $event-expanded-max-height;
 
 				&:after {
 					@include transition-duration(200ms);
@@ -262,6 +263,10 @@ $bullet-info-max-height: 40px;
 
 					&:after {
 						display: inline-block;
+					}
+
+					&.expanded {
+						max-height: $event-expanded-max-height;
 					}
 				}
 

@@ -28,6 +28,9 @@
 	your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
 	improve your experience.</p>
 <![endif]-->
+<noscript>
+	<p class="chromeframe alert-warning"><?php _e('Du har inaktiverat JavaScript i din webbläsare. Vänligen slå på JavaScript för att få en bättre användarupplevelse', 'Hjartesorg'); ?></p>
+</noscript>
 
 <div class="site-wrapper">
 <nav class="main-menu clearfix main-menu--closed" id="main-nav" role="navigation">

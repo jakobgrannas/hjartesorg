@@ -23,9 +23,9 @@
 			</div>
 		</aside>
 
-		<div class="main__section map-section">
+		<div class="main__section map-section" id="map-section">
 			<div class="map__overlay js-click-overlay">
-				<p class="button-important--filled overlay__text"><?php _e('Klicka för att visa karta','Hjartesorg', false); ?></p>
+				<p class="button-important--filled overlay__text"><?php _e('Visa karta','Hjartesorg', false); ?></p>
 			</div>
 			<?php echo ipBlock('map')->render(); ?>
 		</div>
