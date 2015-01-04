@@ -119,3 +119,7 @@ gulp.task('watch', function() {
 gulp.task('default', ['clean'], function() { // browser-sync
 	gulp.start('bower-files', 'scripts', 'images', 'fonts', 'sass', 'watch');
 });
+
+gulp.task('prod-build', ['clean'], function() { // browser-sync
+	gulp.start('bower-files', 'scripts', 'images', 'fonts', 'sass');
+});
