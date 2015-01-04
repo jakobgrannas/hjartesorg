@@ -17,6 +17,14 @@
 	@extend %fixed-position;
 }
 
+.no-js .homepage .site-header {
+	position: relative;
+}
+
+.site-header .logo {
+	float: left;
+}
+
 .headroom {
 	background-color: $header-bg-color;
 }

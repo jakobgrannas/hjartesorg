@@ -1,7 +1,8 @@
 <?php echo ipDoctypeDeclaration(); ?>
 <!--[if lt IE 9]>
-<html class="no-js ie8" <?php echo ipHtmlAttributes(); ?>> <![endif]-->
-<html <?php echo ipHtmlAttributes(); ?>>
+<html class="no-js ie8" <?php echo ipHtmlAttributes(); ?>>
+<![endif]-->
+<html class="no-js" <?php echo ipHtmlAttributes(); ?>>
 <head>
 	<?php
 	$cssPrefix = ipGetThemeOption('minifyCSS') && ipGetThemeOption('minifyCSS') ? '.min'  : '';
@@ -9,7 +10,7 @@
 	ipAddCss('Ip/Internal/Core/assets/ipContent/ipContent.css'); // include default CSS for widgets
 
 	if(\Ip\Internal\Admin\Backend::loggedIn()) {
-		ipAddCss("assets/dist/css/admin" . $cssPrefix . ".css"); // include default CSS for widgets
+		ipAddCss("assets/dist/css/admin" . $cssPrefix . ".css"); // include custom CSS
 	}
 
 	ipAddCss("assets/dist/css/normalize" . $cssPrefix . ".css");

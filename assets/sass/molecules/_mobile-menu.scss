@@ -66,10 +66,7 @@
 .main-menu .children {
 	padding-left: 0;
 	margin-bottom: 0.5em;
-}
-
-.main-menu .children .menu-item {
-	padding-bottom: 0;
+	margin-top: 0.5em;
 }
 
 // Logo
@@ -112,6 +109,11 @@
 		@extend %search-button;
 		color: $light-text-color;
 	}
+}
+
+// Fix for IE, which seems to dislike animating fixed elements
+.main-menu--animate-left.homepage .site-header {
+	position: relative;
 }
 
 
