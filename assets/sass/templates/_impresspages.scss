@@ -29,10 +29,15 @@
 
 // Titles
 .homepage .ipWidget h1,
-.ipWidget h2._title, {
+.ipWidget h2._title,
+.ipWidget h3._title {
 	@extend %big-headline;
 	max-width: 100%;
 	word-break: normal;
+}
+
+.main__article .ipWidget h3._title {
+	text-align: left;
 }
 
 .ipbEmpty .ipWidget ._title {
@@ -62,9 +67,6 @@
 	font-family: $main-font;
 }
 
-.ipWidget h3._title {
-	@extend %widget__label;
-}
 
 .ipWidget-Heading {
 	margin-top: 1em;
@@ -170,6 +172,10 @@
 	@extend .testimonial__image;
 }
 
+.main__article .ipWidget-Image img {
+	margin: 3.5em auto;
+}
+
 .bullet-grid .ipWidget-Bullet {
 	margin-bottom: 3em;
 	text-align: center;
@@ -214,6 +220,10 @@
 .service__block .ipWidget-Button {
 	padding: 0 1em 1em;
 	margin-top: 1.7em;
+}
+
+.main__article .ipsCol {
+	width: 100% !important;
 }
 
 
@@ -291,5 +301,9 @@
 
 	.related-articles .ipWidget-NestedColumns {
 		max-width: none;
+	}
+
+	.main__article .ipsCol {
+		width: 50% !important;
 	}
 }

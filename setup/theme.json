@@ -5,10 +5,6 @@
     "thumbnail": "thumbnail.png",
     "author": "Jakob Grannas",
     "widget": { /* Image cropping settings for widgets. Require theme reinstall to take effect. */
-        "image": {
-            "width": 540,
-            "height": 342
-        },
         "imageGallery": {
             "width": 160,
             "height": 100

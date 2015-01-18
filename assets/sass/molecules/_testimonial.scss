@@ -18,7 +18,7 @@ $bullet-diameter: 0.5em;
 }
 
 .testimonial__quote {
-	font-size: 1.3em;
+	font-size: 1.1em;
 	line-height: 1.5em;
 	font-family: $quote-font;
 	font-style: italic;
@@ -95,6 +95,6 @@ $bullet-diameter: 0.5em;
 // Breakpoints
 @media all and (min-width: $bp-medium) {
 	.testimonial__quote {
-		font-size: 1.6em;
+		font-size: 1.3em;
 	}
 }

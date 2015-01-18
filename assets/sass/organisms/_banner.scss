@@ -7,7 +7,7 @@ $slogan-base-font-size-unit: 4;
 	@include transition (transform 350ms ease);
 	background: image-url('girl-sunset.jpg') center center no-repeat;
 	background-size: cover;
-	height: 28em;
+	height: 20em;
 	padding: 1em;
 	font-family: $headline-font;
 	overflow-y: hidden;
@@ -25,11 +25,11 @@ $slogan-base-font-size-unit: 4;
 	}
 
 	@media all and (min-height: $bp-small-2) {
-		height: 32em;
+		height: 30em;
 	}
 
 	@media all and (min-height: $bp-medium) {
-		height: 40em;
+		height: 35em;
 	}
 }
 
@@ -43,7 +43,7 @@ $slogan-base-font-size-unit: 4;
 // Typography
 .banner__slogan {
 	position: relative;
-	top: 55%;
+	top: 65%;
 	@include transform(translateY(-50%));
 }
 

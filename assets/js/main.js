@@ -40,6 +40,9 @@
 	function initHeadroom () {
 		var headerEl = document.querySelector("#site-header"),
 			options = {
+				tolerance: {
+					up: 40
+				},
 				offset: 80 // Unpinning offset in pixels
 			},
 			headroom  = new Headroom(headerEl, options);

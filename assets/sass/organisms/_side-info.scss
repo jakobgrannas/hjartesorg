@@ -41,6 +41,8 @@
 
 .bullet-grid .bullet__text--secondary {
 	margin-top: 0.3em;
+	font-weight: $main-light;
+	color: darken($body-text-color, 15%);
 }
 
 .bullet-grid .bullet__content {
