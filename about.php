@@ -47,9 +47,5 @@
 			</section>
 		</div>
 		<?php endfor; ?>
-
-		<aside class="main__section--centered like-on-facebook clearfix">
-			<?php echo ipBlock('social-media')->render(); ?>
-		</aside>
 	</main>
 <?php echo ipView('_footer.php')->render(); ?>

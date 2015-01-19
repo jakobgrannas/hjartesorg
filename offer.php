@@ -15,13 +15,11 @@
 		</article>
 
 		<article class="main__section offers">
-			<?php for($i=1; $i < 4; $i++) : ?>
 			<section class="main__article offer">
 				<div class="main__section--centered">
-					<?php echo ipBlock('offer' . $i)->render(); ?>
+					<?php echo ipBlock('offer1')->render(); ?>
 				</div>
 			</section>
-			<?php endfor; ?>
 		</article>
 	</main>
 <?php echo ipView('_footer.php')->render(); ?>

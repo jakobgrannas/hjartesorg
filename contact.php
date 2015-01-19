@@ -29,9 +29,5 @@
 			</div>
 			<?php echo ipBlock('map')->render(); ?>
 		</div>
-
-		<div class="main__section--centered like-on-facebook clearfix">
-			<?php echo ipBlock('social-media')->render(); ?>
-		</div>
 	</main>
 <?php echo ipView('_footer.php')->render(); ?>
