@@ -1,10 +1,10 @@
 .breadcrumb {
 	margin-top: 2em;
+	margin-left: 2em;
 	font-family: $main-font;
 	font-weight: $main-semibold;
 	text-transform: uppercase;
 	padding-bottom: 1em;
-	border-bottom: 1px dashed rgba(0,0,0,0.25);
 
 	& > li {
 		margin-right: -3px; // Fix inline-block margin

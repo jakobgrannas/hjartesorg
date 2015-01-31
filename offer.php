@@ -4,7 +4,7 @@
 	<?php echo ipView('_header.php'); ?>
 
 	<main class="main">
-		<nav class="main__section--centered" role="navigation">
+		<nav class="main__section" role="navigation">
 			<?php echo ipSlot('breadcrumb'); ?>
 		</nav>
 
