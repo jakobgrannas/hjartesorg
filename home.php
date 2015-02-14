@@ -58,6 +58,10 @@
 			</div>
 		</div>
 
+		<div class="main__section quote">
+			<?php echo ipView('_quote.php')->render(); ?>
+		</div>
+
 		<aside class="main__section testimonials">
 			<?php echo ipBlock('testimonials')->render(); ?>
 		</aside>

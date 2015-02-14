@@ -1,0 +1,37 @@
+$quote-width: 32em;
+
+.quote {
+	background-color: $dark-desaturated-bg-color;
+	margin: 6em auto 0 auto;
+	padding: 3.5em 1em;
+	text-align: center;
+	font-style: italic;
+
+	.section--centered {
+		max-width: $quote-width;
+	}
+
+	&__citation {
+		display: block;
+		font-family: $quote-font;
+		font-size: 1.1em;
+		line-height: 1.7em;
+		color: rgba(0,0,0,0.55);
+
+		&:before {
+			content: image-url('feather.svg');
+			width: 6em;
+			text-align: center;
+			display: block;
+			opacity: 0.3;
+			margin: 0 auto 1em auto;
+		}
+	}
+
+	&__author {
+		display: block;
+		font-family: $quote-font;
+		color: $dark-text-color;
+		margin: 0.5em 0 0 0;
+	}
+}
