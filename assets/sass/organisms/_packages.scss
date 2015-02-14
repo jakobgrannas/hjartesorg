@@ -1,0 +1,23 @@
+.packages {
+	background: $dark-desaturated-bg-color image-url('girls-back-transparent.png') center bottom no-repeat;
+	margin-top: 10em;
+	margin-bottom: 6em;
+	padding: 3.5em 1em 5em;
+
+	.section--centered {
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.main__h2 {
+		color: $body-text-color;
+		text-align: center;
+	}
+}
+
+// Breakpoints
+@media all and (min-width: $bp-medium) {
+	.packages .section--centered {
+		max-width: 46em;
+	}
+}

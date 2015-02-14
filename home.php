@@ -21,12 +21,28 @@
 			</div>
 		</article>
 
-		<div class="main__section services">
+		<div class="main__section packages">
 			<div class="section--centered">
 				<?php echo ipSlot('text', array('id' => 'service-header', 'tag' => 'h2',
 					'default' => __('Rubrik', 'Hjartesorg'), 'class' => 'main__h2')); ?>
 
-				<?php echo ipView('_services.php')->render(); ?>
+				<article class="container--stretched">
+					<?php for ($i=1; $i < 3;$i++) : ?>
+						<section class="package">
+							<div class="package__body">
+								<?php echo ipSlot('text', array('id' => 'package-title_' . $i, 'tag' => 'h3',
+									'default' => __('Rubrik', 'Hjartesorg'), 'class' => 'package__title')); ?>
+								<?php echo ipSlot('text', array('id' => 'package-text_' . $i, 'tag' => 'div',
+									'default' => __('Text här...', 'Hjartesorg'), 'class' => 'package__text')); ?>
+							</div>
+							<div class="package__footer">
+								<?php echo ipBlock('package_' . $i . '__footer')->render(); ?>
+							</div>
+						</section>
+					<?php endfor; ?>
+				</article>
+
+				<?php //echo ipView('_services.php')->render(); ?>
 			</div>
 		</div>
 
