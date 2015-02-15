@@ -148,6 +148,10 @@
 	}
 }
 
+.ipWidget a.button-small--positive:hover {
+	color: $positive-color;
+}
+
 .ipWidget a.button-small--secondary {
 	display: block;
 	color: $dark-text-color;;

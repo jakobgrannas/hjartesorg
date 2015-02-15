@@ -1,0 +1,41 @@
+.price {
+	font-family: $main-font;
+	font-weight: $main-normal;
+	font-size: 1.8em;
+	color: $dark-text-color;
+	line-height: 1em;
+
+	.ipWidget &-regular {
+		font-family: $main-font;
+		font-weight: $main-bold;
+		font-size: 1.3em;
+		text-decoration: line-through;
+		line-height: 1em;
+		padding-top: 0.6em;
+	}
+
+	.ipWidget &-label {
+		font-family: $main-font;
+		margin-bottom: 0;
+	}
+}
+
+.prices {
+
+	.package__body {
+		border-radius: 5px;
+		padding-bottom: 0;
+	}
+
+	.package__footer {
+		padding-top: 1em;
+		padding-bottom: 2em;
+		background-color: $bg-color;
+	}
+}
+
+.prices .package .ipWidget a.button-small {
+	margin-top: 1.5em;
+	display: inline-block;
+	letter-spacing: initial;
+}

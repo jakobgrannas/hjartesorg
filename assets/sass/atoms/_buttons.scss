@@ -87,6 +87,13 @@
 	}
 }
 
+.button-small.button-small--positive {
+	@include buttonSmall($positive-color);
+	min-width: 9.5em;
+	width: auto;
+	display: inline-block;
+}
+
 %button-small {
 	@extend %base-button;
 	width: 9.5em;

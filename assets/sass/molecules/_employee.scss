@@ -58,7 +58,14 @@
 	content: "\f095";
 }
 
-.employee__email:before {
-	@extend %contact-icon;
-	content: "\f003";
+.employee__email {
+	a {
+		color: $body-text-color;
+		text-decoration: none;
+	}
+
+	&:before {
+		@extend %contact-icon;
+		content: "\f003";
+	}
 }

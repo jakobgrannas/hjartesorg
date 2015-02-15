@@ -35,14 +35,14 @@
 					'default' => __('Text om personen här...', 'Hjartesorg', false), 'class' => 'employee__bio')); ?>
 
 				<div class="employee__contact-info">
-					<a class="employee__phonenumber contact-media">
+					<p class="employee__phonenumber contact-media">
 						<?php echo ipSlot('text', array('id' => 'employee__phonenumber-' . $i, 'tag' => 'span',
 							'default' => __('Telefonnummer', 'Hjartesorg', false), 'class' => 'inner-text')); ?>
-					</a>
-					<a class="employee__email contact-media">
+					</p>
+					<p class="employee__email contact-media">
 						<?php echo ipSlot('text', array('id' => 'employee__email-' . $i, 'tag' => 'span',
 							'default' => __('mejl@mejl.se', 'Hjartesorg', false), 'class' => 'inner-text')); ?>
-					</a>
+					</p>
 				</div>
 			</section>
 		</div>

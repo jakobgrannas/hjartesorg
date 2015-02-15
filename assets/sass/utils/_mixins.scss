@@ -23,3 +23,31 @@
 	top: 50%;
 	@include transform(translate(-50%, -50%));
 }
+
+// Buttons
+@mixin buttonSmall($color) {
+	line-height: 1em;
+	font-family: $button-font;
+	font-weight: bold;
+	text-align: center;
+	box-sizing: border-box;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 9.5em;
+	height: 2.8em;
+	font-size: 0.8em;
+	letter-spacing: 0.1em;
+	background-color: $color;
+	padding: 1em;
+	color: white;
+	border: 0;
+	@include transition(color 0.6s, background-color 0.6s);
+
+	&:hover {
+		border: 2px solid $color;
+		color: $color;
+		padding: 0.8em;
+		background: none;
+		box-shadow: none;
+	}
+}
