@@ -9,8 +9,8 @@
 			<?php
 			$options = array(
 				'id' => 'founders-picture',
-				'width' => '130',
-				'height'=>'130',
+				'width' => '148',
+				'height'=>'148',
 				'class' => 'main__image--centered',
 				'default' => ipThemeUrl('assets/images/us.png')
 			);

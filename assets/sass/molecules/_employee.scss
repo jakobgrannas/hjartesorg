@@ -1,5 +1,6 @@
 .employee__image {
 	border-radius: 100%;
+	box-sizing: border-box;
 	border: 0.6em solid $bg-color;
 	position: absolute;
 	top: -65px;

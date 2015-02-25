@@ -20,8 +20,8 @@
 				<?php
 				$options = array(
 					'id' => 'employee__image-' . $i,
-					'width' => '108',
-					'height'=>'108',
+					'width' => '128',
+					'height'=>'128',
 					'class' => 'employee__image',
 					'default' => ipThemeUrl('assets/images/child.png')
 				);
